@@ -1,0 +1,123 @@
+/**
+ * Table of contents
+ * Base tags and global classess
+ * Typography
+ * Components
+ * Blocks
+    * Breadcrumbs
+    * Pagination
+    * Site header
+    * Navigation menu
+    * Flight searchbar
+    * Intro home
+    * Intro pages
+    * Intro searchbar
+    * Cards
+    * Category page, items, list & grid, banners
+    * Category Sortbar
+    * Hotel, navigation, cards, guest rooms
+    * Hotel check items
+    * Hotel Gallery
+    * Flights
+    * Blog list, blog posts
+    * Page contacts
+    * Sidebar
+    * Sitebar Guests
+    * Sidebar Category
+    * Site footer
+  * Backgrounds and colors theme
+  * Edit RTL
+  * Demo Switcher
+*/
+
+
+// variables, functions
+
+@import "app/functions";
+@import "app/variables";
+@import "app/core";
+
+@import "libs/libs";
+@import "css/bootstrap/mixins";
+
+
+// fonts, icons
+
+@import "app/fonts-icon";
+@import "app/sprite-icons";
+
+
+/**
+* Base tags and global classess
+*/
+
+@import "app/base";
+
+
+/**
+* Components:  grid, alerts, tooltips, buttons, scrollbars, inputs, checkboxes
+* custom select, range slider, datepicker, progress bars, modals
+*/
+
+@import "app/grid";
+@import "app/alert";
+@import "app/tooltip";
+@import "app/ratings";
+@import "app/buttons";
+@import "app/ui-spinner";
+@import "app/ui-slider";
+@import "app/scrollbar";
+@import "app/form-control";
+@import "app/checkboxes";
+@import "app/selects";
+@import "app/flatpickr";
+@import "app/progress";
+@import "app/modals";
+
+
+/**
+* Blocks
+*/
+
+@import "app/modal-account";
+@import "app/modal-map";
+@import "app/navbar";
+@import "app/main-nav";
+@import "app/navbar-flights";
+@import "app/breadcrumbs";
+@import "app/pagination";
+@import "app/main";
+@import "app/intro";
+@import "app/intro-searchbar";
+@import "app/cards";
+@import "app/category";
+@import "app/category-sortbar";
+@import "app/hotel";
+@import "app/hotel-package";
+@import "app/hotel-gallery";
+@import "app/flights";
+@import "app/blog";
+@import "app/contacts";
+@import "app/sidebar";
+@import "app/sidebar-filter";
+@import "app/footer";
+
+
+/**
+* Backgrounds and colors theme
+*/
+
+@import "app/colors";
+
+/**
+* Edit RTL
+*/
+
+@import "rtl";
+
+
+/**
+* Demo Switcher
+*/
+
+@import "app/demo-switcher";

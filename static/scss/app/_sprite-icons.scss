@@ -1,0 +1,46 @@
+@import "sprite-var";
+
+$sprite-image: "img/sprite.png";
+
+@mixin sprite-image($sprite) {
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .s-icon--#{$sprite-name} {
+      &:before {
+        @include sprite($sprite);
+      }
+    }
+  }
+}
+
+.icon,
+.s-icon, {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+
+  &:before {
+    display: block;
+  }
+}
+
+.icon svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  font-size: inherit;
+}
+
+.s-icon:before {
+  content: '';
+}
+
+// Sprites
+@include sprites($spritesheet-sprites);

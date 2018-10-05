@@ -1,0 +1,162 @@
+/**
+ * Site Header
+ */
+.page-header {
+  padding-bottom: 0;
+  margin: 0;
+  border-bottom: none;
+
+  &__top {
+    position: relative;
+    transition: box-shadow 150ms ease;
+    z-index: 10;
+
+    &.fixed-top {
+      position: fixed;
+    }
+
+    &.fixed-top-active {
+      box-shadow: 0 2px 5px rgba(#000, .24);
+    }
+
+    body.menu-open & {
+      z-index: $zindex-modal - 9;
+    }
+
+    > .container {
+      display: flex;
+      max-width: map-get($container-max-widths, xl);
+
+      > .row {
+        flex-grow: 1;
+        min-height: 4rem;
+      }
+    }
+
+    .nav-panel {
+      flex-wrap: nowrap;
+      margin-left: auto;
+      margin-right: -15px;
+
+      .nav-item {
+        display: flex;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.50rem 1rem;
+      }
+    }
+  }
+
+  &__call {
+    color: $gray-600;
+
+    .icon-call {
+      @include rem(font-size, 32px);
+    }
+  }
+
+  @include media('<sm') {
+    &__top {
+      height: $header-top-sm-height;
+    }
+  }
+}
+
+.navbar-logo {
+  color: $gray-600;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navbar-search {
+  .form-control {
+    font-weight: normal;
+
+    html.rtl & {
+      padding-left: 0!important;
+      padding-right: 1rem!important;
+    }
+  }
+
+  .btn {
+    padding: 0 1rem;
+    color: nth($gray-dark-color, 5);
+  }
+
+  html.rtl & {
+    .btn {
+      border-right: none;
+    }
+  }
+
+  html:not(.rtl) & {
+    .btn {
+      border-left: none;
+    }
+  }
+}
+
+.nav-panel {
+  .nav-link {
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: left;
+    transition: background-color 300ms;
+
+    .icon {
+      vertical-align: top;
+      font-size: inherit;
+      color: $gray-500;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .main-nav & {
+    .nav-item {
+      width: 100%;
+    }
+
+    .nav-link {
+      width: 100%;
+      display: flex;
+      padding: 1rem 0.50rem;
+
+      .icon {
+        width: 34px;
+        padding-right: 0.50rem;
+        margin: 0!important;
+        text-align: center;
+
+        html.rtl & {
+          padding-right: 0;
+          padding-left: 0.50rem;
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    html:not(.rtl) & {
+      top: 100%!important;
+      left: auto!important;
+      right: 0;
+      transform: none!important;
+    }
+
+    html.rtl & {
+      right: auto;
+    }
+  }
+}

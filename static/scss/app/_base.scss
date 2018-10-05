@@ -1,0 +1,295 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $font-family-base;
+  font-size: 13px;
+  color: $gray-700;
+  background-color: $body-bg;
+
+  html.rtl & {
+    direction: rtl;
+    text-align: inherit;
+  }
+}
+
+@include media('<xl') {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include media('<sm') {
+  html {
+    font-size: 13px;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  @include hover {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &.btn-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.pointer {
+  cursor: pointer;
+  outline: none;
+}
+
+.point-fade {
+  &:not(button):hover {
+    opacity: 0.60;
+  }
+}
+
+button, .btn {
+  &.point-fade {
+    &:hover {
+      transition: opacity 115ms;
+      opacity: 0.85;
+    }
+    &:active {
+      opacity: 0.70;
+    }
+  }
+}
+
+.point-under {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+* Typography
+*/
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
+
+h1, .h1,
+h2, .h2 {
+  margin-bottom: 1.50rem;
+  font-family: $headings-font-family;
+}
+
+h3, .h3,
+h4, .h4 {
+  margin-bottom: 1rem;
+  font-family: $headings-font-family;
+}
+
+figure {
+  margin-bottom: 1.50rem;
+}
+
+aside {
+  h4, h5 {
+    font-family: $font-second;
+  }
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+%bullet {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+  width: 4px;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+i.bullet {
+  @extend %bullet;
+}
+
+ul {
+  &.list-styled {
+    list-style-type: disc;
+    @include rem(margin-left, 24px);
+
+    html.rtl & {
+      margin-left: 0;
+      @include rem(margin-right, 24px);
+    }
+  }
+
+  &.list-bullets {
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      line-height: (24/13);
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: .5rem;
+        width: calc(.25rem + 2px);
+        height: calc(.25rem + 2px);
+        background-color: currentColor;
+        border-radius: 50%;
+      }
+
+      html.rtl & {
+        padding-left: auto;
+        padding-right: 1.25rem;
+
+        &:before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &.list-inline {
+    > li {
+      display: inline-block;
+
+      > * {
+        vertical-align: top;
+      }
+
+      &:after {
+        content: '';
+        @extend %bullet;
+        margin-left: 6px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+blockquote {
+  .media-object  {
+    margin: -11/90 + em 18/90 + em 0 0;
+    @include rem(font-size, 90px);
+    line-height: 1;
+
+    html.rtl & {
+      margin-right: 0;
+      margin-left: 18/90 + em;
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  margin-bottom: 1.25rem;
+
+  &::after,
+  &::before {
+    content: '';
+    position: relative;
+    display: block;
+    background-color: $hr-border-color;
+    border-top: 1px solid $hr-border-color;
+    flex-grow: 1;
+  }
+}
+
+.divider-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+$weights: (
+  "light": 300,
+  "norm": 400,
+  "md": 500,
+  "sm": 600,
+  "bold": 700,
+  "black": 900,
+);
+
+@function font-weight($key) {
+  @return map-get($weight, $key);
+}
+@each $weight, $value in $weights {
+  .fw-#{$weight} {
+    font-weight: $value;
+  }
+}
+
+.fz-xs {font-size: 11px}
+.fz-small {font-size: 12px}
+.fz-norm {font-size: 1rem}
+
+.f-primary {font-family: inherit};
+
+.mark {
+  display: inline-block;
+  padding: 0.50rem 1rem;
+  border-radius: 1.75rem;
+}
+
+@mixin object-fit() {
+  position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+%object-fit {
+  @include object-fit();
+}
+
+.jarallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-cover,
+.jarallax-img,
+.jarallax > .jarallax-img {
+  @extend %object-fit;
+}
