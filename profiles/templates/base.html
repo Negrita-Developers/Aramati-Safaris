@@ -1,26 +1,171 @@
 {% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Looking for something amazing?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
 
-  {% if title %}
-  <title>Moringa Tribune - {{title}}</title>
-  {% else %}
-    <title> Moringa Tribune </title>
-  {% endif %}
-
-  {% block styles %}
+    {% if title %}
+    <title>Aramati Safaris - {{title}}</title>
+    {% else %}
+    <title> Aramati Safaris</title>
+    {% endif %}
+    <!-- Edge and IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Add to homescreen for Chrome on Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Looking for something amazing?">
+    <link rel="icon" sizes="192x192" href="{% static 'img/touch/chrome-touch-icon-192x192.png' %}">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Your Travel World">
+    {% block styles %}
     {% bootstrap_css %}
-  {% endblock %}
+
+
+    <link rel="apple-touch-icon" href="{% static 'img/touch/apple-touch-icon.png' %}">
+    <!-- Google Fonts-->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700%7CPoppins:400,500,600,700 ' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link id="cssRtl" rel="stylesheet" href="#">
+    <link rel="stylesheet" href="{% static 'css/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-stars-o.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blueimp-gallery.min.css' %}">
+    <!-- build:css style.min.css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- endbuild-->
+    <link id="cssTheme" rel="stylesheet" href="{% static 'skins/style-default.css' %}">
+    {% endblock %}
 
 </head>
-<body>
-    {% block content %} <h1 class='text-center'>News for {{date|date:"l d-F Y"}}</h1> {%endblock%}
+
+<body class="load">
+    {% include "navbar.html" %}
+    {% block content %} 
+   
+    <footer class="page-footer">
+        <div class="page-footer__cover jarallax" data-speed="0.5"><img class="jarallax-img" src="img/footer.jpg" alt="#"></div>
+        <div class="container mb-5 mb-lg-4">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 mt-5">
+              <h3 class="h3 text-uppercase">Aramati safaris</h3>
+              <ul class="page-footer__address">
+                <li class="mb-2"><strong class="float-left mr-1">A:</strong>
+                    Rehema Place, Suite B14, Ngong Road/Ring Road,
+                    Adjacent Eastlands Hotel & Opposite Nakumatt Ngong Road (Prestige Plaza)
+                </li>
+                <li class="mb-2"><strong class="float-left mr-1">P:</strong>
+                  24/7 customer support:
+                  <a href="tel:#">+254 722 44 32 74, +254 734 44 32 74</a>
+                </li>
+                <li class="mb-2"><strong class="float-left mr-1">E:</strong>
+                  <a href="mailto:#">info@aramatisafaris.co.ke</a>
+                </li>
+              </ul>
+              <h4 class="h4 mb-2">Follow us:</h4>
+              <ul class="footer-social d-flex flex-wrap">
+                <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 mt-5">
+              <h3 class="h3 text-uppercase">customer support</h3>
+              <ul class="page-footer__support list-styled">
+                <li class="mb-2"><a href="#" target="_blank">Faq</a></li>
+                <li class="mb-2"><a href="#" target="_blank">How do I make a reservation?</a></li>
+                <li class="mb-2"><a href="#" target="_blank">Payment options</a></li>
+                <li class="mb-2"><a href="#" target="_blank">Booking tips</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4 mt-5">
+              <h3 class="h3 text-uppercase">get our best offers</h3>
+              <form class="subscribe-form" action="#" method="POST">
+                <div class="input-group input-group--lg flex-nowrap mb-4">
+                  <input class="form-control form-control-lg" type="email" placeholder="Enter Your email" required>
+                  <div class="input-group-append">
+                    <button class="btn btn-btn btn-light btn--round" type="submit"><i class="fa fa-send"></i>
+                    </button>
+                  </div>
+                </div>
+                <p>We guarantee your confidentiality, and we also undertake not to transfer your email address to third parties.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__copyright text-center">
+          <div class="container">
+            <div class="hr"></div>Copyright © 2014 Aramati Safaris. All rights reserved.<br/><a class="text-light text-uppercase" href="https://themeforest.net/user/netgon">This was created by Negrita Developers.
+              <script>document.write(new Date().getFullYear());</script></a>
+          </div>
+        </div>
+      </footer>
+      <div class="modal-map modal" id="modalMap" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header align-items-center py-2">
+              <h4 class="modal-title"><a class="d-flex align-items-center" href="hotel.html"><i class="icon mr-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 22.1"><path d="M0.3,10.3C0.3,10.3,0.3,10.3,0.3,10.3c-0.4,0.5-0.4,1.2,0,1.6l10,10c0,0,0,0,0,0c0.4,0.4,1.1,0.4,1.6,0 c0.4-0.4,0.4-1.1,0-1.6l-8-8h26.6c0.6,0,1.1-0.5,1.1-1.1c0,0,0,0,0,0c0-0.6-0.5-1.1-1.1-1.1H3.8l8-8c0.4-0.4,0.4-1.1,0-1.6 c0,0,0,0,0,0c-0.4-0.4-1.1-0.4-1.6,0L0.3,10.3z"/></svg></i><span class="title">Hotel</span></a></h4>
+              <button class="btn btn-secondary btn--round px-4" type="button" data-dismiss="modal">map close
+              </button>
+            </div>
+            <div class="map-contain" id="map"></div>
+          </div>
+        </div>
+      </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3gFKhVywUkygSxQEBdGVrI5-ZRrdjueA"></script>
+      <script src="js/maps.js"></script>
+      <script src="js/libs/moment.min.js"></script>
+      <script src="js/libs/wNumb.js"></script>
+      <script src="js/libs/nouislider.min.js"></script>
+      <script src="js/libs/jquery.min.js"></script>
+      <script src="js/libs/jquery-ui.min.js"></script>
+      <script src="js/libs/barba.min.js"></script>
+      <script src="js/libs/sticky-kit.min.js"></script>
+      <script src="js/libs/velocity.min.js"></script>
+      <script src="js/libs/velocity.ui.min.js"></script>
+      <script src="js/libs/jquery.waypoints.min.js"></script>
+      <script src="js/libs/popper.min.js"></script>
+      <script src="js/libs/bootstrap.min.js"></script>
+      <script src="js/libs/imagesloaded.pkgd.min.js"></script>
+      <script src="js/libs/masonry.pkgd.min.js"></script>
+      <script src="js/libs/isotope.pkgd.min.js"></script>
+      <script src="js/libs/ofi.min.js"></script>
+      <script src="js/libs/jarallax.min.js"></script>
+      <script src="js/libs/jarallax-video.min.js"></script>
+      <script src="js/libs/jarallax-element.min.js"></script>
+      <script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
+      <script src="js/libs/swiper.min.js"></script>
+      <script src="js/libs/flatpickr/flatpickr.min.js"></script>
+      <script src="js/libs/flatpickr/rangePlugin.js"></script>
+      <script src="js/libs/select2.min.js"></script>
+      <script src="js/libs/select2/en.js"></script>
+      <script src="js/libs/jquery.mask.min.js"></script>
+      <script src="js/libs/validator.min.js"></script>
+      <script src="js/libs/jquery.barrating.min.js"></script>
+      <script src="js/libs/jquery.blueimp-gallery.min.js"></script>
+      <!-- build:js js/script.min.js-->
+      <script src="js/script.js"></script>
+      <!-- endbuild-->{%endblock%}
 
     {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
     {% endblock %}
 </body>
+
 </html>
