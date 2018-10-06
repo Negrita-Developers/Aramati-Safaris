@@ -6,3 +6,6 @@ def home(request):
     template = 'base.html'
 
     return render(request, template, context)
+
+def home(request):
+  return render(request, 'home.html')
