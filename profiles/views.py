@@ -15,3 +15,6 @@ def aboutus(request):
 
 def offers(request):
    return render(request, 'offers.html') 
+
+def contact(request):
+   return render(request, 'contacts.html') 
