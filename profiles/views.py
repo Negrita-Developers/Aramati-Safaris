@@ -12,3 +12,6 @@ def home(request):
 
 def aboutus(request):
    return render(request, 'about.html') 
+
+def offers(request):
+   return render(request, 'offers.html') 

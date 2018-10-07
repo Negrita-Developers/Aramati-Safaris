@@ -8,7 +8,7 @@ app_name='profiles'
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/', views.aboutus, name='aboutus'),
-    # url(r'^contact/', views.contact, name='contact'),
+    url(r'^specialoffers/', views.offers, name='offers'),
 ] 
 
 # if settings.DEBUG:
