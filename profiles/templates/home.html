@@ -9,9 +9,12 @@
             <div class="over"></div>
             <div class="swiper-container js-intro-slider-bg">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="img-cover" src="http://welcome.southafrica.net/uploads/files/slide8.jpg" alt="#"></div>
-                    <div class="swiper-slide"><img class="img-cover" src="http://www.bingwallpaperhd.com/wp-content/uploads/2018/06/ReticulatedGiraffe.jpg" alt="#"></div>
-                    <div class="swiper-slide"><img class="img-cover" src="https://static.blog4ever.com/2016/10/822894/big_artfichier_822894_6299202_201610103741532.jpg" alt="#"></div>
+                    <div class="swiper-slide"><img class="img-cover" src="http://welcome.southafrica.net/uploads/files/slide8.jpg"
+                            alt="#"></div>
+                    <div class="swiper-slide"><img class="img-cover" src="http://www.bingwallpaperhd.com/wp-content/uploads/2018/06/ReticulatedGiraffe.jpg"
+                            alt="#"></div>
+                    <div class="swiper-slide"><img class="img-cover" src="https://static.blog4ever.com/2016/10/822894/big_artfichier_822894_6299202_201610103741532.jpg"
+                            alt="#"></div>
 
                 </div>
             </div>
@@ -92,37 +95,43 @@
                     <div class="search-hotels shadow-sm">
                         <ul class="search-hotels__tabs nav nav-tabs" role="tablist">
                             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tabHotel" role="tab"
-                                    aria-controls="tabHotel" aria-selected="false"><span class="d-none d-md-block" style="width: 170px;">Tour Finder</span><i
-                                        class="icon icon-building d-md-none mx-1 text-secondary"></i></a>
+                                    aria-controls="tabHotel" aria-selected="false"><span class="d-none d-md-block"
+                                        style="width: 170px;">Tour Finder</span><i class="icon icon-building d-md-none mx-1 text-secondary"></i></a>
                             </li>
-                            
+
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active show" id="tabHotel" role="tabpanel">
                                 <form class="search-hotels__form" action="#" method="GET" data-toggle="validator">
-                                    <fieldset class="form-group">
-                                        <label for="first_name">First Name</label>
-                                        <input type="text" class="form-control" id="first_name" name="first_name">
-                                        </fieldset>
-                                        <fieldset class="form-group">
-                                        <label for="last_name">Last Name</label>
-                                        <input type="text" class="form-control" id="last_name" name="last_name">
-                                        </fieldset>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    <input class="label-text" placeholder="Enter destination">
+
+                                    <label class="label-text">Check in date</label>
+                                    <div class="input-date-group position-relative"><i class="mr-2 icon icon-calendar text-secondary"></i>
+                                        <input class="form-control js-input-date hidden " id="hotelDate1" type="text"
+                                            name="hotel_from" required="required" />
+                                        <label class="form-control date" for="hotelDate1"></label>
+                                    </div>
+                                     <!-- <div class="d-inline-block">
+                              <label class="label-text">Check out date</label>
+                              <div class="input-date-group position-relative"><i class="mr-2 icon icon-calendar text-secondary"></i>
+                                <input class="form-control js-input-date hidden " id="hotelDateTo1" type="text" name="hotel_to" required="required"/>
+                                <label class="form-control date" for="hotelDateTo1"></label>
+                              </div>
+                            </div> -->
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="intro__hotels"   style="padding-top: 20px;"  >
+            <div class="intro__hotels" style="padding-top: 20px;">
                 <div class="container-fluid p-0">
                     <div class="swiper-container js-intro-hotels">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="card-intro d-block" style="background-image: url(img/hotels/item-1.jpg);">
                                     <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                                    
+
                                     <div class="card-intro__footer">
                                         <h4 class="h4 f-primary">Resort Spa Hotel</h4>
                                         <div class="card-intro__local d-flex align-items-center"><i class="icon icon-label mr-1"></i><span>Thailand</span></div>
@@ -258,7 +267,8 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-7.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-7.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -280,7 +290,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-8.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-8.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -302,7 +313,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-9.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-9.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -324,7 +336,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-10.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-10.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -346,7 +359,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-11.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-11.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -368,7 +382,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-12.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-12.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -390,7 +405,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-13.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-13.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -412,7 +428,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-14.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-14.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
@@ -434,7 +451,8 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
                     <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-15.jpg' %}" alt="#" />
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-15.jpg' %}"
+                                alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
