@@ -27,11 +27,11 @@
     <!-- Add to homescreen for Safari on iOS-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Your Travel World">
+    <meta name="apple-mobile-web-app-title" content="Aramati Safaris">
 
     <link rel="apple-touch-icon" href="{% static 'img/touch/apple-touch-icon.png' %}">
     <!-- Google Fonts-->
-    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700%7CPoppins:400,500,600,700 ' %}"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700%7CPoppins:400,500,600,700 "
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.structure.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css' %}">
@@ -41,6 +41,11 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontawesome-stars-o.css' %}">
     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'fonts/Icon.woff' %}">
+    <link rel="stylesheet" href="{% static 'fonts/Icon.ttf' %}">
+    <link rel="stylesheet" href="{% static 'fonts/Icon.woff2' %}">
+    <link rel="stylesheet" href="{% static 'fonts/Icon.eot' %}">
+    <link rel="stylesheet" href="{% static 'fonts/Icon.svg' %}"> -->
     <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
@@ -279,7 +284,7 @@
                         <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:offers' %}"><span>Special
                                     Offers</span></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link fw-bold text-uppercase" style="color: red;" href="{% url 'profiles:offers' %}"><span>Join a safari today!!!</span></a>
+                        <li class="nav-item flashit"><a class="nav-link fw-bold text-uppercase " style="color: red;" href="{% url 'profiles:offers' %}"><span>Join a safari today!!!</span></a>
                 </li>
                         <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="#"><span>Excursions</span><i
                                     class="caret fa fa-angle-down ml-2"></i></a>
