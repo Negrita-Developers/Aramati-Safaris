@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -80,9 +80,9 @@
   /**
    * CONSTRUCTOR
    */
-  var App = (function(window) {
+  var App = (function (window) {
     return {
-      init: function() {
+      init: function () {
         $body.removeClass('load');
 
         this.siteMenu();
@@ -92,7 +92,7 @@
         this.buttonScrolls();
       },
 
-      scroll: function() {
+      scroll: function () {
         this.scrollIntro();
         this.scrollAnim();
 
@@ -118,7 +118,7 @@
         }
       },
 
-      resize: function() {
+      resize: function () {
         this.scrollPanels();
         this.resizeIntro();
         this.dropdownOffset();
@@ -128,13 +128,13 @@
         }
       },
 
-      resizeIntro: function() {
+      resizeIntro: function () {
         $introContent.css({
           minHeight: 'calc(100vh - ' + $header.height() + 'px)'
         });
       },
 
-      scrollIntro: function() {
+      scrollIntro: function () {
         var $introBg = $('.js-intro-bg');
         var $introH = $('.intro').height();
 
@@ -147,15 +147,17 @@
         }
       },
 
-      stickyFooter: function() {
-        $main.css({marginBottom: $footer.height() + 'px'});
+      stickyFooter: function () {
+        $main.css({
+          marginBottom: $footer.height() + 'px'
+        });
         $footer.addClass('sticky');
       },
 
-      scrollAnim: function() {
+      scrollAnim: function () {
         var $wTop = $window.scrollTop();
 
-        $('.prlx-scroll').each(function() {
+        $('.prlx-scroll').each(function () {
           var $this = $(this);
 
           var $fromTop = $this.offset().top;
@@ -175,20 +177,20 @@
         });
       },
 
-      scrollPanels: function() {
+      scrollPanels: function () {
         var $h = $headerTop.height();
 
         var $panels = [];
         var $sum = 0;
 
-        $('.js-top-panel').each(function(index, el) {
+        $('.js-top-panel').each(function (index, el) {
           $panels[index] = $(this).height();
 
           $sum += $panels[index];
         });
 
         $headerTop.waypoint({
-          handler: function(direction) {
+          handler: function (direction) {
             $headerTop.addClass('fixed-top');
             $headerTop.parent().css('height', $h);
           },
@@ -202,27 +204,27 @@
         }
       },
 
-      btnLoader: function() {
+      btnLoader: function () {
         var $button = $('.btn-load');
         var $spinner = '<i class="spinner"></i>';
         var $checked = '<i class="fa fa-check"></i>';
 
-        $button.on('click', function() {
+        $button.on('click', function () {
           var $this = $(this);
           $this.addClass('loading').html($spinner);
 
-          setTimeout(function() {
+          setTimeout(function () {
             $this.removeClass('loading').addClass('complete').html($checked);
           }, 1500);
         });
       },
 
-      progressBars: function() {
-        $('.js-point-progress').each(function() {
+      progressBars: function () {
+        $('.js-point-progress').each(function () {
           var $this = $(this);
-          $this.waypoint(function(direction) {
+          $this.waypoint(function (direction) {
             if (direction === 'down') {
-              $this.find('.progress-bar').css("width", function() {
+              $this.find('.progress-bar').css("width", function () {
                 return $(this).attr("aria-valuenow") + "%";
               });
             }
@@ -232,72 +234,80 @@
         });
       },
 
-      siteMenu: function() {
+      siteMenu: function () {
         var $navPanel = $('#navPanel');
         var $navMenu = $('#navMenu');
         var $backdrop = '<div class="modal-backdrop show"></div>';
         var $toggleMenu = $('.btn-toggle-nav');
 
         $navPanel
-        .on('show.bs.collapse', function() {
-          $body.addClass('modal-open menu-open').append($backdrop);
-          $navPanel.css('transition', 'transform 300ms ease-in-out 150ms');
-          $toggleMenu.css('transition', 'transform 300ms ease-in-out 150ms');
-        })
-        .on('hide.bs.collapse', function() {
-          $body.removeClass('menu-open');
+          .on('show.bs.collapse', function () {
+            $body.addClass('modal-open menu-open').append($backdrop);
+            $navPanel.css('transition', 'transform 300ms ease-in-out 150ms');
+            $toggleMenu.css('transition', 'transform 300ms ease-in-out 150ms');
+          })
+          .on('hide.bs.collapse', function () {
+            $body.removeClass('menu-open');
 
-          $('.modal-backdrop').animate({opacity: 0}, 300, function() {
-            $(this).remove();
-            $body.removeClass('modal-open');
+            $('.modal-backdrop').animate({
+              opacity: 0
+            }, 300, function () {
+              $(this).remove();
+              $body.removeClass('modal-open');
+            });
+          })
+          .on('hidden.bs.collapse', function () {
+            $navPanel.css('transition', 'transform 0s 0s');
+            $toggleMenu.css('transition', 'transform 0s 0s');
           });
-        })
-        .on('hidden.bs.collapse', function() {
-          $navPanel.css('transition', 'transform 0s 0s');
-          $toggleMenu.css('transition', 'transform 0s 0s');
-        });
 
-        $body.on('click', '.modal-backdrop', function() {
+        $body.on('click', '.modal-backdrop', function () {
           $navPanel.collapse('hide');
           $body.removeClass('menu-open');
 
-          $(this).animate({opacity: 0}, 300, function() {
+          $(this).animate({
+            opacity: 0
+          }, 300, function () {
             $(this).remove();
             $body.removeClass('modal-open');
           });
         });
 
-        $navMenu.on('click', 'a', function(e) {
+        $navMenu.on('click', 'a', function (e) {
           var $this = $(this);
 
           if ($this.attr('href') === '#') {
             e.preventDefault();
 
             $this.next().slideToggle(300).parent().toggleClass('show')
-            .siblings().removeClass('show')
-            .children('.dropdown-menu').slideUp(300);
+              .siblings().removeClass('show')
+              .children('.dropdown-menu').slideUp(300);
           }
         });
       },
 
-      dropdownOffset: function() {
-        $('.dropdown-menu .dropdown-menu').each(function() {
+      dropdownOffset: function () {
+        $('.dropdown-menu .dropdown-menu').each(function () {
           var $drop = $(this);
           var $dropW = $drop.width();
           var $dropL = $drop.offset().left;
 
           if ($window.width() > 767) {
             if ($window.width() < $dropW + $dropL) {
-              $drop.css({left: '-100%'});
+              $drop.css({
+                left: '-100%'
+              });
             } else if ($dropL < $dropW) {
-              $drop.css({left: '100%'});
+              $drop.css({
+                left: '100%'
+              });
             }
           }
         });
       },
 
-      buttonScrolls: function() {
-        $('.js-intro-btn-jump').on('click', function(e) {
+      buttonScrolls: function () {
+        $('.js-intro-btn-jump').on('click', function (e) {
           var $introSearch = $introContent.find('.intro__search').innerHeight();
           var $top = $introContent.offset().top;
 
@@ -306,7 +316,7 @@
           }, 500);
         });
 
-        $btnUp.on('click', function(e) {
+        $btnUp.on('click', function (e) {
           e.preventDefault();
 
           if ($(this).hasClass('bottom')) {
@@ -320,7 +330,7 @@
           }
         });
 
-        $('.js-nav-scroll').on('click', 'a', function(e) {
+        $('.js-nav-scroll').on('click', 'a', function (e) {
           e.preventDefault();
 
           var target = this.hash;
@@ -345,30 +355,30 @@
     }
   }
 
-  $(window).on('resize', function() {
+  $(window).on('resize', function () {
     App.resize();
 
     clearTimeout(debounce);
 
-    debounce = setTimeout(function() {
+    debounce = setTimeout(function () {
       if ($(window).width() > small) {
         filterModalClose();
       }
     }, 200);
   });
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     App.scroll();
   });
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     App.init();
     App.resize();
 
     /*
      * MODAL MAP
      */
-    $('#modalMap').on('show.bs.modal', function(event) {
+    $('#modalMap').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget);
       var title = button.data('title');
       var modal = $(this);
@@ -394,16 +404,15 @@
     /**
      * BOOKING FORMs
      */
-    $('.js-form-booking-example').validator().on('submit', function(e) {
-      if (e.isDefaultPrevented()) {
-      } else {
+    $('.js-form-booking-example').validator().on('submit', function (e) {
+      if (e.isDefaultPrevented()) {} else {
         e.preventDefault();
         window.location = $(this).data('next');
       }
     });
 
     // Active form for demo
-    $('.js-form-booking').on('submit', function(e) {
+    $('.js-form-booking').on('submit', function (e) {
       e.preventDefault();
       window.location = $(this).data('next');
     });
@@ -411,14 +420,14 @@
     /**
      * CUSTOM SELECT
      */
-    $('.select2').on('select2:open', function(e) {
+    $('.select2').on('select2:open', function (e) {
       var $selectOptions = $('.select2-results__options');
 
       $selectOptions.mCustomScrollbar('destroy');
 
       $('.select2-search input').prop('focus', false);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $selectOptions.mCustomScrollbar({
           scrollInertia: 200,
           scrollButtons: {
@@ -428,7 +437,7 @@
       }, 0);
     });
 
-    $('.js-form-select').each(function() {
+    $('.js-form-select').each(function () {
       $(this).select2({
         width: '100%',
         minimumResultsForSearch: Infinity
@@ -441,11 +450,11 @@
     var $navbarSearch = $('#navbarSearch');
     var $navbarSearchInput = $navbarSearch.find('.form-control');
 
-    $navbarSearch.on('shown.bs.collapse', function() {
+    $navbarSearch.on('shown.bs.collapse', function () {
       $navbarSearchInput.focus();
     });
 
-    $navbarSearch.on('hidden.bs.collapse', function() {
+    $navbarSearch.on('hidden.bs.collapse', function () {
       $navbarSearchInput.blur();
     });
 
@@ -454,7 +463,7 @@
      */
     var $modalAccount = $('#modalAccount');
 
-    $modalAccount.on('hide.bs.modal', function() {
+    $modalAccount.on('hide.bs.modal', function () {
       var $this = $(this);
 
       $this.find('.form-group').removeClass('has-error');
@@ -463,20 +472,19 @@
 
     var $accountForm = $('.js-account-form');
 
-    $accountForm.validator().on('submit', function(e) {
-      if (e.isDefaultPrevented()) {
-      } else {
+    $accountForm.validator().on('submit', function (e) {
+      if (e.isDefaultPrevented()) {} else {
         e.preventDefault();
 
         window.location = 'index.html';
       }
     });
 
-    $accountForm.find('.form-control').on('focus change', function() {
+    $accountForm.find('.form-control').on('focus change', function () {
       errMessage($(this).closest('form'));
     });
 
-    $accountForm.on('submit', function() {
+    $accountForm.on('submit', function () {
       errMessage($(this));
     });
 
@@ -486,7 +494,7 @@
     function errMessage($el) {
       var $errMessage = $el.find('.js-help-block');
       var $helpBlock = '<div class="alert alert-danger ' +
-                       'js-help-block collapse"></div>';
+        'js-help-block collapse"></div>';
 
       var $err = $el.find('.has-error').eq(0).find('.help-block').text();
 
@@ -501,7 +509,7 @@
       }
     }
 
-    $('.js-toggle-account').on('click', function(e) {
+    $('.js-toggle-account').on('click', function (e) {
       e.preventDefault();
 
       var $this = $(this).data('account');
@@ -540,7 +548,7 @@
 
     $ratingAmount.html($ratingCurrent);
 
-    $ratingClear.on('click', function(e) {
+    $ratingClear.on('click', function (e) {
       e.preventDefault();
       $ratingFilter.barrating('clear');
     });
@@ -549,15 +557,14 @@
       theme: 'fontawesome-stars-o',
       showSelectedRating: false,
       initialRating: $ratingCurrent,
-      onSelect: function(value, text) {
+      onSelect: function (value, text) {
         if (value === false) {
           $ratingFilter.barrating('clear');
         } else {
           $ratingAmount.html(value + ' of more');
         }
       },
-      onClear: function(value, text) {
-      }
+      onClear: function (value, text) {}
     });
 
     /**
@@ -567,7 +574,9 @@
       effect: 'fade',
       loop: true,
       speed: 1500,
-      simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
+      simulateTouch: false,
+      allowSwipeToNext: false,
+      allowSwipeToPrev: false,
       autoplay: {
         delay: 8000
       }
@@ -577,7 +586,9 @@
       effect: 'fade',
       loop: true,
       speed: 1500,
-      simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
+      simulateTouch: false,
+      allowSwipeToNext: false,
+      allowSwipeToPrev: false,
       autoplay: {
         delay: 8000
       }
@@ -618,15 +629,15 @@
       }
     });
 
-    $('.js-input-date').on('input blur', function() {
+    $('.js-input-date').on('input blur', function () {
       var $input = $(this);
       $input.next('label').text($input.val());
     });
 
-    $('.js-input-date').each(function() {
+    $('.js-input-date').each(function () {
       var $input = $(this);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $input.next('label').text($input.val());
       }, 100);
     });
@@ -634,14 +645,14 @@
     /**
      * HOME PAGE - SEARCHBAR
      */
-    $('.js-select-locality').each(function() {
+    $('.js-select-locality').each(function () {
       var $this = $(this);
       var $contain = $this.parent();
 
       $this.select2({
         width: '100%',
         allowClear: true,
-        placeholder: function() {
+        placeholder: function () {
           return $(this).data('placeholder');
         },
         dropdownParent: $contain
@@ -700,7 +711,7 @@
     /**
      * CATEGORY - SIDEBAR
      */
-    $('.js-show-more').on('click', function(e) {
+    $('.js-show-more').on('click', function (e) {
       e.preventDefault();
 
       var $this = $(this);
@@ -714,7 +725,7 @@
       }
     });
 
-    $('.js-hotel-show-more').on('click', function(e) {
+    $('.js-hotel-show-more').on('click', function (e) {
       var $this = $(this);
 
       $this.toggleClass('active');
@@ -731,9 +742,9 @@
     $sidebarFilter.modal({
       show: false,
       backdrop: false
-    }).on('show.bs.modal', function(e) {
+    }).on('show.bs.modal', function (e) {
       $('.page-content').addClass('modal-open');
-    }).on('hidden.bs.modal', function(e) {
+    }).on('hidden.bs.modal', function (e) {
       $('.page-content').removeClass('modal-open');
     });
 
@@ -753,7 +764,7 @@
         })
       });
 
-      userRating.noUiSlider.on('update', function(values, handle) {
+      userRating.noUiSlider.on('update', function (values, handle) {
         userRatingMin.innerHTML = values[handle];
       });
     }
@@ -761,13 +772,13 @@
     /**
      * CATEGORY - SORTBAR
      */
-    $('.js-sorting').on('click', 'a', function(e) {
+    $('.js-sorting').on('click', 'a', function (e) {
       e.preventDefault();
 
       var $this = $(this);
 
       $this.addClass('active').toggleClass('asceding')
-      .siblings().removeClass('active asceding asc desc');
+        .siblings().removeClass('active asceding asc desc');
 
       if ($this.hasClass('asceding')) {
         $this.addClass('asc').removeClass('desc');
@@ -779,7 +790,7 @@
     /**
      * CATEGORY - GRID LIST
      */
-    $('.js-toggle-grid').on('click', function(e) {
+    $('.js-toggle-grid').on('click', function (e) {
       e.preventDefault();
 
       var $this = $(this);
@@ -802,12 +813,14 @@
     /**
      * CATEGORY - ITEM BANNER
      */
-    $('.js-banner-slider').each(function() {
+    $('.js-banner-slider').each(function () {
       var $bannerSlider = new Swiper(this, {
         effect: 'fade',
         loop: true,
         speed: 1000,
-        simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
+        simulateTouch: false,
+        allowSwipeToNext: false,
+        allowSwipeToPrev: false,
         autoplay: {
           delay: 3000
         }
@@ -858,7 +871,7 @@
 
     $gridItem.hide();
 
-    $gridMasonry.imagesLoaded(function() {
+    $gridMasonry.imagesLoaded(function () {
       $gridItem.fadeIn();
 
       $gridMasonry.masonry({
@@ -882,7 +895,7 @@
         }
       });
 
-      $('.js-grid-filter').on('click', 'a', function(e) {
+      $('.js-grid-filter').on('click', 'a', function (e) {
         e.preventDefault();
 
         var $this = $(this);
@@ -931,7 +944,7 @@
       $hotelSlider.controller.control = $hotelSliderThumbs;
       $hotelSliderThumbs.controller.control = $hotelSlider;
 
-      $('a[aria-controls="hotel"]').on('shown.bs.tab', function(e) {
+      $('a[aria-controls="hotel"]').on('shown.bs.tab', function (e) {
         $hotelSlider.update();
         $hotelSliderThumbs.update();
       });
@@ -956,7 +969,7 @@
     // to display the images in the Gallery lightbox on click of the links
     var $galleryModal = $(".js-gallery-link");
 
-    $galleryModal.on('click', function(e) {
+    $galleryModal.on('click', function (e) {
       e.preventDefault();
 
       var $modalPanelBottom = $('.js-gallery-modal-panel');
@@ -971,18 +984,18 @@
         startSlideshow: true,
         slideshowInterval: 6000,
 
-        onopen: function() {
+        onopen: function () {
           $modalPanelBottom.css({
             opacity: 1,
             transition: '300ms linear 300ms'
           });
 
-          setTimeout(function() {
+          setTimeout(function () {
             $galleryThumbs.find('li').addClass('swiper-slide');
             $galleryThumbsInit.update();
           }, 100);
         },
-        onslide: function(index, slide) {
+        onslide: function (index, slide) {
           var text = this.list[index].getAttribute('data-description');
           var node = this.container.find('.description');
           var count = this.getIndex() + 1 + '/' + this.getNumber() + ': ';
@@ -995,7 +1008,7 @@
 
           $galleryThumbsInit.slideTo(index);
         },
-        onclose: function() {
+        onclose: function () {
           $modalPanelBottom.css({
             opacity: 0,
             transition: '300ms ease'
@@ -1004,7 +1017,7 @@
       });
     });
 
-    $('#galleryThumbs').on('shown.bs.collapse', function() {
+    $('#galleryThumbs').on('shown.bs.collapse', function () {
       $galleryThumbsInit.update();
       $galleryThumbs.css({
         opacity: 1,
@@ -1012,10 +1025,41 @@
       });
     });
 
-    $('#galleryThumbs').on('hidden.bs.collapse', function() {
+    $('#galleryThumbs').on('hidden.bs.collapse', function () {
       $galleryThumbs.css({
         opacity: 0
       });
     });
   });
+
+
+  // Set the date we're counting down to
+  var countDownDate = new Date("October 9 2018 20:17:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+      minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+
 })();
