@@ -22,7 +22,8 @@ from profiles import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', include('profiles.urls'))
+    url('', include('profiles.urls')),
+    url('', include('tours.urls'))
 
 
 ]
