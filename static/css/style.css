@@ -7185,7 +7185,7 @@ show form{
   width: 0;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden;
+  overflow: scroll;
   cursor: pointer;
   transition: opacity 0.2s ease-in;
 }
@@ -7243,9 +7243,8 @@ show form{
 .modal-container #modal-toggle.active ~ .modal-content, .modal-container #modal-toggle:checked ~ .modal-content {
   opacity: 1;
   background-color: #fff;
-  max-width: 400px;
-  width: 400px;
-  height: 280px;
+  width: 750px; 
+  height: 400px;
   padding: 10px 30px;
   position: fixed;
   left: calc(50% - 200px);
