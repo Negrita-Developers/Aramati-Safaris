@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 app_name='tours' 
 
 urlpatterns = [
+    
 url(r'^excursions/', views.excursions, name='excursions'),
 
 ]   
