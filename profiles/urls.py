@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^about/', views.aboutus, name='aboutus'),
     url(r'^specialoffers/', views.offers, name='offers'),
     url(r'^contactus/', views.contact, name='contact'),
+    url(r'^excursions/', views.excursions, name='excursions'),
 ] 
 
 # if settings.DEBUG:

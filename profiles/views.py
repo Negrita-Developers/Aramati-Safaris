@@ -12,3 +12,6 @@ def offers(request):
 
 def contact(request):
    return render(request, 'contacts.html') 
+
+def excursions(request):
+   return render(request, 'excursions/excursions.html') 
