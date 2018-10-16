@@ -4,4 +4,4 @@ from django.contrib import admin
 from .models import Profiles, Package
 
 admin.site.register(Profiles)
-admin.site.register(Package)
+admin.site.register(Package) 

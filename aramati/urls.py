@@ -19,12 +19,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from profiles import views
-from tours import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', include('profiles.urls')),
-    url('', include('tours.urls'))
+    url('', include('profiles.urls'))
 
 
 ]
