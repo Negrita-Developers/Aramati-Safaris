@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^specialoffers/', views.offers, name='offers'),
     url(r'^contactus/', views.contact, name='contact'),
     url(r'^excursions/', views.excursions, name='excursions'),
+    url(r'^singleexcursion/', views.singleexcur, name='singleexcur'),
 ] 
 
 # if settings.DEBUG:

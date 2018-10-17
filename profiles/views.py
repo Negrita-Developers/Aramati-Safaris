@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Package
+from .models import Package, Excursion
 
 # Create your views here.
 def home(request):
@@ -15,4 +15,10 @@ def contact(request):
    return render(request, 'contacts.html') 
 
 def excursions(request):
-   return render(request, 'excursions/excursions.html') 
+   excur = Excursion.objects.all()
+
+   return render(request, 'excursions/excursions.html', {"excur": excur })   
+
+def singleexcur(request):
+    excur = Excursion.objects.all()
+    return render(request, 'excursions/single.html', {"excur": excur })

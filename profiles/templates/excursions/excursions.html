@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block content %}
+{{ block.super}}
+
 <main class="page-main">
     <nav class="breadcrumb-nav d-flex align-items-center" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
                 <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
-                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:offers' %}">Excursions</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><span>Search results</span></li>
+=                <li class="breadcrumb-item active" aria-current="page"><span>Excursions</span></li>
             </ol>
         </div>
     </nav>
@@ -22,6 +23,7 @@
                             <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
                             <div class="modal-header bg-white">
                                 <h4 class="modal-title">See more packages:</h4>
+                               
                             </div>
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -57,6 +59,7 @@
                     </div>
                 </aside>
                 <div class="col-lg-9 category-content">
+                    
                     <!-- <nav class="sortbar navbar shadow-sm d-flex align-items-stretch">
                         <div class="sortbar__title d-flex align-items-stretch">
                             <button class="navbar-brand d-flex align-items-center pointer js-toggle-sidebar"
@@ -69,15 +72,16 @@
                                 class="nav-link js-toggle-grid" href="#" data-grid="list" data-cols="col-12 d-flex"><i
                                     class="icon icon-list-mb"></i></a></div>
                     </nav> -->
-                    <div class="category-content__items row pad-lg-20">
+                <div class="category-content__items row pad-lg-20">
                         <div class="col-12 col-sm-6 col-xl-4 d-flex">
                             <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-primary text-white">special price
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-15.jpg' %}"
+                                <a class="product__img-top d-block" href="{% url 'profiles:singleexcur' %}"><img class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
                                         alt="#" /></a>
                                 <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Al Moggar Garden Beach Club</a></h4>
-                                    <div class="product__rating mb-2">
+
+                                       {% for excurs in excur %}
+                                    <h4 class="product__title"><a href="{% url 'profiles:singleexcur' %}">{{excurs.title}}</a></h4>
+                                    <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
                                             <select class="js-rating-stat" data-current-rating="5">
                                                 <option value="1">1</option>
@@ -87,24 +91,21 @@
                                                 <option value="5" selected="selected">5</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Egypt</span><i class="bullet"></i><a href="#modalMap"
+                                        <li class="mr-3"><span>{{excurs.location}}</span><i class="bullet"></i><a href="#modalMap"
                                                 data-toggle="modal" data-title="Al Moggar Garden Beach Club">Show on
                                                 map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
                                     </ul>
-                                    <hr />
+                                    <hr>
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
+                                        <li class="mr-2"><span>Join now and pay</span></li>
+                                        <li><span class="cost">USD {{excurs.price6}}</span>
                                         </li>
                                     </ul>
-                                    <hr />
+                                    <hr>
                                     <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
+                                        <p>{{excurs.details}} </p><a class="product__link-more" href="{% url 'profiles:singleexcur' %}">Read
                                             more</a>
                                     </div>
                                 </div>
@@ -116,613 +117,21 @@
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
                                         now</a>
-                                </div>
+                                </div> 
+                                {% endfor %}
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-purple text-white">best seller
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-16.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Resort Spa Hotel</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Thailand</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Resort Spa Hotel">Show on map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>A quiet and cozy spa hotel is located just 80 meters from the coast. Here
-                                            you can relax, relax from everyday bustle, and also undergo various
-                                            strengthening programs and spa treatments. All ... </p><a class="product__link-more"
-                                            href="hotel.html">Read more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item"><a class="product__img-top d-block" href="hotel.html"><img
-                                        class="img-fluid" src="{% static 'img/hotels/item-17.jpg' %}" alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Macronissos Village Bungalows</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="4">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4" selected="selected">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Cyprus</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Macronissos Village Bungalows">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>9/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">75 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">75 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item"><a class="product__img-top d-block" href="hotel.html"><img
-                                        class="img-fluid" src="{% static 'img/hotels/item-17.jpg' %}" alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Macronissos Village Bungalows</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="4">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4" selected="selected">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Cyprus</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Macronissos Village Bungalows">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>9/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-purple text-white">best seller
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-16.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Resort Spa Hotel</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Thailand</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Resort Spa Hotel">Show on map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>A quiet and cozy spa hotel is located just 80 meters from the coast. Here
-                                            you can relax, relax from everyday bustle, and also undergo various
-                                            strengthening programs and spa treatments. All ... </p><a class="product__link-more"
-                                            href="hotel.html">Read more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-primary text-white">special price
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-15.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Al Moggar Garden Beach Club</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Egypt</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Al Moggar Garden Beach Club">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 banner-list">
-                            <div class="swiper-container h-100 js-banner-slider" style="background-image: url(img/banner-bg-air.jpg);"
-                                data-jarallax="{}" data-speed="0.5">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide d-flex"><a class="product-banner btn-link d-flex w-100 py-3 py-sm-0"
-                                            href="hotel.html">
-                                            <div class="row align-items-center text-center">
-                                                <div class="col-12 col-sm-6 col-xl-7 mb-3 mb-sm-0"><img class="img-fluid"
-                                                        src="{% static 'img/air-banner-big.png' %}" alt="#" />
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-xl-5 py-sm-5">
-                                                    <h4 class="h4 text-uppercase mb-3 text-white">
-                                                        FROM
-                                                        <strong>JANUARY 1-8 DISCOUNT</strong><br />ON THE FLIGHT -30%
-                                                    </h4>
-                                                    <div class="btn btn-secondary btn--round px-4">more info</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-primary text-white">special price
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-15.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Al Moggar Garden Beach Club</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Egypt</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Al Moggar Garden Beach Club">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-purple text-white">best seller
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-16.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Resort Spa Hotel</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Thailand</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Resort Spa Hotel">Show on map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>A quiet and cozy spa hotel is located just 80 meters from the coast. Here
-                                            you can relax, relax from everyday bustle, and also undergo various
-                                            strengthening programs and spa treatments. All ... </p><a class="product__link-more"
-                                            href="hotel.html">Read more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-danger text-white">hot deal
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-18.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Macronissos Village Bungalows</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="4">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4" selected="selected">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Cyprus</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Macronissos Village Bungalows">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>9/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 banner-grid">
-                            <div class="swiper-container h-100 js-banner-slider" style="background-image: url(img/banner-bg-air.jpg);"
-                                data-jarallax="{}" data-speed="0.5">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide d-flex"><a class="product-banner btn-link d-flex w-100 py-3 py-sm-0"
-                                            href="hotel.html">
-                                            <div class="row align-items-center text-center">
-                                                <div class="col-12 col-sm-4 pl-sm-5"><img class="img-fluid" src="{% static 'img/air-banner-small.png' %}"
-                                                        alt="#" />
-                                                </div>
-                                                <div class="col-12 col-sm-5 py-3 py-xl-2">
-                                                    <h4 class="h4 mb-0 text-white">1 mile = 10 cents<br />Accumulate
-                                                        miles and fly for free!</h4>
-                                                </div>
-                                                <div class="col-12 col-sm-3 d-flex justify-content-center justify-content-sm-start">
-                                                    <div class="btn btn-secondary btn--round px-4">more info</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-danger text-white">hot deal
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-17.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Macronissos Village Bungalows</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="4">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4" selected="selected">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Cyprus</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Macronissos Village Bungalows">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>9/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="sale mr-2">95 €</span><span class="cost">75 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-purple text-white">best seller
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-16.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Resort Spa Hotel</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Thailand</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Resort Spa Hotel">Show on map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>A quiet and cozy spa hotel is located just 80 meters from the coast. Here
-                                            you can relax, relax from everyday bustle, and also undergo various
-                                            strengthening programs and spa treatments. All ... </p><a class="product__link-more"
-                                            href="hotel.html">Read more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">110 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <div class="product__special bg-primary text-white">special price
-                                </div><a class="product__img-top d-block" href="hotel.html"><img class="img-fluid" src="{% static 'img/hotels/item-18.jpg' %}"
-                                        alt="#" /></a>
-                                <div class="product__body">
-                                    <h4 class="product__title"><a href="hotel.html">Al Moggar Garden Beach Club</a></h4>
-                                    <div class="product__rating mb-2">
-                                        <div class="rating">
-                                            <select class="js-rating-stat" data-current-rating="5">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5" selected="selected">5</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Egypt</span><i class="bullet"></i><a href="#modalMap"
-                                                data-toggle="modal" data-title="Al Moggar Garden Beach Club">Show on
-                                                map</a></li>
-                                        <li class="d-inline-flex align-items-center"><i class="icon icon-thumbs-up mr-1"></i><span>8/10</span></li>
-                                    </ul>
-                                    <hr />
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul>
-                                    <hr />
-                                    <div class="product__desc">
-                                        <p>The air-conditioned rooms have a balcony with views of the sea or the
-                                            garden. Each spacious room has a TV with satellite channels. The private
-                                            bathrooms at the... </p><a class="product__link-more" href="hotel.html">Read
-                                            more</a>
-                                    </div>
-                                </div>
-                                <hr class="d-none d-sm-block" />
-                                <div class="product__footer">
-                                    <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
-                                        </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
-                                        now</a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
-                    <nav class="pagination-nav" aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item align-self-end d-sm-none"><a class="dotted" href="#">......</a>
-                            </li>
-                            <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a>
-                            </li>
-                            <li class="page-item d-none d-sm-block"><a class="page-link" href="#">6</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">7</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">8</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                        </ul>
-                    </nav>
+                    
                 </div>
             </div>
+            
+            
         </div>
+       
         <button class="btn btn-primary btn-nav btn-nav--up js-scroll-up" type="button"><i class="fa fa-angle-up"></i></button>
+   
     </div>
 </main>
 <footer class="page-footer">
@@ -790,4 +199,5 @@
         </div>
     </div>
 </footer>
+
 {% endblock %}
