@@ -24,10 +24,13 @@ def singleexcur(request):
     return render(request, 'excursions/single.html', {"excur": excur })
 
 def booking(request):
-    return render(request, 'booking-traveler.html')
+    excur = Excursion.objects.all()
+    return render(request, 'booking-traveler.html', {"excur": excur })
 
 def confirming(request):
-    return render(request, 'booking-confirming.html')
+    excur = Excursion.objects.all()
+    return render(request, 'booking-confirm.html', {"excur": excur })
 
 def payment(request):
-    return render(request, 'booking-payment.html')
+    excur = Excursion.objects.all()
+    return render(request, 'booking-payment.html', {"excur": excur })

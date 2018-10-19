@@ -12,9 +12,9 @@ urlpatterns = [
     url(r'^contactus/', views.contact, name='contact'),
     url(r'^excursions/', views.excursions, name='excursions'),
     url(r'^singleexcursion/', views.singleexcur, name='singleexcur'),
-     url(r'^booking/', views.booking, name='booking'),
-      url(r'^confirmation/', views.confirmingr, name='confirming'),
-       url(r'^payment/', views.payment, name='payment'),
+    url(r'^booking/', views.booking, name='booking'),
+    url(r'^confirmation/', views.confirming, name='confirming'),
+    url(r'^payment/', views.payment, name='payment'),
 
 ] 
 
