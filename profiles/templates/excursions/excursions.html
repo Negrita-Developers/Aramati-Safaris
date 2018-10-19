@@ -10,7 +10,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
                 <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
-              <li class="breadcrumb-item active" aria-current="page"><span>Excursions</span></li>
+                <li class="breadcrumb-item active" aria-current="page"><span>Excursions</span></li>
             </ol>
         </div>
     </nav>
@@ -23,7 +23,7 @@
                             <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
                             <div class="modal-header bg-white">
                                 <h4 class="modal-title">See more packages:</h4>
-                               
+
                             </div>
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -59,7 +59,7 @@
                     </div>
                 </aside>
                 <div class="col-lg-9 category-content">
-                    
+
                     <!-- <nav class="sortbar navbar shadow-sm d-flex align-items-stretch">
                         <div class="sortbar__title d-flex align-items-stretch">
                             <button class="navbar-brand d-flex align-items-center pointer js-toggle-sidebar"
@@ -71,15 +71,17 @@
                                 data-grid="grid" data-cols="col-12 col-sm-6 col-xl-4 d-flex"><i class="icon icon-grid"></i></a><a
                                 class="nav-link js-toggle-grid" href="#" data-grid="list" data-cols="col-12 d-flex"><i
                                     class="icon icon-list-mb"></i></a></div>
-                    </nav> -->
-                <div class="category-content__items row pad-lg-20">
-                        <div class="col-12 col-sm-6 col-xl-4 d-flex">
-                            <div class="product bg-white js-grid-item">
-                                <a class="product__img-top d-block" href="{% url 'profiles:singleexcur' %}"><img class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
+                    </nav> --> 
+                {% for excurs in excur %}
+                    <div class="category-content__items pad-lg-20">
+                        <div class="col-3 col-sm-12 ">
+                            <div class="product bg-white js-grid-item product--list">
+                                <a class="product__img-top d-block" href="{% url 'profiles:singleexcur' %}"><img class="img-fluid"
+                                        src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
                                         alt="#" /></a>
                                 <div class="product__body">
 
-                                       {% for excurs in excur %}
+                                   
                                     <h4 class="product__title"><a href="{% url 'profiles:singleexcur' %}">{{excurs.title}}</a></h4>
                                     <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
@@ -113,25 +115,25 @@
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
                                         <li class="mr-2"><span>Price per night from</span></li>
-                                        <li><span class="cost">50 €</span>
+                                        <li><span class="cost">{{excurs.price4}}</span>
                                         </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="booking-traveler.html">book
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:singleexcur' %}">book
                                         now</a>
-                                </div> 
-                                {% endfor %}
+                                </div>
+                                
                             </div>
-                            
+
                         </div>
                     </div>
-                    
+{% endfor %}
                 </div>
             </div>
-            
-            
+
+
         </div>
-       
+
         <button class="btn btn-primary btn-nav btn-nav--up js-scroll-up" type="button"><i class="fa fa-angle-up"></i></button>
-   
+
     </div>
 </main>
 <footer class="page-footer">

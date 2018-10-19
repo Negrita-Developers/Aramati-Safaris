@@ -46,6 +46,7 @@ class Package(models.Model):
 class Excursion(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
+   
     details= models.TextField()
     depature=models.DateField(auto_now_add=True)
     price1=models.IntegerField()
@@ -62,9 +63,11 @@ class Excursion(models.Model):
     )
     itinerary= models.TextField()
     bookbefore=models.DateField(auto_now_add=True)
+    briefdetails=models.SlugField(default="my details") 
 
     def __str__(self):
         return self.title 
+
 
 
 

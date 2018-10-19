@@ -31,9 +31,7 @@
 */
 @font-face {
   font-family: "Icon";
-  src: url("./fonts/Icon.eot");
-  src: url("./fonts/Icon.eot?#iefix") format("eot"), url("./fonts/Icon.woff2") format("woff2"), url("./fonts/Icon.woff") format("woff"), url("./fonts/Icon.ttf") format("truetype"), url("./fonts/Icon.svg#Icon") format("svg");
-
+  src: url('https://use.fontawesome.com/releases/v5.4.1/css/all.css'); 
 }
 
 .icon:before {
