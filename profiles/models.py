@@ -59,7 +59,7 @@ class Excursion(models.Model):
         return self.title 
 
 
-class ShortSafaris(models.Model):
+class TwoSSF(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     details= models.TextField()
@@ -71,12 +71,20 @@ class ShortSafaris(models.Model):
     price5=models.IntegerField()
     price6=models.IntegerField()
     price7=models.IntegerField()
+    image1=models.IntegerField()
+    image2=models.IntegerField()
+    image3=models.IntegerField()
+    image4=models.IntegerField()
+    image5=models.IntegerField()
+    image6=models.IntegerField()
+    image7=models.IntegerField()
     accomodation=(
         ('budget'),
         ( 'standard')
 
     )
-    itinerary= models.TextField()
+    itinerary1= models.TextField()
+    itinerary2= models.TextField()
     bookbefore=models.DateField(auto_now_add=True)
     briefdetails=models.TextField(default="my details") 
 

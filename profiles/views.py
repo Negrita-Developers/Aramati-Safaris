@@ -26,6 +26,11 @@ def singleexcur(request, excursions_id):
       
     return render(request, "excursions/single.html", {"excur": excur })
 
+def shortsafaris(request):
+
+    ssf = ShortSafaris.objects.all()
+    return render(request, 'shortsafaris/excursions.html', {"ssf": ssf })  
+
 def booking(request):
     excur = Excursion.objects.all()
     return render(request, 'bookings/booking-traveler.html', {"excur": excur })
