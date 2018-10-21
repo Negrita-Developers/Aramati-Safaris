@@ -86,11 +86,11 @@
             </nav>
 
             <div class="tab-content">
- {% for excurs in excur %}
+              {% for excurs in excur %}
               <div class="tab-pane active show" id="hotel" role="tabpanel">
 
                 <section>
-                 
+
                   <h3 class="fw-md mb-1">{{excurs.title}}</h3>
                   <ul class="hotel-title mb-3">
 
@@ -160,7 +160,8 @@
                     <div class="col-12 col-md-12 d-flex">
                       <div class="hotel__intro hotel-card w-100">
                         <section class="pb-4">
-                          <h5 class="d-flex align-items-center text-primary mb-3"><i class="icon icon-badge mr-2"></i>Package Information</h5>
+                          <h5 class="d-flex align-items-center text-primary mb-3"><i class="icon icon-badge mr-2"></i>Package
+                            Information</h5>
                           <p>{{excurs.itinerary}}</p>
 
                         </section>
@@ -336,9 +337,9 @@
                     </ul>
                   </div>
                 </section>
-                
+
               </div>
-{% endfor %}
+              {% endfor %}
             </div>
 
           </div>

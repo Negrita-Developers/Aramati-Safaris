@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Profiles(models.Model):
@@ -9,16 +10,6 @@ class Profiles(models.Model):
     def __unicode__(self):
         return self.name
 
-class SpecialOffers(models.Model):
-    title=models.CharField(max_length=120)
-    depature=models.DateField(auto_now_add=True)
-    # images=
-    # bookbefore=
-    # duration=
-    # accomodation=
-    # itinerary=
-    # included=
-    # notincluded=
 
 class Package(models.Model):
     title=models.CharField(max_length=120)
@@ -46,7 +37,6 @@ class Package(models.Model):
 class Excursion(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
-   
     details= models.TextField()
     depature=models.DateField(auto_now_add=True)
     price1=models.IntegerField()
@@ -63,12 +53,32 @@ class Excursion(models.Model):
     )
     itinerary= models.TextField()
     bookbefore=models.DateField(auto_now_add=True)
-    briefdetails=models.SlugField(default="my details") 
+    briefdetails=models.TextField(default="my details") 
 
     def __str__(self):
         return self.title 
 
 
+class ShortSafaris(models.Model):
+    title=models.CharField(max_length=120)
+    location=models.CharField(max_length=20)
+    details= models.TextField()
+    depature=models.DateField(auto_now_add=True)
+    price1=models.IntegerField()
+    price2=models.IntegerField()
+    price3=models.IntegerField()
+    price4=models.IntegerField()
+    price5=models.IntegerField()
+    price6=models.IntegerField()
+    price7=models.IntegerField()
+    accomodation=(
+        ('budget'),
+        ( 'standard')
 
+    )
+    itinerary= models.TextField()
+    bookbefore=models.DateField(auto_now_add=True)
+    briefdetails=models.TextField(default="my details") 
 
-
+    def __str__(self):
+        return self.title 

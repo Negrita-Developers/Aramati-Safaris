@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Package, Excursion
 
 # Create your views here.
@@ -14,14 +14,17 @@ def offers(request):
 def contact(request):
    return render(request, 'contacts.html') 
 
-def excursions(request):
+def excursions(request ):
    excur = Excursion.objects.all()
 
    return render(request, 'excursions/excursions.html', {"excur": excur })   
 
-def singleexcur(request):
-    excur = Excursion.objects.all()
-    return render(request, 'excursions/single.html', {"excur": excur })
+def singleexcur(request, excursions_id):
+    
+    excur = Excursion.objects.get(id=excursions_id)
+   
+      
+    return render(request, "excursions/single.html", {"excur": excur })
 
 def booking(request):
     excur = Excursion.objects.all()
