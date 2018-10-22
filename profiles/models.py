@@ -11,7 +11,7 @@ class Profiles(models.Model):
         return self.name
 
 
-class Package(models.Model):
+class JoinGroup(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     details= models.TextField()
@@ -34,59 +34,4 @@ class Package(models.Model):
     def __str__(self):
         return self.title 
 
-class Excursion(models.Model):
-    title=models.CharField(max_length=120)
-    location=models.CharField(max_length=20)
-    details= models.TextField()
-    depature=models.DateField(auto_now_add=True)
-    price1=models.IntegerField()
-    price2=models.IntegerField()
-    price3=models.IntegerField()
-    price4=models.IntegerField()
-    price5=models.IntegerField()
-    price6=models.IntegerField()
-    price7=models.IntegerField()
-    accomodation=(
-        ('budget'),
-        ( 'standard')
 
-    )
-    itinerary= models.TextField()
-    bookbefore=models.DateField(auto_now_add=True)
-    briefdetails=models.TextField(default="my details") 
-
-    def __str__(self):
-        return self.title 
-
-
-class TwoSSF(models.Model):
-    title=models.CharField(max_length=120)
-    location=models.CharField(max_length=20)
-    details= models.TextField()
-    depature=models.DateField(auto_now_add=True)
-    price1=models.IntegerField()
-    price2=models.IntegerField()
-    price3=models.IntegerField()
-    price4=models.IntegerField()
-    price5=models.IntegerField()
-    price6=models.IntegerField()
-    price7=models.IntegerField()
-    image1=models.IntegerField()
-    image2=models.IntegerField()
-    image3=models.IntegerField()
-    image4=models.IntegerField()
-    image5=models.IntegerField()
-    image6=models.IntegerField()
-    image7=models.IntegerField()
-    accomodation=(
-        ('budget'),
-        ( 'standard')
-
-    )
-    itinerary1= models.TextField()
-    itinerary2= models.TextField()
-    bookbefore=models.DateField(auto_now_add=True)
-    briefdetails=models.TextField(default="my details") 
-
-    def __str__(self):
-        return self.title 

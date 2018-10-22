@@ -8,15 +8,14 @@ app_name='profiles'
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.aboutus, name='aboutus'),
-    url(r'^specialoffers/$', views.offers, name='offers'),
     url(r'^contactus/$', views.contact, name='contact'),
-    url(r'^excursions/$', views.excursions, name='excursions'),
-    url(r'^singleexcursion/(d+)/', views.singleexcur, name='singleexcur'),
-    url(r'^booking/$', views.booking, name='booking'),
-    url(r'^confirmation/$', views.confirming, name='confirming'),
-    url(r'^payment/$', views.payment, name='payment'),
+ 
 ] 
 
 # if settings.DEBUG:
 #     urlpatterns += static(settings.MEDIA_URL,
-#                           document_root=settings.MEDIA_ROOT)
+#                           document_root=settings.MEDIA_ROOT) 
+# 
+#   # url(r'^booking/$', views.booking, name='booking'),
+    # url(r'^confirmation/$', views.confirming, name='confirming'),
+    # url(r'^payment/$', views.payment, name='payment'),
