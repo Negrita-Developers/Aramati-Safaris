@@ -15,7 +15,6 @@ class JoinGroup(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     details= models.TextField()
-    depature=models.DateField(auto_now_add=True)
     price1=models.IntegerField()
     price2=models.IntegerField()
     price3=models.IntegerField()
@@ -23,6 +22,13 @@ class JoinGroup(models.Model):
     price5=models.IntegerField()
     price6=models.IntegerField()
     price7=models.IntegerField()
+    image1=models.IntegerField()
+    image2=models.IntegerField()
+    image3=models.IntegerField()
+    image4=models.IntegerField()
+    image5=models.IntegerField()
+    image6=models.IntegerField()
+    image7=models.IntegerField()
     accomodation=(
         ('budget'),
         ( 'standard')

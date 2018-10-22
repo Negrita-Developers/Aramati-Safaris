@@ -2417,9 +2417,7 @@ html.rtl .pagination .page-item .fa {
 /**
  * Intro home
  */
-body.load .intro {
-  min-height: calc(100vh);
-}
+
 
 .intro__bg {
   position: absolute;
@@ -2464,7 +2462,7 @@ body.load .intro__bg .scene {
 }
 
 .intro__bg .swiper-slide .img-cover {
-  height: calc(100% + 100px);
+  height: calc(100% + 60px); 
 }
 
 .intro__bg .swiper-slide.swiper-slide-prev .img-cover, .intro__bg .swiper-slide.swiper-slide-active .img-cover {
