@@ -15,7 +15,8 @@ class JoinGroup(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     details= models.TextField()
-    price1=models.IntegerField()
+    travelers_that_have_booked=models.IntegerField()
+    price1=models.FloatField()
     price2=models.IntegerField()
     price3=models.IntegerField()
     price4=models.IntegerField()
@@ -35,7 +36,8 @@ class JoinGroup(models.Model):
 
     )
     itinerary= models.TextField()
-    bookbefore=models.DateField(auto_now_add=True)
+    created_on=models.DateField(auto_now_add=True)
+    bookbefore=models.DateField()
 
     def __str__(self):
         return self.title 
