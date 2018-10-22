@@ -11,6 +11,10 @@ def aboutus(request):
 def contact(request):
    return render(request, 'contacts.html') 
 
+def joingroup(request):
 
+    excur = JoinGroup.objects.all()
+
+    return render(request, 'joingroup/joining.html', {"excur": excur})
 
 

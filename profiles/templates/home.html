@@ -21,17 +21,17 @@
         </div>
         <div class="intro__content d-flex flex-column justify-content-end js-intro-content">
 
-            <div class="modal-container">
+            <!-- <div class="modal-container">
                 <label class="button" style="width: 250px; margin-left: -250px;
                  background-color: black;" for="modal-toggle">Create
                     Safari Group</label>
                 <label class="modal-backdrop" for="modal-toggle"></label>
-            </div>
+            </div> -->
             <div class="modal-container">
                 <input id="modal-toggle" type="checkbox">
                 <label class="modal-btn" style="width: 290px; margin-left: 250px;
                 margin-top: 400px; background-color: black; opacity: 1;"
-                    for="modal-toggle"><i class="fas fa-plus-square" style="margin-right:12px;"></i><a href=" " style="color:white; font-weight: 900;">Join a Safari Group</a></label>
+                    for="modal-toggle"><i class="fas fa-plus-square" style="margin-right:12px;"></i><a href="{% url 'profiles:joingroup' %}" style="color:white; font-weight: 900;">Join a Safari Group</a></label>
                 
             </div>
 

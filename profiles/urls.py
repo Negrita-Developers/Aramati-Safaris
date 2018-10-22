@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.aboutus, name='aboutus'),
     url(r'^contactus/$', views.contact, name='contact'),
+    url(r'^joinsafarigroups/$', views.joingroup, name='joingroup'),
  
 ] 
 
