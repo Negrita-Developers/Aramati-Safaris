@@ -25,3 +25,16 @@ def single(request, id):
 
 def bookings(request):
    return render(request, 'bookings/booking-traveler.html')  
+
+def excursions (request):
+    return render(request, 'excursions/excursions.html')
+
+def longsafaris(request):
+    return render(request, 'longsafaris/longsafaris.html')
+
+def shortsafaris (request):
+    return render(request, 'shortsafaris/shortsafaris.html')
+
+
+
+
