@@ -260,65 +260,26 @@
 
                             </ul>
                         </div>
-                        <ul class="main-nav__list nav d-flex" id="navMenu" style="margin-top: 10px; width:1050px;">
+                        <ul class="main-nav__list nav d-flex" id="navMenu" style="margin-top: 10px; width:1090px;">
                             <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:home' %}"><span>Home</span></a>
                             </li>
                             <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:aboutus' %}"><span>about
                                         us</span></a>
                             </li>
-                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href=" "><span>Special
-                                        Offers</span></a>
-                            </li>
+
                             <li class="nav-item flashit"><a class="nav-link fw-bold text-uppercase " style="color: red;"
                                     href="{% url 'profiles:joingroup' %}"><span>Join a safari today!!!</span></a>
                             </li>
                             <li class="nav-item "><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:excursions' %}"><span>Excursions</span></a>
-                                <!-- <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href=""><span> Nairobi
-                                                Excursions</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span> Lake Nakuru
-                                                Day
-                                                Trip</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html"><span>Lake Naivasha Day
-                                                Trip</span></a>
-                                    </li>
-
-                                </ul> -->
-
                             </li>
 
-                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="#"><span>Short
+                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:shortsafaris' %}"><span>Short
                                         Safaris(2-5 days)</span><i class="caret fa fa-angle-down ml-2"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="about.html"><span>2 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span>3 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html"><span>4 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span>5 days Safari</span></a>
-                                    </li>
-
-                                </ul>
 
                             </li>
 
-                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="#"><span>Long
-                                        Safaris(6-13 days</span><i class="caret fa fa-angle-down ml-2"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="about.html"><span>6 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span>7 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html"><span>8 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span>10 days Safari</span></a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="contacts.html"><span>13 days Safari</span></a>
-                                    </li>
-                                </ul>
+                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:longsafaris' %}"><span>Long
+                                        Safaris(6-13 days)</span><i class="caret fa fa-angle-down ml-2"></i></a>
                             </li>
                             <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:contact' %}"><span>contacts</span></a>
                             </li>

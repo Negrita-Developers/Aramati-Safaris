@@ -2159,7 +2159,7 @@ html.rtl .main-nav__search .navbar-search .form-control {
     padding: 0;
   }
   .main-nav__list .nav-item {
-    width: 100%;
+    width: 120%;
     border-bottom: 1px solid #dcdcdc;
   }
   .main-nav__list .dropdown-menu {
@@ -2743,7 +2743,7 @@ body.load .intro__content {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0;
-  width: 33%;
+  width: 40%;
 }
 
 .search-hotels__tabs .nav-link {
