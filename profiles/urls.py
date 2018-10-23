@@ -11,7 +11,12 @@ urlpatterns = [
     url(r'^contactus/$', views.contact, name='contact'),
     url(r'^joinsafarigroups/$', views.joingroup, name='joingroup'),
     url(r'^singlegroup/(?P<id>\d+)/', views.single, name='single'),
- 
+    url(r'^excursions/$', views.excursions, name='excursions'),
+    url(r'^longsafaris/$', views.longsafaris, name='longsafaris'),
+    url(r'^shortsafaris/$', views.shortsafaris, name='shortsafaris'),
+    url(r'^lakenaivashapackage/$', views.lakenaivasha, name='lakenaivasha'),
+    url(r'^lakenakurupackage/$', views.lakenakuru, name='lakenakuru'),
+    url(r'^nairobiexcursionpackage/$', views.nairobiexcursion, name='nairobiexcursion'),
 ] 
 
 if settings.DEBUG:

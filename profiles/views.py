@@ -29,6 +29,15 @@ def bookings(request):
 def excursions (request):
     return render(request, 'excursions/excursions.html')
 
+def lakenaivasha (request):
+    return render(request, 'excursions/lakenaivasha.html')
+    
+def lakenakuru (request):
+    return render(request, 'excursions/lakenakuru.html') 
+
+def nairobiexcursion (request):
+    return render(request, 'excursions/nairobiexcursions.html')
+
 def longsafaris(request):
     return render(request, 'longsafaris/longsafaris.html')
 
