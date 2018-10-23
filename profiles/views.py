@@ -17,4 +17,11 @@ def joingroup(request):
 
     return render(request, 'joingroup/joining.html', {"excur": excur})
 
+def single(request, id):
 
+    singlegroup = get_object_or_404(JoinGroup, id=id)
+
+    return render(request, 'joingroup/single.html', {"singlegroup": singlegroup}) 
+
+def bookings(request):
+   return render(request, 'bookings/booking-traveler.html')  

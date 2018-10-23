@@ -3,6 +3,7 @@
 
 {% block content %}
 {{ block.super}}
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
 <main class="page-main">
 
@@ -11,7 +12,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
         <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
-        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:excursions' %}">Excursions</a></li>
+        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:joingroup' %}">Join a Safari Group</a></li>
       </ol>
     </div>
   </nav>
@@ -24,7 +25,7 @@
               <h4 class="m-0 mb-lg-4">Create a safari group.</h4>
               <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="#" method="POST" data-toggle="validator">
 
-                <button class="btn btn-secondary btn--round mx-auto mt-2 w-100" type="submit"><a href="{% url 'profiles:booking' %}">BOOK
+                <button class="btn btn-secondary btn--round mx-auto mt-2 w-100" type="submit"><a href=" ">BOOK
                     NOW!</a>
                 </button>
               </form>
@@ -86,37 +87,36 @@
             </nav>
 
             <div class="tab-content">
-              {% for excurs in excur %}
+
               <div class="tab-pane active show" id="hotel" role="tabpanel">
 
                 <section>
 
-                  <h3 class="fw-md mb-1">{{excurs.title}}</h3>
+                  <h3 class="fw-md mb-1">{{singlegroup.title}}</h3>
                   <ul class="hotel-title mb-3">
 
                     <li class="d-flex">
                       <div class="media-object"><i class="icon icon-label mr-2 text-primary"></i></div>
-                      <div class="local"><span>{{excurs.location}}</span><i class="bullet mx-2"></i><a href="#modalMap"
+                      <div class="local"><span>{{singlegroup.location}}</span><i class="bullet mx-2"></i><a href="#modalMap"
                           data-toggle="modal" data-title="Ravena Best Hotel">Show on map</a></div>
                     </li>
                   </ul>
                   <div class="hotel-gallery">
                     <div class="hotel-gallery__carousel swiper-container js-hotel-carousel">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="http://mountafrica.com/wp-content/uploads/2018/02/hells-gate-three.jpg"
-                            alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image1}} " alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="http://www.travelteam.vr.it/wp-content/uploads/2014/07/alex-hanbury-brown-hippopotamus-in-lake-naivasha-kenya.jpeg"
-                            alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image2}} " alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="https://wild-wings-safaris.com/s3_local/all/1004/flaming_flamingos_at_lake_nakuru.jpg"
-                            alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image3}} " alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="http://kenyatourbudgetsafari.com/images/2-Days-Hells-Gate-and-Lake-Elementaita-Safari.jpg"
-                            alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image4}}  " alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="https://media.audleytravel.com/-/media/images/home/africa/kenya/letterbox-images/pnaivashahippoinlakenaivasha0000384481.jpg?w=1800&q=80"
-                            alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image5}} " alt="#" />
+                        </div>
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image6}} " alt="#" />
+                        </div>
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image7}} " alt="#" />
                         </div>
 
                       </div>
@@ -131,25 +131,27 @@
                     </div>
                     <div class="hotel-gallery__thumbs swiper-container js-hotel-carousel-thumbs">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="http://mountafrica.com/wp-content/uploads/2018/02/hells-gate-three.jpg"
-                            data-description="Joshua Tree Homesteader Cabin"><img class="img-cover" src="http://mountafrica.com/wp-content/uploads/2018/02/hells-gate-three.jpg"
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image1}}"
+                            data-description="Joshua Tree Homesteader Cabin"><img class="img-cover" src="{{singlegroup.image1}}"
                               alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="http://www.travelteam.vr.it/wp-content/uploads/2014/07/alex-hanbury-brown-hippopotamus-in-lake-naivasha-kenya.jpeg"
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image2}}"
                             data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="http://www.travelteam.vr.it/wp-content/uploads/2014/07/alex-hanbury-brown-hippopotamus-in-lake-naivasha-kenya.jpeg"
-                              alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="https://wild-wings-safaris.com/s3_local/all/1004/flaming_flamingos_at_lake_nakuru.jpg"
+                              src="{{singlegroup.image2}}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image3}}"
                             data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="https://wild-wings-safaris.com/s3_local/all/1004/flaming_flamingos_at_lake_nakuru.jpg"
-                              alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="http://kenyatourbudgetsafari.com/images/2-Days-Hells-Gate-and-Lake-Elementaita-Safari.jpg"
+                              src="{{singlegroup.image3}}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image4}}"
                             data-description="Underfloor heating in the bathroom floor to keep your toes warm!"><img
-                              class="img-cover" src="http://kenyatourbudgetsafari.com/images/2-Days-Hells-Gate-and-Lake-Elementaita-Safari.jpg"
-                              alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="https://media.audleytravel.com/-/media/images/home/africa/kenya/letterbox-images/pnaivashahippoinlakenaivasha0000384481.jpg?w=1800&q=80"
+                              class="img-cover" src="{{singlegroup.image4}}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image5}}"
                             data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="https://media.audleytravel.com/-/media/images/home/africa/kenya/letterbox-images/pnaivashahippoinlakenaivasha0000384481.jpg?w=1800&q=80"
-                              alt="#" /></a></div>
+                              src="{{singlegroup.image5}}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image6}}"
+                            data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
+                              src="{{singlegroup.image6}}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image7}}"
+                            data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
+                              src="{{singlegroup.image7}}" alt="#" /></a></div>
                       </div>
                     </div>
 
@@ -162,7 +164,7 @@
                         <section class="pb-4">
                           <h5 class="d-flex align-items-center text-primary mb-3"><i class="icon icon-badge mr-2"></i>Package
                             Information</h5>
-                          <p>{{excurs.itinerary}}</p>
+                          <p>{{singlegroup.itinerary}}</p>
 
                         </section>
                         <section>
@@ -187,102 +189,6 @@
 
                           </ul>
                         </section>
-                      </div>
-                    </div>
-                    <div class="hotel-stats hotel-card w-100">
-                      <div class="row">
-                        <div class="col-12 col-sm-auto col-md-12">
-                          <h3 class="mb-3">Guests like:</h3>
-                          <ul class="hotel-stats__view mb-4">
-                            <li class="item d-flex align-items-center">
-                              <div class="media-object"><i class="icon icon-check-button mr-2"></i></div>
-                              <div class="desc">
-                                <div class="fw-bold mb-1">Convenient location</div>
-                                <div class="amount">123 reviews</div>
-                              </div>
-                            </li>
-                            <li class="item d-flex align-items-center">
-                              <div class="media-object"><i class="icon icon-check-button mr-2"></i></div>
-                              <div class="desc">
-                                <div class="fw-bold mb-1">View from window</div>
-                                <div class="amount">95 reviews</div>
-                              </div>
-                            </li>
-                            <li class="item d-flex align-items-center">
-                              <div class="media-object"><i class="icon icon-check-button mr-2"></i></div>
-                              <div class="desc">
-                                <div class="fw-bold mb-1">Cleanliness of the room</div>
-                                <div class="amount">1325 reviews</div>
-                              </div>
-                            </li>
-                            <li class="item d-flex align-items-center">
-                              <div class="media-object"><i class="icon icon-check-button mr-2"></i></div>
-                              <div class="desc">
-                                <div class="fw-bold mb-1">Buffet breakfast</div>
-                                <div class="amount">1890 reviews</div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-12 col-sm col-md-12">
-                          <div class="hotel-stats__like d-flex flex-wrap justify-content-between align-items-center mb-3">
-                            <div class="title mr-3 fw-bold">Guest ratings</div>
-                            <div class="likes"><i class="icon icon-thumbs-up mr-2"></i><span class="amount">8,2 / 10</span></div>
-                          </div>
-                          <ul class="hotel-stats__progress js-point-progress">
-                            <li class="item mb-1">
-                              <div class="title">Comfort</div>
-                              <div class="d-flex align-items-center">
-                                <div class="progress progress--sm">
-                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"
-                                    aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-                                  </div>
-                                </div><span>8.2</span>
-                              </div>
-                            </li>
-                            <li class="item mb-1">
-                              <div class="title">Facilities</div>
-                              <div class="d-flex align-items-center">
-                                <div class="progress progress--sm">
-                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"
-                                    aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
-                                  </div>
-                                </div><span>9.3</span>
-                              </div>
-                            </li>
-                            <li class="item mb-1">
-                              <div class="title">Staff</div>
-                              <div class="d-flex align-items-center">
-                                <div class="progress progress--sm">
-                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"
-                                    aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
-                                  </div>
-                                </div><span>7.6</span>
-                              </div>
-                            </li>
-                            <li class="item mb-1">
-                              <div class="title">Food</div>
-                              <div class="d-flex align-items-center">
-                                <div class="progress progress--sm">
-                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"
-                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                  </div>
-                                </div><span>8.5</span>
-                              </div>
-                            </li>
-                            <li class="item mb-1">
-                              <div class="title">Price-quality ratio</div>
-                              <div class="d-flex align-items-center">
-                                <div class="progress progress--sm">
-                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"
-                                    aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-                                  </div>
-                                </div><span>8.2</span>
-                              </div>
-                            </li>
-                          </ul><a class="btn btn-secondary btn--round btn-block ml-sm-0" href="booking-traveler.html"
-                            role="button">book now</a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -339,7 +245,6 @@
                 </section>
 
               </div>
-              {% endfor %}
             </div>
 
           </div>
@@ -416,5 +321,5 @@
     </div>
   </div>
 </footer>
-
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
