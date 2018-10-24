@@ -1617,11 +1617,11 @@ textarea.form-control {
   color: inherit;
   text-shadow: none;
 }
-
+/* 
 body.modal-open,
 .modal-backdrop {
   -webkit-overflow-scrolling: touch;
-}
+} */
 
 /**
 * Blocks
