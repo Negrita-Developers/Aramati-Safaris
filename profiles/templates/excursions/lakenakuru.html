@@ -25,16 +25,58 @@
           <div class="sidebar__content js-sticky-top">
             <div class="sidebar__finder card bg-primary text-white">
               <h4 class="m-0 mb-lg-4">Create a safari group.</h4>
-              <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="#" method="POST" data-toggle="validator">
-
-                <button class="btn btn-secondary btn--round mx-auto mt-2 w-100" type="submit"><a href=" ">BOOK
-                    NOW!</a>
+              <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://www.enformed.io/arn8nc8f" method="POST" data-toggle="validator">
+                <div class="row">
+                  <div class="col-12 form-group">
+                    <label>Name:</label>
+                    <input name="Name:" class="form-control">
+                  </div>
+                  <div class="col-12 form-group">
+                    <label>Email:</label>
+                    <input  name="Email:" class="form-control">
+                  </div>
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12 col-sm-6 col-lg-12 form-group">
+                        <label class="label-text" for="hotelInDate">Depature Date:</label>
+                        <div class="input-group-append">
+                          <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                            required="required" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="label">Travel Info:</label>
+                    <div class="row">
+                      <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                          <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                            <option value="1 Adult">1 Adult</option>
+                            <option value="2 Adults">2 Adults</option>
+                            <option value="3 Adults">3 Adults</option>
+                            <option value="4 Adults">4 Adults</option>
+                            <option value="5 Adults">5 Adults</option>
+                            <option value="5 Adults">6 Adults</option>
+                            <option value="5 Adults">7 Adults</option>
+                          </select></span>
+                      </div>
+                      <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                          <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                            <label>Open or Closed Group</label>
+                            <option value="Open">Open</option>
+                            <option value="Closed">Closed</option>
+                          </select></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
                 </button>
               </form>
               <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
                 data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
             </div>
-           
+
             <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
               data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
 
@@ -46,15 +88,14 @@
             <nav class="hotel-nav">
               <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
                 <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link active" data-toggle="tab" href="#hotel"
-                    role="tab" aria-controls="hotel" aria-selected="false"><span>Package information and rates</span></a>
+                    role="tab" aria-controls="hotel" aria-selected="false"><span>Package information and Details</span></a>
                 </li>
                 <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelServices"
-                    role="tab" aria-controls="hotelServices" aria-selected="true"><span> Itinerary &amp; Details</span></a>
+                    role="tab" aria-controls="hotelServices" aria-selected="true"><span> Itinerary</span></a>
                 </li>
-                <!-- <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelAccommodation" role="tab" aria-controls="hotelAccommodation" aria-selected="true"><span>Accommodation conditions</span></a>
-                    </li>
-                    <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelReviews" role="tab" aria-controls="hotelReviews" aria-selected="true"><span>Guest reviews</span></a>
-                    </li> -->
+                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelServicess"
+                    role="tab" aria-controls="hotels" aria-selected="false"><span> Rates</span></a>
+                </li>
               </ul>
             </nav>
 
@@ -64,31 +105,37 @@
 
                 <section>
 
-                  <h3 class="fw-md mb-1">{{singlegroup.title}}</h3>
+                  <h3 class="fw-md mb-1">LAKE NAKURU DAY TRIP</h3>
                   <ul class="hotel-title mb-3">
 
                     <li class="d-flex">
-                      <div class="media-object"><i class="icon icon-label mr-2 text-primary"></i></div>
-                      <div class="local"><span>{{singlegroup.location}}</span><i class="bullet mx-2"></i><a href="#modalMap"
-                          data-toggle="modal" data-title="Ravena Best Hotel">Show on map</a></div>
+                      <div class="media-object"><i class="fas fa-map-marker-alt" style="margin-right: 12px;"></i></div>
+                      <div class="local"><span>Nakuru.</span></div>
                     </li>
                   </ul>
                   <div class="hotel-gallery">
                     <div class="hotel-gallery__carousel swiper-container js-hotel-carousel">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image1}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/Lake-In-Flamingo-Bird-Picture.jpg' %} "
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image2.url}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/lake-naivasha-waters.jpg' %}  "
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image3}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/lesser-flamingo-naivasha-kenya.jpg' %}  "
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image4}}  " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/shutterstock_518101015.jpg' %}"
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image5}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/Crescent-Island.jpg' %} "
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image6}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/Flamingo_Running_On_The_Water_At_Lake_Naivasha_Kenya_600.jpg' %}  "
+                            alt="#" />
                         </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image7}} " alt="#" />
+                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/lakenaivasha/kenya--amboseli,-lake-naivasha,-masai-mara.jpg' %}  "
+                            alt="#" />
                         </div>
 
                       </div>
@@ -103,27 +150,28 @@
                     </div>
                     <div class="hotel-gallery__thumbs swiper-container js-hotel-carousel-thumbs">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image1}}"
-                            data-description="Joshua Tree Homesteader Cabin"><img class="img-cover" src="{{singlegroup.image1}}"
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/Lake-In-Flamingo-Bird-Picture.jpg' %} "
+                            data-description="Joshua Tree Homesteader Cabin"><img class="img-cover" src="{% static 'img/lakenaivasha/Lake-In-Flamingo-Bird-Picture.jpg' %} "
                               alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image2}}"
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/lake-naivasha-waters.jpg' %} "
                             data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="{{singlegroup.image2}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image3}}"
+                              src="{% static 'img/lakenaivasha/lake-naivasha-waters.jpg' %} " alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/lesser-flamingo-naivasha-kenya.jpg' %} "
                             data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="{{singlegroup.image3}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image4}}"
+                              src="{% static 'img/lakenaivasha/lesser-flamingo-naivasha-kenya.jpg' %} " alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/shutterstock_518101015.jpg' %} "
                             data-description="Underfloor heating in the bathroom floor to keep your toes warm!"><img
-                              class="img-cover" src="{{singlegroup.image4}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image5}}"
+                              class="img-cover" src="{% static 'img/lakenaivasha/shutterstock_518101015.jpg' %} " alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/Crescent-Island.jpg' %}"
                             data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image5}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image6}}"
+                              src="{% static 'img/lakenaivasha/Crescent-Island.jpg' %}" alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/Flamingo_Running_On_The_Water_At_Lake_Naivasha_Kenya_600.jpg' %} "
                             data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image6}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image7}}"
+                              src="{% static 'img/lakenaivasha/Flamingo_Running_On_The_Water_At_Lake_Naivasha_Kenya_600.jpg' %} "
+                              alt="#" /></a></div>
+                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{% static 'img/lakenaivasha/kenya--amboseli,-lake-naivasha,-masai-mara.jpg' %} "
                             data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image7}}" alt="#" /></a></div>
+                              src="{% static 'img/lakenaivasha/kenya--amboseli,-lake-naivasha,-masai-mara.jpg' %} " alt="#" /></a></div>
                       </div>
                     </div>
 
@@ -134,47 +182,25 @@
                     <div class="col-12 col-md-12 d-flex">
                       <div class="hotel__intro hotel-card w-100">
                         <section class="pb-4">
-                          <h5 class="d-flex align-items-center text-primary mb-3"><i class="icon icon-badge mr-2"></i>Package
-                            Information</h5>
-                          <p>{{singlegroup.itinerary}}</p>
+                          <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle" style="margin-right: 12px;"></i>Details:</h5>
+                          <p>This shallow soda lake has been famous for its flamingos but has also retained its
+                            reputation as an ornithologists’ delight with more than 400 species of bird found here. You
+                            may get out of the vehicle at the lake shore to get a closer look at the birds. The nearby cliffs
+                            offer sightings of baboons, birds of prey and scurrying hyraxes, as well as great views of the
+                            park. The national park covers 180 sq km and is home to warthogs, waterbuck, buffaloes,
+                            reedbucks, and the occasional leopard as well as white and black rhinos which were
+                            introduced to the park some years ago.</p>
 
                         </section>
-                        <section>
-                          <h5>Included:</h5>
-                          <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-parkin mr-2"></i><span
-                                class="align-middle mr-2">Transport in a safari vehicle with pop up roof for easy
-                                photography</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-parkin mr-2"></i><span
-                                class="align-middle mr-2">Park entry fees</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-foo mr-2"></i><span class="align-middle mr-2">Lunch</span><i
-                                class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon- mr-2"></i><span class="align-middle mr-2">Mineral
-                                water</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-bellbo g mr-2"></i><span
-                                class="align-middle mr-2">English speaking driver guide</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-la mr-2"></i><span class="align-middle mr-2">Boat
-                                ride</span><i class="bullet d-none d-md-inline-block"></i></li>
 
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-bottle mr-2"></i><span
-                                class="align-middle mr-2">Visit to Crescent Island</span><i class="bullet d-none d-md-inline-block"></i></li>
-
-                          </ul>
-                        </section>
                       </div>
                     </div>
                   </div>
-
-                  <form class="hotel-card hotel-status" action="#" method="POST" data-toggle="validator">
-                    <h4>Rates:</h4>
-
-                  </form>
                 </section>
 
               </div>
               <div class="tab-pane" id="hotelServices" role="tabpanel">
                 <section>
-                  <h3 class="fw-md">Facilities & Services</h3>
                   <hr class="mb-4">
                   <div class="hotel-card">
                     <h2 class="mb-4">Itinerary</h2>
@@ -182,41 +208,135 @@
                     <ul>
 
                       <li><strong>Available:</strong> All year round</li>
-                      <li><strong>Tour Duration:</strong>0700hrs – 1800hrs</li>
+                      <li><strong>Tour Duration:</strong>0600hrs – 1800hrs</li>
                       <li><strong>Pick up/drop off location:</strong>Aramati Safari Offices – Ngong Road</li>
-                      <li> <strong>Departure Time:</strong>0700hrs</li>
+                      <li> <strong>Departure Time:</strong>0600hrs</li>
                     </ul>
+                    <br>
+                    <p>Pick up at the hotel early morning and depart for Lake Nakuru National Park.
+                      On arrival proceed for a game drive in this beautiful park. Lunch at the lodge. Afternoon
+                      game drive. Later transfer to Nairobi with a stop at the Great Rift Valley View point.
+                      Optional boat ride in Lake Naivasha. Arrive in the evening and drop off at your hotel.</p>
+                  </div>
 
-                  </div>
-                  <div class="hotel-card">
-                    <h4 class="mb-4"> Included:</h4>
-                    <ul class="hotel-options row">
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Transport in
-                          a safari vehicle with pop up roof for easy photography</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Park entry
-                          fees</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Lunch</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Mineral water</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>English
-                          speaking driver guide</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Boat ride</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Visit to
-                          Crescent Island</span></li>
 
-                    </ul>
-                  </div>
-                  <div class="hotel-card">
-                    <h4 class="mb-4">Not Included: </h4>
-                    <ul class="hotel-options row">
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Personal
-                          expenses</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Drinks</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Tips</span></li>
-                    </ul>
-                  </div>
                 </section>
 
               </div>
+              <div class="tab-pane" id="hotelServicess" role="tabpanel">
+                <section>
+                  <hr class="mb-4">
+
+                  <div class="hotel-card" id="rates">
+                    <h4 class="mb-4"><strong> Rates:</strong></h4>
+                    <div class="table-title">
+                    </div>
+                    <table class="table-fill">
+                      <thead>
+                        <tr>
+                          <th class="text-left">No. of Passenger (s)</th>
+                          <th class="text-left">Price per person</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-hover">
+                        <tr>
+                          <td class="text-left">1 PAX</td>
+                          <td class="text-left">$ 340</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">2 PAX</td>
+                          <td class="text-left">$ 250</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">3 PAX</td>
+                          <td class="text-left">$ 225</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">4 PAX</td>
+                          <td class="text-left">$ 210</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">5 PAX</td>
+                          <td class="text-left">$ 200</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">6 PAX</td>
+                          <td class="text-left">$ 195</td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">7 PAX</td>
+                          <td class="text-left">$ 190</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="hotel-card">
+                    <section>
+                      <h5>Included:</h5>
+                      <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">Transport
+                            in a safari vehicle with pop up roof for easy
+                            photography</span></li>
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">Park
+                            entry fees</span></li>
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">Lunch</span></li>
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">Mineral
+                            water</span></li>
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">English
+                            speaking driver guide</span></li>
+
+                        <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span class="align-middle mr-2">Game drives</span></li>
+
+                      </ul>
+                    </section>
+                  </div>
+                  <div class="hotel-card">
+                    <section>
+                      <h4 class="mb-4">Not Included: </h4>
+                      <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
+                        <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span class="align-middle mr-2">Boat ride in Naivasha</span></li>
+                        <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span class="align-middle mr-2">Drinks</span></li>
+                        <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span class="align-middle mr-2">Tips</span></li>
+                      </ul>
+                    </section>
+                  </div>
+
+
+                </section>
+
+              </div>
+              <div class="hotel-card">
+                <h2>IMPORTANT INFO PLEASE READ CAREFULLY</h2>
+                <ul style="font-size: 15px; ">
+                     <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>The Tours and the itineraries CANNOT be changed. As it is a sharing tour, we provide the tours as
+                      mentioned on our website (unless everyone in the vehicle agrees to a different itinerary).</li>
+                      <br>
+                  <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>We recommend to our guests to always be on time and to follow our driver&#39;s suggestions regarding
+                      timing, in this way you&#39;ll have a wonderful tour and we&#39;ll be 100% sure that we&#39;ll have no complaints
+                      or recriminations.</li>
+                      <br>
+                  <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Once you have joined a tour already opened or created a new group, your information (name, mobile
+                      phone, email address) will be given to the other participants joining your tour.</li>
+                      <br>
+                  <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Every time a new guest will join or cancel the tour, you will receive a new automatic voucher, with
+                      the guest&#39;s information, number of participants and the new price you&#39;ll pay per person.</li>
+                    <br>
+                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Each Safari vehicle takes a maximum of 7 passengers</li>
+                    <br>
+                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Payment will be made at the day of departure in cash USD, notes from year 2004 onwards</li>
+                    <br>
+                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>At the moment we do not accept credit cards for payment, credit card is requested only to guarantee
+                        your services.</li>
+                        <br>
+                         <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Cancellation policy is 7 days prior the service, after this terms the full amount (based on your
+                      booking) will be charged on your credit card in case of late cancelation or no show.</li>
+                      <br>
+                      <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>If you have any further questions, please don&#39;t hesitate to contact us, will be our pleasure to help
+                          you. For private/customized tours please contact us direct. Our email remains
+                          <a href="info@aramatisafaris.co.ke" >info@aramatisafaris.co.ke</a></li>
+                </ul>
+              </div>
+
             </div>
 
           </div>
@@ -293,5 +413,11 @@
     </div>
   </div>
 </footer>
+<style>
+  p {
+    color: black;
+    font-size: 15px;
+  }
+</style>
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
