@@ -3,295 +3,316 @@
 
 {% block content %}
 {{ block.super}}
+
+
 <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
 <main class="page-main">
+    <nav class="breadcrumb-nav d-flex align-items-center" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span>Excursions</span></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <aside class="sidebar col-lg-3 order-1 order-lg-0">
+                    <div class="sidebar__content js-sticky-top">
+                        <div class="sidebar-filter modal card fade" id="sidebarFilter" tabindex="-1" role="dialog">
+                            <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
+                            <div class="modal-header bg-white">
+                                <h4 class="modal-title">See more packages:</h4>
 
-  <nav class="breadcrumb-nav d-flex align-items-center" aria-label="breadcrumb">
-    <div class="container">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
-        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
-        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:excursions' %}">Excursions</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span>Lake Naivasha</span></li>
+                            </div>
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <ul class="sidebar-filter__list">
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#accommodation" data-toggle="collapse" role="button"><span>Safaris:</span><i
+                                                            class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse show" id="accommodation">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="">Short Safaris(2-5 days)</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">Long Safaris(6-13 days)</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">Request customized Safari.</a>
+                                                            </li>
+                                                        </ul>
 
-      </ol>
-    </div>
-  </nav>
-  <div class="page-content">
-    <div class="container">
-      <div class="row">
-        <aside class="sidebar col-lg-3">
-          <div class="sidebar__content js-sticky-top">
-            <div class="sidebar__finder card bg-primary text-white">
-              <h4 class="m-0 mb-lg-4">Create a safari group.</h4>
-              <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="#" method="POST" data-toggle="validator">
+                                                    </div>
+                                                </div>
+                                            </li>
 
-                <button class="btn btn-secondary btn--round mx-auto mt-2 w-100" type="submit"><a href=" ">BOOK
-                    NOW!</a>
-                </button>
-              </form>
-              <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-                data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-lg-9 category-content">
+
+                    <!-- <nav class="sortbar navbar shadow-sm d-flex align-items-stretch">
+                        <div class="sortbar__title d-flex align-items-stretch">
+                            <button class="navbar-brand d-flex align-items-center pointer js-toggle-sidebar"
+                                data-target="#sidebarFilter" data-toggle="modal" type="button"><i class="d-lg-none icon icon-filter"></i><span
+                                    class="ml-2 d-none d-lg-inline">Sort by:</span></button>
+                        </div>
+                        <div class="sortbar__sort js-sorting d-flex align-items-stretch"><a class="nav-link" href="#">Date</a><a
+                                class="nav-link" href="#">Price</a><a class="nav-link active js-toggle-grid" href="#"
+                                data-grid="grid" data-cols="col-12 col-sm-6 col-xl-4 d-flex"><i class="icon icon-grid"></i></a><a
+                                class="nav-link js-toggle-grid" href="#" data-grid="list" data-cols="col-12 d-flex"><i
+                                    class="icon icon-list-mb"></i></a></div>
+                    </nav> -->
+                    
+                    <div class="category-content__items pad-lg-20">
+                        <div class="col-3 col-sm-12 ">
+                            <div class="product bg-white js-grid-item product--list">
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid"
+                                        src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
+                                        alt="#" /></a>
+                                <div class="product__body">
+
+
+                                    <h4 class="product__title"><a href=" ">LAKE NAIVASHA DAY TRIP</a></h4>
+                                    <!-- <div class="product__rating mb-2"> 
+                                        <div class="rating">
+                                            <select class="js-rating-stat" data-current-rating="5">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5" selected="selected">5</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
+                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Naivasha</span></li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Join now and pay</span></li>
+                                        <li><span class="cost">USD  </span>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <div class="product__desc">
+                                        <p>Located between beautiful Lake Naivasha and
+                                            the twin Longonot and Suswa Volcanoes, Hell&#39;s Gate is one of Africa&#39;s most visually stunning parks.
+                                            The Park is famous for its natural hot geysers, its eagle and vulture breeding grounds, and the variety
+                                            of activities that visitors have access to during their visit. Hiking, cycling, and rock climbing are just a
+                                            few of the options available to visitors. </p><a class="product__link-more" href="{% url 'profiles:lakenaivasha'%}">Read
+                                            more</a>
+                                    </div> 
+                                </div>
+                                <hr class="d-none d-sm-block" />
+                                <div class="product__footer">
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Price per day from</span></li>
+                                        <li><span class="cost">USD 295-150 </span>
+                                        </li>
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:lakenaivasha'%}">book
+                                        now</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-content__items pad-lg-20">
+                        <div class="col-3 col-sm-12 ">
+                            <div class="product bg-white js-grid-item product--list">
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid"
+                                        src="{% static 'img/lakenaivasha/Flamingo_Running_On_The_Water_At_Lake_Naivasha_Kenya_600.jpg'%}"
+                                        alt="#" /></a>
+                                <div class="product__body">
+
+
+                                    <h4 class="product__title"><a href=" ">Lake Nakuru Day Trip</a></h4>
+                                    <!-- <div class="product__rating mb-2"> 
+                                        <div class="rating">
+                                            <select class="js-rating-stat" data-current-rating="5">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5" selected="selected">5</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
+                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Nakuru</span></li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Join now and pay</span></li>
+                                        <li><span class="cost">USD </span>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <div class="product__desc">
+                                        <p>The national park covers 180 sq km and is home to warthogs,more than 400 species of birds, waterbuck, buffaloes,
+                                            reedbucks, and the occasional leopard as well as white and black rhinos which were
+                                            introduced to the park some years ago. </p><a class="product__link-more" href="{% url 'profiles:lakenakuru'%}">Read
+                                            more</a>
+                                    </div>
+                                </div>
+                                <hr class="d-none d-sm-block" />
+                                <div class="product__footer">
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Price per day from</span></li>
+                                        <li><span class="cost">USD 340-190 </span>
+                                        </li>
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:lakenakuru'%}">book
+                                        now</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-content__items pad-lg-20">
+                        <div class="col-3 col-sm-12 ">
+                            <div class="product bg-white js-grid-item product--list">
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid"
+                                        src="http://www.silverspoonlondon.co.uk/wp-content/uploads/2016/10/The-David-Sheldrick-Trust_-24.jpg"
+                                        alt="#" /></a>
+                                <div class="product__body">
+
+
+                                    <h4 class="product__title"><a href=" ">Nairobi Excursions</a></h4>
+                                    <!-- <div class="product__rating mb-2"> 
+                                        <div class="rating">
+                                            <select class="js-rating-stat" data-current-rating="5">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5" selected="selected">5</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
+                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Nairobi.</span></li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Join now and pay</span></li>
+                                        <li><span class="cost">USD  </span>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <div class="product__desc">
+                                        <p>Among other roles, The David Sheldrick Wildlife Trust rescues orphaned and wounded baby elephants and rehabilitates
+                                            them before reintroducing them to their natural habitat. </p><a class="product__link-more" href="{% url 'profiles:nairobiexcursion'%}">Read
+                                            more</a>
+                                    </div>
+                                </div>
+                                <hr class="d-none d-sm-block" />
+                                <div class="product__footer">
+                                    <ul class="product__price d-flex justify-content-between align-items-center">
+                                        <li class="mr-2"><span>Price per day from</span></li>
+                                        <li><span class="cost">USD 245-95 </span>
+                                        </li>
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:nairobiexcursion'%}">book
+                                        now</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-           
-            <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-              data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
 
-          </div>
-        </aside>
-
-        <div class="col-lg-9" id="barba-wrapper">
-          <div class="barba-container">
-            <nav class="hotel-nav">
-              <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
-                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link active" data-toggle="tab" href="#hotel"
-                    role="tab" aria-controls="hotel" aria-selected="false"><span>Package information and rates</span></a>
-                </li>
-                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelServices"
-                    role="tab" aria-controls="hotelServices" aria-selected="true"><span> Itinerary &amp; Details</span></a>
-                </li>
-                <!-- <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelAccommodation" role="tab" aria-controls="hotelAccommodation" aria-selected="true"><span>Accommodation conditions</span></a>
-                    </li>
-                    <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#hotelReviews" role="tab" aria-controls="hotelReviews" aria-selected="true"><span>Guest reviews</span></a>
-                    </li> -->
-              </ul>
-            </nav>
-
-            <div class="tab-content">
-
-              <div class="tab-pane active show" id="hotel" role="tabpanel">
-
-                <section>
-
-                  <h3 class="fw-md mb-1">{{singlegroup.title}}</h3>
-                  <ul class="hotel-title mb-3">
-
-                    <li class="d-flex">
-                      <div class="media-object"><i class="icon icon-label mr-2 text-primary"></i></div>
-                      <div class="local"><span>{{singlegroup.location}}</span><i class="bullet mx-2"></i><a href="#modalMap"
-                          data-toggle="modal" data-title="Ravena Best Hotel">Show on map</a></div>
-                    </li>
-                  </ul>
-                  <div class="hotel-gallery">
-                    <div class="hotel-gallery__carousel swiper-container js-hotel-carousel">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image1}} " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image2.url}} " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image3}} " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image4}}  " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image5}} " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image6}} " alt="#" />
-                        </div>
-                        <div class="swiper-slide"><img class="img-fluid img-cover" src="{{singlegroup.image7}} " alt="#" />
-                        </div>
-
-                      </div>
-                      <div class="hotel-gallery__controls"><a class="hotel-gallery__arrow shadow-sm js-prev" role="button"><i
-                            class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 44 44">
-                              <path d="M22.119 44.237C9.922 44.237 0 34.315 0 22.119S9.922.001 22.119.001s22.119 9.922 22.119 22.118-9.924 22.118-22.119 22.118zm0-42.736C10.75 1.501 1.5 10.75 1.5 22.119c0 11.368 9.25 20.618 20.619 20.618s20.619-9.25 20.619-20.618c0-11.369-9.25-20.618-20.619-20.618z" />
-                              <path d="M24.667 29.884a.74.74 0 0 1-.53-.22l-7.328-7.334a.752.752 0 0 1 0-1.061l7.328-7.333a.75.75 0 1 1 1.061 1.061L18.4 21.8l6.798 6.805a.752.752 0 0 1 0 1.061.75.75 0 0 1-.531.218z" /></svg></i></a><a
-                          class="hotel-gallery__arrow shadow-sm js-next" role="button"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg"
-                              viewbox="0 0 44 44">
-                              <path d="M22.118 44.236C9.922 44.236 0 34.314 0 22.118S9.922 0 22.118 0s22.118 9.922 22.118 22.118-9.922 22.118-22.118 22.118zm0-42.736C10.75 1.5 1.5 10.749 1.5 22.118c0 11.368 9.25 20.618 20.618 20.618 11.37 0 20.618-9.25 20.618-20.618 0-11.369-9.248-20.618-20.618-20.618z" />
-                              <path d="M19.341 29.884a.75.75 0 0 1-.53-1.281l6.796-6.804-6.796-6.803a.75.75 0 1 1 1.061-1.061l7.325 7.333a.75.75 0 0 1 0 1.061l-7.325 7.333a.742.742 0 0 1-.531.222z" /></svg></i></a></div>
-                    </div>
-                    <div class="hotel-gallery__thumbs swiper-container js-hotel-carousel-thumbs">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image1}}"
-                            data-description="Joshua Tree Homesteader Cabin"><img class="img-cover" src="{{singlegroup.image1}}"
-                              alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image2}}"
-                            data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="{{singlegroup.image2}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image3}}"
-                            data-description="A perfect place to snuggle up after a fun day in Asheville!"><img class="img-cover"
-                              src="{{singlegroup.image3}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image4}}"
-                            data-description="Underfloor heating in the bathroom floor to keep your toes warm!"><img
-                              class="img-cover" src="{{singlegroup.image4}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image5}}"
-                            data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image5}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image6}}"
-                            data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image6}}" alt="#" /></a></div>
-                        <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link" href="{{singlegroup.image7}}"
-                            data-description="Full kitchen with full size refrigerator and dining table"><img class="img-cover"
-                              src="{{singlegroup.image7}}" alt="#" /></a></div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <hr>
-                  <div class="row">
-                    <div class="col-12 col-md-12 d-flex">
-                      <div class="hotel__intro hotel-card w-100">
-                        <section class="pb-4">
-                          <h5 class="d-flex align-items-center text-primary mb-3"><i class="icon icon-badge mr-2"></i>Package
-                            Information</h5>
-                          <p>{{singlegroup.itinerary}}</p>
-
-                        </section>
-                        <section>
-                          <h5>Included:</h5>
-                          <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-parkin mr-2"></i><span
-                                class="align-middle mr-2">Transport in a safari vehicle with pop up roof for easy
-                                photography</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-parkin mr-2"></i><span
-                                class="align-middle mr-2">Park entry fees</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-foo mr-2"></i><span class="align-middle mr-2">Lunch</span><i
-                                class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon- mr-2"></i><span class="align-middle mr-2">Mineral
-                                water</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-bellbo g mr-2"></i><span
-                                class="align-middle mr-2">English speaking driver guide</span><i class="bullet d-none d-md-inline-block"></i></li>
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-la mr-2"></i><span class="align-middle mr-2">Boat
-                                ride</span><i class="bullet d-none d-md-inline-block"></i></li>
-
-                            <li class="mr-2"><i class="align-middle icon text-secondary icon-bottle mr-2"></i><span
-                                class="align-middle mr-2">Visit to Crescent Island</span><i class="bullet d-none d-md-inline-block"></i></li>
-
-                          </ul>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-
-                  <form class="hotel-card hotel-status" action="#" method="POST" data-toggle="validator">
-                    <h4>Rates:</h4>
-
-                  </form>
-                </section>
-
-              </div>
-              <div class="tab-pane" id="hotelServices" role="tabpanel">
-                <section>
-                  <h3 class="fw-md">Facilities & Services</h3>
-                  <hr class="mb-4">
-                  <div class="hotel-card">
-                    <h2 class="mb-4">Itinerary</h2>
-                    <h4>General Informantion</h4>
-                    <ul>
-
-                      <li><strong>Available:</strong> All year round</li>
-                      <li><strong>Tour Duration:</strong>0700hrs – 1800hrs</li>
-                      <li><strong>Pick up/drop off location:</strong>Aramati Safari Offices – Ngong Road</li>
-                      <li> <strong>Departure Time:</strong>0700hrs</li>
-                    </ul>
-
-                  </div>
-                  <div class="hotel-card">
-                    <h4 class="mb-4"> Included:</h4>
-                    <ul class="hotel-options row">
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Transport in
-                          a safari vehicle with pop up roof for easy photography</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Park entry
-                          fees</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Lunch</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Mineral water</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>English
-                          speaking driver guide</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Boat ride</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Visit to
-                          Crescent Island</span></li>
-
-                    </ul>
-                  </div>
-                  <div class="hotel-card">
-                    <h4 class="mb-4">Not Included: </h4>
-                    <ul class="hotel-options row">
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Personal
-                          expenses</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Drinks</span></li>
-                      <li class="col-12 col-sm-6 d-flex mb-3"><i class="icon icon-check-button"></i><span>Tips</span></li>
-                    </ul>
-                  </div>
-                </section>
-
-              </div>
-            </div>
-
-          </div>
 
         </div>
-      </div>
+
+        <button class="btn btn-primary btn-nav btn-nav--up js-scroll-up" type="button"><i class="fa fa-angle-up"></i></button>
+
     </div>
-
-    <button class="btn btn-primary btn-nav btn-nav--up js-scroll-up" type="button"><i class="fa fa-angle-up"></i></button>
-  </div>
-
 </main>
 <footer class="page-footer">
-  <div class="page-footer__cover jarallax" data-speed="0.5"><img class="jarallax-img" src="https://s-media-cache-ak0.pinimg.com/originals/35/76/a5/3576a51097ee19c85932943e6f73ea2f.jpg"
-      alt="#"></div>
-  <div class="container mb-5 mb-lg-4">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">Aramati safaris</h3>
-        <ul class="page-footer__address">
-          <li class="mb-2"><strong class="float-left mr-1">A:</strong>
-            Rehema Place, Suite B14, Ngong Road/Ring Road,
-            Adjacent Eastlands Hotel & Opposite Nakumatt Ngong Road (Prestige Plaza)
-          </li>
-          <li class="mb-2"><strong class="float-left mr-1">P:</strong>
-            24/7 customer support:
-            <a href="tel:#">+254 722 44 32 74, +254 734 44 32 74</a>
-          </li>
-          <li class="mb-2"><strong class="float-left mr-1">E:</strong>
-            <a href="mailto:#">info@aramatisafaris.co.ke</a>
-          </li>
-        </ul>
-        <h4 class="h4 mb-2">Follow us:</h4>
-        <ul class="footer-social d-flex flex-wrap">
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">customer support</h3>
-        <ul class="page-footer__support list-styled">
-          <li class="mb-2"><a href="#" target="_blank">Faq</a></li>
-          <li class="mb-2"><a href="#" target="_blank">How do I make a reservation?</a></li>
-          <li class="mb-2"><a href="#" target="_blank">Payment options</a></li>
-          <li class="mb-2"><a href="#" target="_blank">Booking tips</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-12 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">get our best offers</h3>
-        <form class="subscribe-form" action="#" method="POST">
-          <div class="input-group input-group--lg flex-nowrap mb-4">
-            <input class="form-control form-control-lg" type="email" placeholder="Enter Your email" required>
-            <div class="input-group-append">
-              <button class="btn btn-btn btn-light btn--round" type="submit"><i class="fa fa-send"></i>
-              </button>
+    <div class="page-footer__cover jarallax" data-speed="0.5"><img class="jarallax-img" src="https://s-media-cache-ak0.pinimg.com/originals/35/76/a5/3576a51097ee19c85932943e6f73ea2f.jpg"
+            alt="#"></div>
+    <div class="container mb-5 mb-lg-4">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 mt-5">
+                <h3 class="h3 text-uppercase">Aramati safaris</h3>
+                <ul class="page-footer__address">
+                    <li class="mb-2"><strong class="float-left mr-1">A:</strong>
+                        Rehema Place, Suite B14, Ngong Road/Ring Road,
+                        Adjacent Eastlands Hotel & Opposite Nakumatt Ngong Road (Prestige Plaza)
+                    </li>
+                    <li class="mb-2"><strong class="float-left mr-1">P:</strong>
+                        24/7 customer support:
+                        <a href="tel:#">+254 722 44 32 74, +254 734 44 32 74</a>
+                    </li>
+                    <li class="mb-2"><strong class="float-left mr-1">E:</strong>
+                        <a href="mailto:#">info@aramatisafaris.co.ke</a>
+                    </li>
+                </ul>
+                <h4 class="h4 mb-2">Follow us:</h4>
+                <ul class="footer-social d-flex flex-wrap">
+                    <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
             </div>
-          </div>
-          <p>We guarantee your confidentiality, and we also undertake not to transfer your email address
-            to third parties.</p>
-        </form>
-      </div>
+            <div class="col-12 col-sm-6 col-lg-4 mt-5">
+                <h3 class="h3 text-uppercase">customer support</h3>
+                <ul class="page-footer__support list-styled">
+                    <li class="mb-2"><a href="#" target="_blank">Faq</a></li>
+                    <li class="mb-2"><a href="#" target="_blank">How do I make a reservation?</a></li>
+                    <li class="mb-2"><a href="#" target="_blank">Payment options</a></li>
+                    <li class="mb-2"><a href="#" target="_blank">Booking tips</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4 mt-5">
+                <h3 class="h3 text-uppercase">get our best offers</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <div class="input-group input-group--lg flex-nowrap mb-4">
+                        <input class="form-control form-control-lg" type="email" placeholder="Enter Your email"
+                            required>
+                        <div class="input-group-append">
+                            <button class="btn btn-btn btn-light btn--round" type="submit"><i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p>We guarantee your confidentiality, and we also undertake not to transfer your email address
+                        to third parties.</p>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="page-footer__copyright text-center">
-    <div class="container">
-      <div class="hr"></div>Copyright © 2014 Aramati Safaris. All rights reserved.<br /><a class="text-light text-uppercase"
-        href="https://themeforest.net/user/netgon">This was created by Negrita Developers.
-        <script>
-          document.write(new Date().getFullYear());
-        </script></a>
+    <div class="page-footer__copyright text-center">
+        <div class="container">
+            <div class="hr"></div>Copyright © 2014 Aramati Safaris. All rights reserved.<br /><a class="text-light text-uppercase"
+                href="https://themeforest.net/user/netgon">This was created by Negrita Developers.
+                <script>
+                    document.write(new Date().getFullYear());
+                </script></a>
+        </div>
     </div>
-  </div>
 </footer>
+<style>
+    p{
+        color: black;
+    }
+</style>
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
