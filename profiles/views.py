@@ -44,6 +44,9 @@ def longsafaris(request):
 def shortsafaris (request):
     return render(request, 'shortsafaris/shortsafaris.html')
 
+def ssfnakuru(request):
+    return render (request, 'shortsafaris/2days/lakenakuru.html')
+
 
 
 
