@@ -62,6 +62,8 @@ def maasaimarassf(request):
 def pajetassf(request):
     return render (request, 'shortsafaris/2days/sweetwaters.html')
 
+def amboselissf3(request):
+    return render (request, 'shortsafaris/3days/amboseli.html') 
 
 
 

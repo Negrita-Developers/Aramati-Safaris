@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^shortsafarislakenaivasha/$', views.naivashassf, name='naivashassf'), 
     url(r'^shortsafarismaasaimara/$', views.maasaimarassf, name='maasaimarassf'),
     url(r'^shortsafarissweetwaters/$', views.pajetassf, name='pajetassf'),
+    url(r'^shortsafarisamboseli3days/$', views.amboselissf3, name='amboselissf3'),
 ] 
 
 if settings.DEBUG:
