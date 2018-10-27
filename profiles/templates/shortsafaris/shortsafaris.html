@@ -138,7 +138,7 @@
                                     <div class="product__desc">
                                         <p>The national park covers 180 sq km and is home to warthogs,more than 400 species of birds, waterbuck, buffaloes,
                                             reedbucks, and the occasional leopard as well as white and black rhinos which were
-                                            introduced to the park some years ago. </p><a class="product__link-more" href=" ">Read
+                                            introduced to the park some years ago. </p><a class="product__link-more" href="{% url 'profiles:aberdaressf'%}">Read
                                             more</a>
                                     </div>
                                 </div>
@@ -160,12 +160,12 @@
                         <div class="col-3 col-sm-12 ">
                             <div class="product bg-white js-grid-item product--list">
                                 <a class="product__img-top d-block" href=" "><img class="img-fluid"
-                                        src="http://www.silverspoonlondon.co.uk/wp-content/uploads/2016/10/The-David-Sheldrick-Trust_-24.jpg"
+                                        src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %}"
                                         alt="#" /></a>
                                 <div class="product__body">
 
 
-                                    <h4 class="product__title"><a href=" ">Nairobi Excursions</a></h4>
+                                    <h4 class="product__title"><a href=" ">2 DAYS AMBOSELI SAFARI</a></h4>
                                     <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
                                             <select class="js-rating-stat" data-current-rating="5">
@@ -178,7 +178,7 @@
                                         </div>
                                     </div> -->
                                     <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><span>Nairobi.</span></li>
+                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Kijabe County</span></li>
                                     </ul>
                                     <hr>
                                     <ul class="product__price d-flex justify-content-between align-items-center">
@@ -188,8 +188,8 @@
                                     </ul>
                                     <hr>
                                     <div class="product__desc">
-                                        <p>Among other roles, The David Sheldrick Wildlife Trust rescues orphaned and wounded baby elephants and rehabilitates
-                                            them before reintroducing them to their natural habitat. </p><a class="product__link-more" href=" ">Read
+                                        <p>It is one of the best places in Africa to view large herds of elephants up close. Nature lovers can explore five different habitats here ranging from the dried-up bed of Lake Amboseli,
+                                             wetlands with sulphur springs, the savannah and woodlands.</p><a class="product__link-more" href="{% url 'profiles:amboselissf'%}">Read
                                             more</a>
                                     </div>
                                 </div>
@@ -197,9 +197,9 @@
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
                                         <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 245-95 </span>
+                                        <li><span class="cost">USD 677-318 </span>
                                         </li>
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:nairobiexcursion'%}">book
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselissf'%}">book
                                         now</a>
                                 </div>
 
@@ -207,6 +207,57 @@
 
                         </div>
                     </div>
+                    <div class="category-content__items pad-lg-20">
+                            <div class="col-3 col-sm-12 ">
+                                <div class="product bg-white js-grid-item product--list">
+                                    <a class="product__img-top d-block" href=" "><img class="img-fluid"
+                                            src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %}"
+                                            alt="#" /></a>
+                                    <div class="product__body">
+    
+    
+                                        <h4 class="product__title"><a href=" ">2 DAYS LAKE NAIVASHA</a></h4>
+                                        <!-- <div class="product__rating mb-2"> 
+                                            <div class="rating">
+                                                <select class="js-rating-stat" data-current-rating="5">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5" selected="selected">5</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
+                                        <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
+                                            <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Kijabe County</span></li>
+                                        </ul>
+                                        <hr>
+                                        <ul class="product__price d-flex justify-content-between align-items-center">
+                                            <li class="mr-2"><span>Join now and pay</span></li>
+                                            <li><span class="cost">USD  </span>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <div class="product__desc">
+                                            <p>It is one of the best places in Africa to view large herds of elephants up close. Nature lovers can explore five different habitats here ranging from the dried-up bed of Lake Amboseli,
+                                                 wetlands with sulphur springs, the savannah and woodlands.</p><a class="product__link-more" href="{% url 'profiles:naivashassf'%}">Read
+                                                more</a>
+                                        </div>
+                                    </div>
+                                    <hr class="d-none d-sm-block" />
+                                    <div class="product__footer">
+                                        <ul class="product__price d-flex justify-content-between align-items-center">
+                                            <li class="mr-2"><span>Price per day from</span></li>
+                                            <li><span class="cost">USD 677-318 </span>
+                                            </li>
+                                        </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:naivashassf'%}">book
+                                            now</a>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+                        </div>
                     
                 </div>
             </div>

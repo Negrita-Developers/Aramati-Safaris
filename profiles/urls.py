@@ -19,6 +19,8 @@ urlpatterns = [
     url(r'^nairobiexcursionpackage/$', views.nairobiexcursion, name='nairobiexcursion'),
     url(r'^shortsafarislakenakuru/$', views.ssfnakuru, name='ssfnakuru'),
     url(r'^shortsafarisaberdare/$', views.aberdaressf, name='aberdaressf'),
+    url(r'^shortsafarisamboseli/$', views.amboselissf, name='amboselissf'), 
+    url(r'^shortsafarislakenaivasha/$', views.naivashassf, name='naivashassf'),
 ] 
 
 if settings.DEBUG:

@@ -50,6 +50,13 @@ def ssfnakuru(request):
 def aberdaressf(request):
     return render (request, 'shortsafaris/2days/aberdare.html')
 
+def  amboselissf(request):
+    return render (request, 'shortsafaris/2days/amboseli.html') 
+
+def naivashassf(request):
+    return render (request, 'shortsafaris/2days/naivasha.html')
+
+
 
 
 
