@@ -20,7 +20,9 @@ urlpatterns = [
     url(r'^shortsafarislakenakuru/$', views.ssfnakuru, name='ssfnakuru'),
     url(r'^shortsafarisaberdare/$', views.aberdaressf, name='aberdaressf'),
     url(r'^shortsafarisamboseli/$', views.amboselissf, name='amboselissf'), 
-    url(r'^shortsafarislakenaivasha/$', views.naivashassf, name='naivashassf'),
+    url(r'^shortsafarislakenaivasha/$', views.naivashassf, name='naivashassf'), 
+    url(r'^shortsafarismaasaimara/$', views.maasaimarassf, name='maasaimarassf'),
+    url(r'^shortsafarissweetwaters/$', views.pajetassf, name='pajetassf'),
 ] 
 
 if settings.DEBUG:
