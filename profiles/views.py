@@ -65,6 +65,18 @@ def pajetassf(request):
 def amboselissf3(request):
     return render (request, 'shortsafaris/3days/amboseli.html') 
 
+def sweetwaterssf3(request):
+    return render (request, 'shortsafaris/3days/sweetwaters.html') 
+
+def maasaimarassf3(request):
+    return render (request, 'shortsafaris/3days/maasaimara.html') 
+
+def nakurussf3(request):
+    return render (request, 'shortsafaris/3days/nakuru.html') 
+
+def samburussf3(request):
+    return render (request, 'shortsafaris/3days/samburu.html') 
+
 
 
 
