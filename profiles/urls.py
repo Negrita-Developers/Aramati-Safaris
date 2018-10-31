@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^shortsafarismaasaimara3days/$', views.maasaimarassf3, name='maasaimarassf3'),
     url(r'^shortsafarisnakuru3days/$', views.nakurussf3, name='nakurussf3'),
     url(r'^shortsafarissamburu3days/$', views.samburussf3, name='samburussf3'),
+    url(r'^shortsafarismaasarimaranakuru4days/$', views.maranakurussf4, name='maranakurussf4'),
+    url(r'^shortsafarisamboseli5days/$', views.amboselissf5, name='amboselissf5'),
 ] 
 
 if settings.DEBUG:

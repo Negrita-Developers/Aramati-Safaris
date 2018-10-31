@@ -77,6 +77,12 @@ def nakurussf3(request):
 def samburussf3(request):
     return render (request, 'shortsafaris/3days/samburu.html') 
 
+def maranakurussf4(request):
+    return render (request, 'shortsafaris/4days/mara-nakuru.html') 
+
+def amboselissf5(request):
+    return render (request, 'shortsafaris/5days/amboseli.html') 
+
 
 
 
