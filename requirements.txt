@@ -3,4 +3,4 @@ django-bootstrap4==0.0.7
 Pillow==5.3.0
 psycopg2==2.7.5
 pytz==2018.5
-Gunicorn
+gunicorn==19.7.1
