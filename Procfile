@@ -1,1 +1,1 @@
-web: gunicorn aramatisafaris.wsgi --log-file -
+web: gunicorn aramati.wsgi --log-file -
