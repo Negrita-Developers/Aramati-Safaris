@@ -2159,7 +2159,7 @@ html.rtl .main-nav__search .navbar-search .form-control {
     padding: 0;
   }
   .main-nav__list .nav-item {
-    width: 120%;
+    width: 100%;
     border-bottom: 1px solid #dcdcdc;
   }
   .main-nav__list .dropdown-menu {

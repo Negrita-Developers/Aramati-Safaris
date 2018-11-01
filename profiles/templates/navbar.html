@@ -23,7 +23,7 @@
     <!-- Add to homescreen for Chrome on Android-->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Looking for something amazing?">
-    <link rel="icon" sizes="192x192" href="{% static 'img/touch/chrome-touch-icon-192x192.png' %}">
+    <link rel="icon" sizes="172x172" href="{% static 'img/touch/chrome-touch-icon-172x172.png' %}">
     <!-- Add to homescreen for Safari on iOS-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -215,7 +215,7 @@
                                  style="margin-left:40px;">
                                 <form class="form-inline" action="/action_page.php">
                                     <div class="form-group">
-                                      <h2 style="font-size: 19px; margin-top:24px; margin-right: 15px;">Tour Finder:</h2>
+                                      <h2 style="font-size: 17px; margin-top:24px; margin-right: 15px;">Tour Finder:</h2>
                                       <input type="email" class="form-control" id="email" placeholder="Enter destination" name="email">
                                     </div>
                                     <div class="form-group">
@@ -260,28 +260,28 @@
 
                             </ul>
                         </div>
-                        <ul class="main-nav__list nav d-flex" id="navMenu" style="margin-top: 10px; width:1090px;">
-                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:home' %}"><span>Home</span></a>
+                        <ul class="main-nav__list nav d-flex" id="navMenu" style="margin-top: 10px; width:1090px; max-resolution: left 7px;0px;">
+                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:home' %}" style="font-size:17px;"><span>Home</span></a>
                             </li>
-                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:aboutus' %}"><span>about
+                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:aboutus' %}" style="font-size:17px;"><span>about
                                         us</span></a>
                             </li>
 
-                            <li class="nav-item flashit"><a class="nav-link fw-bold text-uppercase " style="color: red;"
+                            <li class="nav-item flashit"><a class="nav-link fw-bold text-uppercase " style="color: red; font-size:17px;"
                                     href="{% url 'profiles:joingroup' %}"><span>Join a safari today!!!</span></a>
                             </li>
-                            <li class="nav-item "><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:excursions' %}"><span>Excursions</span></a>
+                            <li class="nav-item "><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:excursions' %}" style="font-size:17px;"><span>Excursions</span></a>
                             </li>
 
-                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:shortsafaris' %}"><span>Short
+                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:shortsafaris' %}" style="font-size:17px;"><span>Short
                                         Safaris(2-5 days)</span><i class="caret fa fa-angle-down ml-2"></i></a>
 
                             </li>
 
-                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:longsafaris' %}"><span>Long
+                            <li class="nav-item dropdown"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:longsafaris' %}" style="font-size:17px;"><span>Long
                                         Safaris(6-13 days)</span><i class="caret fa fa-angle-down ml-2"></i></a>
                             </li>
-                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:contact' %}"><span>contacts</span></a>
+                            <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{% url 'profiles:contact' %}" style="font-size:17px;"><span>contacts</span></a>
                             </li>
                         </ul>
                     </div>
