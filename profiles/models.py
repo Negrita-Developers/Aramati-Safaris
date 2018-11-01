@@ -14,16 +14,14 @@ class Profiles(models.Model):
 class JoinGroup(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
-    details= models.TextField()
-    travelers_that_have_booked=models.FloatField()
-    image1=models.ImageField()
+    brief_details= models.TextField()
+    travelers_that_have_booked=models.IntegerField()
+    image=models.ImageField()
     accomodation=(
         ('budget'),
         ( 'standard')
 
     )
-    itinerary= models.TextField()
-    created_on=models.DateField(auto_now_add=True)
     bookbefore=models.DateField()
 
     def __str__(self):
