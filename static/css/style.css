@@ -7451,3 +7451,84 @@ td.text-right {
 .filter__link.asc::after {
   content: '(asc)';
 }
+
+ #perspective{ 
+  font:65px "Oswald";
+  text-transform:uppercase;
+  perspective:100;
+}
+
+strong {
+  display:block;
+  position:absolute;
+  width:100%;
+  text-align:center;
+  line-height:58px;
+  color:hsl(201,3%,18%);
+}
+
+strong:first-child { 
+  transform:rotateX(-110deg);
+  transform-origin:center bottom;
+  color:transparent;
+  user-select:none;
+  text-shadow:
+    0 0 1px hsla(201,3%,30%,.6),
+    0 -7px 10px hsla(201,3%,30%,.3);
+}
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  background: rgb(173, 35, 35);
+  -webkit-border-radius: 50%;
+  border-radius: 50%
+}
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  background: #ddd;
+  -webkit-border-radius: 50%;
+  border-radius: 50%
+}
+.avatar:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 70%;
+  height: 44%;
+  margin: 0 0 0 -35%;
+  background: #c20e0e;
+  -webkit-border-radius: 100% 100% 0 0;
+  border-radius: 100% 100% 0 0
+}
+
+.avatar:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 19%;
+  width: 40%;
+  height: 40%;
+  margin: 0 0 0 -20%;
+  background: #8f0c0c;
+  -webkit-box-shadow: 0 0 0 4px rgb(190, 23, 23);
+  box-shadow: 0 0 0 4px #DCDCDC;
+  -webkit-border-radius: 50%;
+  border-radius: 50%
+}
+
+.avatar img {
+  position: relative;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 10
+}

@@ -3,9 +3,11 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
 <main class="page-main">
-    <div class="intro-page d-flex align-items-center">
-        <div class="page-intro__cover jarallax"><img class="img-cover" src="https://pt.best-wallpaper.net/wallpaper/1920x1080/1209/Cheetah-predation-rapid-jumping_1920x1080.jpg"
+    <div class="intro-page d-flex align-items-center" style="margin-top:-20px;">
+        <div class="page-intro__cover jarallax"><img class="img-cover" src="https://media.gadventures.com/media-server/image_library/3523462_1080x810_Amboseli_Game_Reserve_Kenya.jpg"
                 alt="#" /></div>
         <div class="container p-5 text-center">
             <h1 class="text-uppercase fw-bold" style="color:white; margin-left:70%;">About us</h1>
@@ -38,7 +40,7 @@
                 <li class="mr-3"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
                 <li class="mr-3"><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
             </ul>
-            <p>Kenya Sharing Safaris was established to give to our clients the opportunity to save money
+            <p >Kenya Sharing Safaris was established to give to our clients the opportunity to save money
                 by sharing tours with other travellers without compromising the same luxury service
                 experience of a private tour. We realized that solo or two travelers find it hard to get a
                 safari that best suits their budget, time and schedule. We are here to offer unique joining
@@ -127,5 +129,9 @@
         </div>
     </div>
 </footer>
-
+<style>
+p{
+    color:black;
+}
+    </style>
 {% endblock %}

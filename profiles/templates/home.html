@@ -23,7 +23,7 @@
         </div>
         <!-- <div class="intro__content d-flex flex-column justify-content-end js-intro-content"> -->
 
-<!-- 
+        <!-- 
             <div class="modal-container">
                 <input id="modal-toggle" type="checkbox">
                 <label class="modal-btn" style="width: 290px; margin-left:-400px;
@@ -40,8 +40,8 @@
                 <input id="modal-toggle" type="checkbox">
                 <label class="modal-btn" style="width: 290px; margin-left: -250px;
                 margin-top: 420px; background-color: black; opacity: 1;"
-                    for="modal-toggle"><i class="fas fa-plus-square" style="margin-right:12px;"></i><a href=" "
-                        style="color:white; font-weight: 900;">Create a Safari Group</a></label>
+                    for="modal-toggle"><i class="fas fa-plus-square" style="margin-right:12px;"></i><a href=" " style="color:white; font-weight: 900;">Create
+                        a Safari Group</a></label>
 
             </div>
 
@@ -68,22 +68,37 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-7.jpg' %}"
+                <div class="col-12 col-sm-6 col-lg-5 d-flex mb-4">
+                    <div class="card card-hotel w-100 mb-9">
+                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/lakenakuru/kenya--amboseli,-lake-naivasha,-masai-mara.jpg'%}"
                                 alt="#" />
                         </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
+                        <div class="card-price"><span class="mr-1">Price:</span><span class="count text-secondary">300$</span></div>
+
                         <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Saint Peterburg</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Russia</li>
-                                    <li class="amout">1234
-                                        Hotels
-                                    </li>
-                                </ul>
+                            <h4 style="font-size:26px;">Lake Nakuru Day Trip</h4>
+                            <p class="flashit" style="color:red; font-size:19px;"><strong>2 DAYS TO BOOK!!</strong></p>
+                            <ul>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Depature Date:</strong>Nov
+                                    12th 2018</li>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Destinations:</strong>Lake
+                                    Nakuru.</li>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Accomodation:</strong>Budget</li>
+                            </ul>
+                            <br>
+                            <div class="row">
+                                <div class="d-inline-flex flex-wrap">
+                                    <div class="avatar_black"></div>
+                                    <div class="avatar_black" style="margin-left:5px; "></div>
+                                    <div class="avatar_black" style="margin-left:5px;"></div>
+                                    <div class="avatar_black" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                </div>
                             </div>
+
+
                         </div>
                         <div class="card-hover">
                             <h3 class="h3 text-uppercase">Saint Peterburg</h3><a class="btn btn-light btn--round card-hover__view"
@@ -91,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
+                <div class="col-12 col-sm-6 col-lg-5 d-flex mb-4" style="margin-left:140px;">
                     <div class="card card-hotel w-100 mb-2">
                         <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-8.jpg' %}"
                                 alt="#" />
@@ -122,14 +137,10 @@
                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
                         <div class="card-hotel__bottom">
                             <h4 class="h4 mb-1">Barselona</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Spain</li>
-                                    <li class="amout">1234
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul>
+                                <li><strong>Depature Date:</strong>....</li>
+                            </ul>
+
                         </div>
                         <div class="card-hover">
                             <h3 class="h3 text-uppercase">Barselona</h3><a class="btn btn-light btn--round card-hover__view"
@@ -497,5 +508,113 @@
             }
         }
     })
+    $("html").mousemove(function (e) {
+
+        var deg = (e.pageY / 10) + 240;
+        var rotation = 'rotateX(' + deg + 'deg)';
+        var rotate = {
+            '-webkit-transform': rotation,
+            '-moz-perspective': rotation,
+            '-ms-perspective': rotation,
+            'perspective': rotation
+        }
+        $("#shadow").css(rotate);
+
+
+        var perspective = (e.pageX / 2) + 25;
+        var perspective = {
+            '-webkit-perspective': perspective,
+            '-moz-perspective': perspective,
+            '-ms-perspective': perspective,
+            'perspective': perspective
+        }
+        $("#perspective").css(perspective);
+
+    });
 </script>
+<style>
+    .avatar {
+        position: relative;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background: #ddd;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+    .avatar_black {
+        position: relative;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background: #ddd;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+
+    .avatar:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 70%;
+        height: 44%;
+        margin: 0 0 0 -35%;
+        background: #989898;
+        -webkit-border-radius: 100% 100% 0 0;
+        border-radius: 100% 100% 0 0
+    }
+
+    .avatar:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 19%;
+        width: 40%;
+        height: 40%;
+        margin: 0 0 0 -20%;
+        background: #989898;
+        -webkit-box-shadow: 0 0 0 4px #DCDCDC;
+        box-shadow: 0 0 0 4px #DCDCDC;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+    .avatar_black:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 70%;
+        height: 44%;
+        margin: 0 0 0 -35%;
+        background: #000000;
+        -webkit-border-radius: 100% 100% 0 0;
+        border-radius: 100% 100% 0 0
+    }
+
+    .avatar_black:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 19%;
+        width: 40%;
+        height: 40%;
+        margin: 0 0 0 -20%;
+        background: #000000;
+        -webkit-box-shadow: 0 0 0 4px #DCDCDC;
+        box-shadow: 0 0 0 4px #DCDCDC;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+    .avatar img {
+        position: relative;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        z-index: 10
+    }
+</style>
 {% endblock %}
