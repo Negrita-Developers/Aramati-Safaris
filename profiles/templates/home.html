@@ -3,6 +3,8 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
 <main class="page-main">
     <section class="intro d-flex flex-column load" style="height:460px;">
         <div class="intro__bg js-intro-bg">
@@ -67,16 +69,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-5 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-9">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/lakenakuru/kenya--amboseli,-lake-naivasha,-masai-mara.jpg'%}"
+            <div class="row" style="margin-bottom:0px;">
+                <div class="col-12 col-sm-9 col-lg-6 d-flex mb-12" style="margin-bottom:12px; ">
+                    <div class="card card-hotel w-100 mb-9" style="margin-bottom:-600px;">
+                        <div class="card-hotel__img" ><img class="img-cover" src="{% static 'img/lakenakuru/kenya--amboseli,-lake-naivasha,-masai-mara.jpg'%}"
                                 alt="#" />
                         </div>
                         <div class="card-price"><span class="mr-1">Price:</span><span class="count text-secondary">300$</span></div>
 
                         <div class="card-hotel__bottom">
-                            <h4 style="font-size:26px;">Lake Nakuru Day Trip</h4>
+                            <h4 style="font-size:23px;">Lake Nakuru Day Trip</h4>
                             <p class="flashit" style="color:red; font-size:19px;"><strong>2 DAYS TO BOOK!!</strong></p>
                             <ul>
                                 <li style="font-size:17px;"><strong style="margin-right:10px;">Depature Date:</strong>Nov
@@ -98,6 +100,8 @@
                                 </div>
                             </div>
 
+                            <p style="margin-left:120px; margin-top: 20px;">Seats remaining: 3</p>
+
 
                         </div>
                         <div class="card-hover">
@@ -106,187 +110,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-5 d-flex mb-4" style="margin-left:140px;">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-8.jpg' %}"
+                <div class="col-12 col-sm-9 col-lg-6 d-flex mb-12" style="margin-bottom:12px;">
+                    <div class="card card-hotel w-100 mb-9" style="margin-bottom:-600px;">
+                        <div class="card-hotel__img" ><img class="img-cover" src="{% static 'img/lakenakuru/kenya--amboseli,-lake-naivasha,-masai-mara.jpg'%}"
                                 alt="#" />
                         </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
+                        <div class="card-price"><span class="mr-1">Price:</span><span class="count text-secondary">300$</span></div>
+
                         <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Milan</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Italy</li>
-                                    <li class="amout">953
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Milan</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-9.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Barselona</h4>
+                            <h4 style="font-size:23px;">Lake Nakuru Day Trip</h4>
+                            <p class="flashit" style="color:red; font-size:19px;"><strong>2 DAYS TO BOOK!!</strong></p>
                             <ul>
-                                <li><strong>Depature Date:</strong>....</li>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Depature Date:</strong>Nov
+                                    12th 2018</li>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Destinations:</strong>Lake
+                                    Nakuru.</li>
+                                <li style="font-size:17px;"><strong style="margin-right:10px;">Accomodation:</strong>Budget</li>
                             </ul>
+                            <br>
+                            <div class="row">
+                                <div class="d-inline-flex flex-wrap">
+                                    <div class="avatar_black"></div>
+                                    <div class="avatar_black" style="margin-left:5px; "></div>
+                                    <div class="avatar_black" style="margin-left:5px;"></div>
+                                    <div class="avatar_black" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                    <div class="avatar" style="margin-left:5px;"></div>
+                                </div>
+                            </div>
+
+                            <p style="margin-left:120px; margin-top: 20px;">Seats remaining: 3</p>
+
 
                         </div>
                         <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Barselona</h3><a class="btn btn-light btn--round card-hover__view"
+                            <h3 class="h3 text-uppercase">Saint Peterburg</h3><a class="btn btn-light btn--round card-hover__view"
                                 href="category.html">VIEW</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-10.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Rio de Janeiro</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Brazil</li>
-                                    <li class="amout">1976
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Rio de Janeiro</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-11.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Paris</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">England</li>
-                                    <li class="amout">953
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Paris</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-12.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Barselona</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">France</li>
-                                    <li class="amout">1976
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Barselona</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-13.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Amsterdam</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Netherlands</li>
-                                    <li class="amout">1976
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Amsterdam</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-14.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Berlin</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Germany</li>
-                                    <li class="amout">953
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Berlin</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
-                    <div class="card card-hotel w-100 mb-2">
-                        <div class="card-hotel__img"><img class="img-cover" src="{% static 'img/hotels/item-15.jpg' %}"
-                                alt="#" />
-                        </div>
-                        <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">300$</span></div>
-                        <div class="card-hotel__bottom">
-                            <h4 class="h4 mb-1">Budapest</h4>
-                            <div class="card-hotel__local d-flex align-items-center"><i class="icon icon-label text-secondary mr-1"></i>
-                                <ul class="d-inline-flex flex-wrap">
-                                    <li class="mr-4">Hungary</li>
-                                    <li class="amout">1976
-                                        Hotels
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-hover">
-                            <h3 class="h3 text-uppercase">Budapest</h3><a class="btn btn-light btn--round card-hover__view"
-                                href="category.html">VIEW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 page-section__more text-center">
+                <div class="col-12 page-section__more text-center"style="margin-top:600px; ">
                     <button class="btn btn-secondary btn--round btn-load" type="button">Show more<i class="fa fa-spin"></i>
                     </button>
                 </div>
@@ -615,6 +479,9 @@
         -webkit-border-radius: 50%;
         border-radius: 50%;
         z-index: 10
+    }
+    p{
+        color: #000000;
     }
 </style>
 {% endblock %}
