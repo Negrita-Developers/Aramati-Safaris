@@ -15,8 +15,9 @@ class JoinGroup(models.Model):
     title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     brief_details= models.TextField()
-    travelers_that_have_booked=models.IntegerField()
+    travelers_that_have_booked=models.IntegerField(default=0)
     image=models.ImageField()
+    price=models.IntegerField(default=0)
     accomodation=(
         ('budget'),
         ( 'standard')
@@ -27,6 +28,6 @@ class JoinGroup(models.Model):
     def __str__(self):
         return self.title 
 
-        
+  
 
 
