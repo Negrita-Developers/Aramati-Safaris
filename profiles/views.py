@@ -17,11 +17,11 @@ def joingroup(request):
 
     return render(request, 'joingroup/joining.html', {"excur": excur})
 
-def single(request):
+def jointrial(request):
 
+    excur = JoinGroup.objects.all()
 
-
-    return render(request,'shortsafaris/2days/naivasha.html') 
+    return render(request, 'joingroup/trial.html', {"excur": excur})
 
 def bookings(request):
    return render(request, 'bookings/booking-traveler.html')  
