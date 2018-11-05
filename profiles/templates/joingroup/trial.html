@@ -101,11 +101,12 @@
                                     class="icon icon-list-mb"></i></a></div>
                     </nav> -->
                     {% for excurs in excur %}
+                    {% if excurs.show is True %}
                     <div class="category-content__items pad-lg-20">
                         <div class="col-3 col-sm-12 ">
                             <div class="product bg-white js-grid-item product--list">
                                 <a class="product__img-top d-block" href=" "><img
-                                        class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
+                                        class="img-fluid" src="{{excurs.image.url}}"
                                         alt="#" /></a>
                                 <div class="product__body">
 
@@ -130,27 +131,27 @@
                                     <hr>
                                     <ul class="product__price d-flex justify-content-between align-items-center">
                                         <li class="mr-2"><span>Join now and pay</span></li>
-                                        <li><span class="cost">USD {{excurs.price6}}</span>
+                                        <li><span class="cost">USD {{excurs.price}}</span>
                                         </li>
                                     </ul>
                                     <hr>
-                                    {% if "2 days Naivasha" in excurs.title %}
+                                    
                                     <div class="product__desc">
                                         <p>{{excurs.brief_details}} </p><a class="product__link-more" href="{% url 'profiles:lakenaivasha' %}">Read
                                             more</a>
                                     </div>
-                                   {% endif %}
+                                   
                                 </div>
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
+                                        <li class="mr-2"><span>Book now and pay</span></li>
                                         <li><span class="cost">{{excurs.price}}</span>
                                         </li>
-                                        {% if "2 days Naivasha" in excurs.title %}
+                                        
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:lakenaivasha' %}">book
                                         now</a> 
-                                        {% endif %}
+                                        
                                         
                                 </div>
 
@@ -158,6 +159,7 @@
 
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
