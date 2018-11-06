@@ -5,3 +5,4 @@ from .models import JoinGroup, GuaranteedSafaris
 
 admin.site.register(JoinGroup)
 admin.site.register(GuaranteedSafaris)
+ 
