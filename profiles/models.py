@@ -12,23 +12,37 @@ class Profiles(models.Model):
 
 
 class JoinGroup(models.Model):
-    title = (
-        ('2dys' '2 days Lake Naivasha'),
-        ('3dys' '2 days Lake Naivasha'),
-    )
+    title=models.CharField(max_length=120)
     location=models.CharField(max_length=20)
     travelers_that_have_booked=models.IntegerField(default=0)
     image=models.ImageField()
     price=models.IntegerField(default=0)
-    accomodation=(
-        ('budget'),
-        ( 'standard')
-    ) 
     bookbefore=models.DateField()
     
-    def __unicode__(self):
-        return self.title
 
-  
+    def __str__(self):
+        return self.title 
+
+
+class GuaranteedSafaris(models.Model):
+    SafariPackages=(
+        ('Excursions-lakenakuru'),
+        ('Excursions-lakenaivasha'),
+        ('Excursions-nairobiexcursions'),
+    )
+
+    bookbefore=models.DateField()
+    Season=(
+        ('low'),
+        ('high'),
+        ('peak')
+    )
+    hotelstar=(
+        ('2 star'),
+        ('3 star'),
+        ('4 star')
+    )
+    peoplebooked=models.IntegerField(default=0)
+
 
 
