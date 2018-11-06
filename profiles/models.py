@@ -30,7 +30,6 @@ class GuaranteedSafaris(models.Model):
         ('Excursions-lakenaivasha'),
         ('Excursions-nairobiexcursions'),
     )
-
     bookbefore=models.DateField()
     Season=(
         ('low'),
