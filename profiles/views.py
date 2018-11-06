@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import JoinGroup
+from .models import JoinGroup, GuaranteedSafaris
 
 # Create your views here.
 def home(request):
@@ -22,6 +22,11 @@ def jointrial(request):
     excur = JoinGroup.objects.all()
 
     return render(request, 'joingroup/trial.html', {"excur": excur})
+
+def guaranteedsafaris(request):
+
+    
+    return render(request)
 
 def bookings(request):
    return render(request, 'bookings/booking-traveler.html')  
