@@ -1,25 +1,18 @@
 from django.db import models
 from django.urls import reverse
+import datetime as date
+from datetime import datetime; datetime.now()
+
 
 # Create your models here.
-class Profiles(models.Model):
-    name=models.CharField(max_length=120)
-    email =models.CharField(max_length=40, blank=False, default='my email default')
-    location = models.CharField(max_length=40, default='my location default')
-    
-    def __unicode__(self):
-        return self.name
-
 
 class JoinGroup(models.Model):
-    title=models.CharField(max_length=120, default=0)
+    title=models.CharField(max_length=120, default="title")
     location=models.CharField(max_length=20)
     travelers_that_have_booked=models.IntegerField(default=0)
     # image=models.ImageField(blank=False)
     price=models.IntegerField(default=0)
-    bookbefore=models.DateField()
     
-
     def __str__(self):
         return self.title 
 
@@ -44,22 +37,30 @@ class GuaranteedSafaris(models.Model):
 
     )
     Enter_Safari_Package=models.CharField(choices=SafariPackagesChoices, max_length=50, default="title")
-    book_before=models.DateField()
+    book_before=models.DateTimeField(default=datetime.now)
+    depature_date=models.DateTimeField(default=datetime.now) 
+    Accomodation=(
+        ('bg', 'Budget'),
+        ('lx','Luxury')
+    )
+    Accomodation=models.CharField(choices=Accomodation, max_length=20, default="accomodation")
+    people_booked=models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.Enter_Safari_Package
+
+class Packages(models.Model):
+    name=models.CharField(max_length=30, default="packagename")
+
+class LowSeason(models.Model):
+    package=  models.OneToOneField(Packages, on_delete=models.CASCADE)
     price1=models.IntegerField(default=0)
-    price2=models.IntegerField(default=0)
+    price2=models.IntegerField(default=0) 
     price3=models.IntegerField(default=0)
     price4=models.IntegerField(default=0)
     price5=models.IntegerField(default=0)
     price6=models.IntegerField(default=0)
     price7=models.IntegerField(default=0)
-    hotel_star=(
-        ('2', '2 star'),
-        ('3','3 star'),
-        ('4', '4 star')
-    )
-    Enter_Hotel_Star=models.CharField(choices=hotel_star, max_length=20, default="hotels")
-    people_booked=models.IntegerField(default=0)
-    show=models.BooleanField(blank=True)
 
     def __str__(self):
-        return self.Enter_Safari_Package
+        return self.package

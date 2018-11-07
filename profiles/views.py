@@ -26,7 +26,7 @@ def jointrial(request):
 def guaranteedsafaris(request):
 
     
-    return render(request)
+    return render(request, 'joingroup/joining.html')
 
 def bookings(request):
    return render(request, 'bookings/booking-traveler.html')  
