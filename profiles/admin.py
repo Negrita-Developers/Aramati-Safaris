@@ -1,10 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import JoinGroup, GuaranteedSafaris, Packages , LowSeason
+from .models import JoinGroup, Packages , LowSeason, JoinedSafaris
 
 admin.site.register(JoinGroup)
-admin.site.register(GuaranteedSafaris)
+admin.site.register(JoinedSafaris) 
 admin.site.register(Packages)
 admin.site.register(LowSeason)
  
