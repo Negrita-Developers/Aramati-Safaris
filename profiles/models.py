@@ -67,6 +67,33 @@ class LowSeason(models.Model):
     def __str__(self):
         return self.package.name
 
+class HighSeason(models.Model):
+    package=models.ForeignKey(Packages)
+    price1=models.IntegerField(default=0)
+    price2=models.IntegerField(default=0) 
+    price3=models.IntegerField(default=0)
+    price4=models.IntegerField(default=0)
+    price5=models.IntegerField(default=0)
+    price6=models.IntegerField(default=0)
+    price7=models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.package.name
+
+
+class PeakSeason(models.Model):
+    package=models.ForeignKey(Packages)
+    price1=models.IntegerField(default=0)
+    price2=models.IntegerField(default=0) 
+    price3=models.IntegerField(default=0)
+    price4=models.IntegerField(default=0)
+    price5=models.IntegerField(default=0)
+    price6=models.IntegerField(default=0)
+    price7=models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.package.name
+
  
 
 
