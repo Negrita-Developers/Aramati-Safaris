@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import JoinGroup
+from .models import JoinGroup, Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason
 
 # Create your views here.
 def home(request):
@@ -11,25 +11,15 @@ def aboutus(request):
 def contact(request):
    return render(request, 'contacts.html') 
 
-def joingroup(request):
-
-    excur = JoinGroup.objects.all()
-
-    return render(request, 'joingroup/joining.html', {"excur": excur})
-
-def jointrial(request):
-
-    excur = JoinGroup.objects.all()
-
-    return render(request, 'joingroup/trial.html', {"excur": excur})
-
 def guaranteedsafaris(request):
 
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
     
-    return render(request, 'joingroup/joining.html')
+    return render(request, 'joingroup/joining.html', {"guaras": guaras}, {" single":  single})
 
 def bookings(request):
-   return render(request, 'bookings/booking-traveler.html')  
+    return render(request, 'bookings/booking-traveler.html')  
 
 def excursions (request):
     return render(request, 'excursions/excursions.html')
