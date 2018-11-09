@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import JoinGroup, Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason
+from .models import Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason
 
 # Create your views here.
 def home(request):
@@ -44,6 +44,11 @@ def ssfnakuru(request):
 
 def aberdaressf(request):
     return render (request, 'shortsafaris/2days/aberdare.html')
+
+def aberdarejoinssf(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'joingroup/2days/aberdare.html', {"guaras": guaras}, {" single":  single})
 
 def  amboselissf(request):
     return render (request, 'shortsafaris/2days/amboseli.html') 

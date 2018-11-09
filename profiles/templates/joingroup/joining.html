@@ -105,13 +105,12 @@
                     <div class="category-content__items pad-lg-20">
                         <div class="col-3 col-sm-12 ">
                             <div class="product bg-white js-grid-item product--list">
-                                <a class="product__img-top d-block" href=" "><img
-                                        class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
                                         alt="#" /></a>
                                 <div class="product__body">
 
 
-                                    <h4 class="product__title"><a href=" ">{{guara.Enter_Safari_Package}}</a></h4>
+                                    <h4 class="product__title"><a href=" ">{{guara.package}}</a></h4>
                                     <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
                                             <select class="js-rating-stat" data-current-rating="5">
@@ -127,10 +126,10 @@
                                         <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>{{guara.Location}}</span></li>
                                     </ul>
                                     <hr>
-                                    
+
                                     <div class="product__desc">
                                         <div class="row">
-                                            <div class="d-inline-flex flex-wrap" >
+                                            <div class="d-inline-flex flex-wrap">
                                                 <div class="avatar" style=" height:39px; width:39px;"></div>
                                                 <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
                                                 <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
@@ -143,21 +142,22 @@
 
                                     </div>
                                     <p style="color:black; margin-left:110px;">4 Seats remaining </p>
-                                 
+
                                 </div>
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per night from</span></li>
+                                        <li class="mr-2"><span>Book now and pay:</span></li>
                                         <li><span class="cost">{{guara.price}}</span>
                                         </li>
-                                        {% if "Excursions - Lake Nakuru" in guara.Enter_Safari_Package %}
+                                        {% if "Excursions-lakenaivasha" in guara.package.name %}
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:aberdarejoinssf' %}">book
+                                        now</a>
+                                    {% elif "Excursions-lakenakuru" in guara.package.name %}
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:lakenakuru' %}">book
-                                        now</a> 
+                                        now</a>
+                                    {% endif %}
 
-
-                                        {% endif %}
-                                        
                                 </div>
 
                             </div>
