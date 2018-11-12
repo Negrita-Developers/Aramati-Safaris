@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
-import datetime as date
-from datetime import datetime; datetime.now()
+from datetime import datetime; datetime.today
+from datetime import date 
 
 
 # Create your models here.
@@ -15,8 +15,9 @@ class JoinedSafaris(models.Model):
    
     package=models.ForeignKey(Packages)
     Location=models.CharField(max_length=15, default="location")
-    book_before=models.DateTimeField(default=datetime.now)
-    depature_date=models.DateTimeField(default=datetime.now) 
+    book_before=models.DateField(default=date.today)
+    depature_date=models.DateField(default=date.today)
+    book_day=models.DateField(default=date.today)
     Season=(
         ('Low Season', 'Low Season'),
         ('High Season','High Season'),
