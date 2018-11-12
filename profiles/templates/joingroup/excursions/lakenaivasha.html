@@ -13,7 +13,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
         <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
-        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:excursions' %}">Join Safaris</a></li>
+        <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:guaranteedsafaris' %}">Join Safaris</a></li>
         <li class="breadcrumb-item active" aria-current="page"><span>Lake Naivasha</span></li>
 
       </ol>
@@ -25,58 +25,23 @@
         <aside class="sidebar col-lg-3">
           <div class="sidebar__content js-sticky-top">
 
-            <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM $ 300</button>
+            <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+              $ 300 <sub>p.p</sub></button>
             <!-- <hr> -->
             <br>
             <div class="sidebar__finder card bg-primary text-white">
-          <h4>TIME TO BOOK</h4>
-              <p>{{guara.book_before}}</p>
+             
+              <p style="font-size:20px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}} Days To Book</p>
+              <h4>Depature Date:</h4>
+              <p>{{guara.depature_date}}</p>
+              <h4>Accomodation</h4>
+              <p>{{guara.Accomodation}}</p>
               <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
               <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
               <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Join This Trip
-                </button>
+              </button>
             </div>
             <hr>
-            <!-- <div class="container">
-              <div class="table">
-                <div class="table-header">
-                  <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Seats:</a></div>
-                  <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Rates</a></div>
-
-                </div>
-                <div class="table-content">
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data" style="text-align:center;">1 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">2 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">3 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">4 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">5 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">6 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                  <div class="table-row" style="height:12px;">
-                    <div class="table-data">7 PAX </div>
-                    <div class="table-data">$ 215</div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
           </div>
         </aside>
 
@@ -407,11 +372,10 @@
         </ul>
         <h4 class="h4 mb-2">Follow us:</h4>
         <ul class="footer-social d-flex flex-wrap">
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+          <li class="mr-4"><a class="social-link" href="https://www.facebook.com/Aramati-Safaris-137041733019958/"
+              target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li class="mr-4"><a class="social-link" href="https://twitter.com/Aramatisafaris" target="_blank"><i class="fa fa-twitter"></i></a></li>
+
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-lg-4 mt-5">
@@ -454,7 +418,6 @@
     color: black;
     font-size: 15px;
   }
-  
 </style>
 <script src="{% static 'js/script.js' %}"></script>
 {% endfor %}

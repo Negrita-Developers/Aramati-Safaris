@@ -17,7 +17,7 @@ class JoinedSafaris(models.Model):
     Location=models.CharField(max_length=15, default="location")
     book_before=models.DateField(default=date.today)
     depature_date=models.DateField(default=date.today)
-    book_day=models.DateField(default=date.today)
+    today_date=models.DateField(default=date.today)
     Season=(
         ('Low Season', 'Low Season'),
         ('High Season','High Season'),
@@ -33,16 +33,25 @@ class JoinedSafaris(models.Model):
     )
     Hotel_Star=models.CharField(choices=Hotel_Star, max_length=20, default="hotelstar")
     Accomodation=(
-        ('bg', 'Budget'),
-        ('lx','Luxury')
+        ('Budget', 'Budget'),
+        ('Luxury','Luxury')
     )
     Accomodation=models.CharField(choices=Accomodation, max_length=20, default="accomodation")
-    people_booked=models.IntegerField(default=0)
+    people_booked=models.IntegerField(default=0, max_length=7)
 
     def __str__(self):
         return self.package.name
 
-
+    def datediff(self):
+        date1 = self.today_date
+        date2 = self.book_before
+        delta= date2 - date1
+        return delta.days
+        
+    def seatsremaining(self):
+        booked = self.people_booked
+        seatsrem = 7 - booked
+        return seatsrem
 
 class LowSeason(models.Model):
     package=models.ForeignKey(Packages)
@@ -87,7 +96,18 @@ class PeakSeason(models.Model):
     def __str__(self):
         return self.package.name 
 
- 
+class ExcursionPrices(models.Model):
+    package=models.ForeignKey(Packages)
+    price1=models.IntegerField(default=0)
+    price2=models.IntegerField(default=0) 
+    price3=models.IntegerField(default=0)
+    price4=models.IntegerField(default=0)
+    price5=models.IntegerField(default=0)
+    price6=models.IntegerField(default=0)
+    price7=models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.package.name 
 
 
 
