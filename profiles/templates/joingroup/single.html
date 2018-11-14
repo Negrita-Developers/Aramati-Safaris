@@ -1,217 +1,29 @@
-<section>
-  <hr class="mb-4">
+<aside class="sidebar col-lg-3">
+        <div class="sidebar__content js-sticky-top">
 
-  <div class="hotel-card" id="rates">
-      <h4 class="mb-4"><strong> Rates: (USING A SAFARI VAN,
-              COST PER PERSON SHARING)</strong></h4>
-      <div class="table-title">
-      </div>
-      <div class="container">
-          <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
-                  style="margin-right: 12px;"></i>LOW SEASON 1 ST APRIL – 30 TH JUNE
-              (EXCLUDING EASTER)</h5>
+                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                        $ 300 <sub>p.p</sub></button>
+                <!-- <hr> -->
+                <br>
+                <div class="sidebar__finder card bg-primary text-white">
+                        <h4>Time to Book:</h4>
+                        <p style="font-size:22px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
+                                Days
+                                Remaining</p>
+                        <h4>Depature Date:</h4>
+                        <p style="font: size 20px;">{{guara.depature_date}}</p>
+                        <h4>Booked Seats:</h4>
+                        <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
+                        <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
+                    <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
+                        <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Join This Trip
+                        </button>
+                </div>
+                <hr>
+        </div>
+</aside>
 
-          <div class="table">
-              <div class="table-header">
-                  <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
-                  <div class="header__item"><a id="wins" class="filter__link filter__link--number"
-                          href="#">1 PAX</a></div>
-                  <div class="header__item"><a id="draws" class="filter__link filter__link--number"
-                          href="#">2 PAX</a></div>
-                  <div class="header__item"><a id="losses" class="filter__link filter__link--number"
-                          href="#">3 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">4 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">5 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">6 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">7 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">SRS</a></div>
-              </div>
-              <div class="table-content">
-                  <div class="table-row">
-                      <div class="table-data">3 STAR HOTELS</div>
-                      <div class="table-data">605 </div>
-                      <div class="table-data">410</div>
-                      <div class="table-data">345</div>
-                      <div class="table-data">310</div>
-                      <div class="table-data">290</div>
-                      <div class="table-data">280</div>
-                      <div class="table-data">270</div>
-                      <div class="table-data">25</div>
-
-
-
-                  </div>
-                  <div class="table-row">
-                      <div class="table-data">4 STAR HOTELS</div>
-                      <div class="table-data">625</div>
-                      <div class="table-data">430</div>
-                      <div class="table-data">365</div>
-                      <div class="table-data">330</div>
-                      <div class="table-data">310</div>
-                      <div class="table-data">295</div>
-                      <div class="table-data">290</div>
-                      <div class="table-data">-</div>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="container">
-          <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
-                  style="margin-right: 12px;"></i>HIGH SEASON 5 TH JAN – 31 ST MARCH
-              – 1
-              ST NOV. – 15 TH DEC</h5>
-
-          <div class="table">
-              <div class="table-header">
-                  <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
-                  <div class="header__item"><a id="wins" class="filter__link filter__link--number"
-                          href="#">1 PAX</a></div>
-                  <div class="header__item"><a id="draws" class="filter__link filter__link--number"
-                          href="#">2 PAX</a></div>
-                  <div class="header__item"><a id="losses" class="filter__link filter__link--number"
-                          href="#">3 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">4 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">5 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">6 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">7 PAX</a></div>
-
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">SRS</a></div>
-              </div>
-              <div class="table-content">
-                  <div class="table-row">
-                      <div class="table-data">3 STAR HOTELS</div>
-                      <div class="table-data">605 </div>
-                      <div class="table-data">410</div>
-                      <div class="table-data">345</div>
-                      <div class="table-data">310</div>
-                      <div class="table-data">290</div>
-                      <div class="table-data">280</div>
-                      <div class="table-data">270</div>
-                      <div class="table-data">25</div>
-
-
-
-                  </div>
-                  <div class="table-row">
-                      <div class="table-data">4 STAR HOTELS</div>
-                      <div class="table-data">665 </div>
-                      <div class="table-data">470</div>
-                      <div class="table-data">405</div>
-                      <div class="table-data">370</div>
-                      <div class="table-data"> 350</div>
-                      <div class="table-data"> 340</div>
-                      <div class="table-data">330</div>
-                      <div class="table-data">50</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="container">
-          <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
-                  style="margin-right: 12px;"></i>PEAK SEASON 1 ST JULY – 31 ST
-              OCTOBER</h5>
-          <div class="table">
-              <div class="table-header">
-                  <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
-                  <div class="header__item"><a id="wins" class="filter__link filter__link--number"
-                          href="#">1 PAX</a></div>
-                  <div class="header__item"><a id="draws" class="filter__link filter__link--number"
-                          href="#">2 PAX</a></div>
-                  <div class="header__item"><a id="losses" class="filter__link filter__link--number"
-                          href="#">3 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">4 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">5 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">6 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">7 PAX</a></div>
-                  <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                          href="#">SRS</a></div>
-              </div>
-              <div class="table-content">
-                  <div class="table-row">
-                      <div class="table-data">3 STAR HOTELS</div>
-                      <div class="table-data">605 </div>
-                      <div class="table-data">410</div>
-                      <div class="table-data">345</div>
-                      <div class="table-data">310</div>
-                      <div class="table-data">290</div>
-                      <div class="table-data">280</div>
-                      <div class="table-data">270</div>
-                      <div class="table-data">25</div>
-
-
-                  </div>
-                  <div class="table-row">
-                      <div class="table-data">4 STAR HOTELS</div>
-                      <div class="table-data">700</div>
-                      <div class="table-data">505</div>
-                      <div class="table-data">440</div>
-                      <div class="table-data">405</div>
-                      <div class="table-data">385</div>
-                      <div class="table-data"> 375</div>
-                      <div class="table-data"> 365</div>
-                      <div class="table-data"> 60</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="hotel-card">
-      <section>
-          <h5>Included:</h5>
-          <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Accommodation on fullboard basis at
-                      the lodge</span></li>
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Transport in a private safari van
-                      with a pop-up roof</span></li>
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Hells Gate entry fees and Boat ride</span></li>
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Mineral
-                      water</span></li>
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">English
-                      speaking driver guide</span></li>
-
-              <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Crescent Island</span></li>
-
-          </ul>
-      </section>
-  </div>
-  <div class="hotel-card">
-      <section>
-          <h4 class="mb-4">Not Included: </h4>
-          <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
-              <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Drinks</span></li>
-              <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Tips</span></li>
-              <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Extra meals/lunch on the last day</span></li>
-              <!-- <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Masai Village</span></li> -->
-              <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
-                      class="align-middle mr-2">Visa and Travel insurance</span></li>
-          </ul>
-      </section>
-  </div>
-
-
-</section>
+<li><span style="font-weight:900;">Available: </span> All year round</li>
+                      <li><span style="font-weight:900;">Tour Duration: </span> 0700hrs – 1800hrs</li>
+                      <li><span style="font-weight:900;">Pick up/drop off location: </span> Aramati Safari Offices – Ngong Road</li>
+                      <li> <span style="font-weight:900;">Departure Time: </span> 0700hrs</li>

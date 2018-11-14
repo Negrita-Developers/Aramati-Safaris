@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 from datetime import datetime; datetime.today
 from datetime import date 
 
@@ -17,7 +18,7 @@ class JoinedSafaris(models.Model):
     Location=models.CharField(max_length=15, default="location")
     book_before=models.DateField(default=date.today)
     depature_date=models.DateField(default=date.today)
-    today_date=models.DateField(default=date.today)
+    today_date=models.DateField(auto_now_add=True)
     Season=(
         ('Low Season', 'Low Season'),
         ('High Season','High Season'),
@@ -37,21 +38,21 @@ class JoinedSafaris(models.Model):
         ('Luxury','Luxury')
     )
     Accomodation=models.CharField(choices=Accomodation, max_length=20, default="accomodation")
-    people_booked=models.IntegerField(default=0, max_length=7)
+    people_booked=models.IntegerField(default=0)
 
     def __str__(self):
         return self.package.name
 
     def datediff(self):
-        date1 = self.today_date
         date2 = self.book_before
-        delta= date2 - date1
+        delta= date2 - timezone.now().date()
         return delta.days
         
     def seatsremaining(self):
         booked = self.people_booked
         seatsrem = 7 - booked
         return seatsrem
+
 
 class LowSeason(models.Model):
     package=models.ForeignKey(Packages)

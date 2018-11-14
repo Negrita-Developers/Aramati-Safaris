@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason
-
+from .models import Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason, ExcursionPrices
+from datetime import date
 # Create your views here.
 
 # General view pages
@@ -21,9 +21,10 @@ def lakenaivasha (request):
     return render(request, 'excursions/lakenaivasha.html')
 
 def joinlakenaivasha (request):
-    guaras = JoinedSafaris.objects.all()
-    single = Packages.objects.all()
-    return render(request, 'joingroup/excursions/lakenaivasha.html', {"guaras": guaras}, {" single":  single})
+    guaras = JoinedSafaris.objects.all() 
+    singles = ExcursionPrices.objects.all()
+
+    return render(request, 'joingroup/excursions/lakenaivasha.html', {"guaras": guaras}, {"singles": singles})
 
 def lakenakuru (request):
     return render(request, 'excursions/lakenakuru.html')  
