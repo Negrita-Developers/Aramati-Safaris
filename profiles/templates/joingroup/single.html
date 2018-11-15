@@ -16,8 +16,8 @@
                         <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
                         <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
                     <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
-                        <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Join This Trip
-                        </button>
+                    <a href="{% url 'profiles:bookings' %}"><button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Join This Trip
+                        </button></a> 
                 </div>
                 <hr>
         </div>

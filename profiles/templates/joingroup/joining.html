@@ -105,8 +105,13 @@
                     <div class="category-content__items pad-lg-20">
                         <div class="col-3 col-sm-12 ">
                             <div class="product bg-white js-grid-item product--list">
+                                    {% if "Excursions-lakenaivasha" in guara.package.name %}
                                 <a class="product__img-top d-block" href=" "><img class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
                                         alt="#" /></a>
+                                        {% elif "Excursions-lakenakuru" in guara.package.name %}
+                                        <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenakuru/Lake-In-Flamingo-Bird-Picture_SmhzbZp.jpg' %} "
+                                            alt="#" /></a>
+                                            {% endif %}
                                 <div class="product__body">
 
 
@@ -123,8 +128,11 @@
                                         </div>
                                     </div> -->
                                     <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>{{guara.Location}}</span></li>
+                                        <li class="mr-3"><i class="fas fa-map-marked-alt" style="font-size:16px; margin-right: 12px; "></i><span>{{guara.Location}}</span></li>
+                                        <li> </li>
                                     </ul>
+                                   <p style="font-size:16px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}} Days
+                                                Remaining</p>
                                     <hr>
 
                                     <div class="product__desc">

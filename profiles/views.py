@@ -151,6 +151,50 @@ def amboselijoinssf5(request):
 def longsafaris(request):
     return render(request, 'longsafaris/longsafaris.html')
 
+def amboselissf6(request):
+    return render (request, 'longsafaris/6days/amboselinakuru.html') 
+
+def amboselijoinssf6(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'longsafaris/6days/amboselinakuru.html', {"guaras": guaras}, {"single":  single}) 
+
+def maranakurussf6(request):
+    return render (request, 'longsafaris/6days/maranakurunaivasha.html') 
+
+def maranakurujoinssf6(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'longsafaris/6days/maranakurunaivasha.html', {"guaras": guaras}, {"single":  single}) 
+
+def maranakurussf7(request):
+    return render (request, 'longsafaris/7days/maranakuru.html') 
+
+def maranakurujoinssf7(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'longsafaris/7days/maranakuru.html', {"guaras": guaras}, {"single":  single})
+
+def maranakurussf10(request):
+    return render (request, 'longsafaris/10days/maranakuru.html') 
+
+def maranakurujoinssf10(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'longsafaris/10days/maranakuru.html', {"guaras": guaras}, {"single":  single})
+
+def amboselinakurussf13(request):
+    return render (request, 'longsafaris/13days/amboselinakuru.html') 
+
+def amboselinakurujoinssf13(request):
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+    return render (request, 'longsafaris/13days/amboselinakuru.html', {"guaras": guaras}, {"single":  single})
+
+#booking and checkout
+def bookings(request):
+    return render(request, 'bookings/booking-traveler.html') 
+
 #joining groups
 def guaranteedsafaris(request):
 
@@ -161,4 +205,23 @@ def guaranteedsafaris(request):
 
 #booking and checkout
 def bookings(request):
-    return render(request, 'bookings/booking-traveler.html') 
+
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+
+    return render(request, 'bookings/booking-traveler.html' , {"guaras": guaras}, {" single":  single}) 
+
+def confirming(request):
+
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+
+    return render(request, 'bookings/booking-traveler.html' , {"guaras": guaras}, {" single":  single}) 
+
+def bookings(request):
+
+    guaras = JoinedSafaris.objects.all()
+    single = Packages.objects.all()
+
+    return render(request, 'bookings/booking-traveler.html' , {"guaras": guaras}, {" single":  single}) 
+

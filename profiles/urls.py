@@ -59,13 +59,30 @@ urlpatterns = [
     url(r'^joinshortsafarismaasarimaranakuru4days/$', views.maranakurujoinssf4, name='maranakurujoinssf4'),
 
     url(r'^shortsafarisamboseli5days/$', views.amboselissf5, name='amboselissf5'),
-    url(r'^joinshortsafarisamboseli5days/$', views.amboselijoinssf5, name='amboselijoinssf5'),
+    url(r'^joinshortsafarisamboseli5days/$', views.amboselijoinssf5, name='amboselijoinssf5'), 
+
+    url(r'^6 DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI/$', views.amboselissf6, name='amboselissf6'),
+    url(r'^SHARING: 6 DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI/$', views.amboselijoinssf6, name='amboselijoinssf6'),
+
+    url(r'^6 DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU/$', views.maranakurussf6, name='maranakurussf6'),
+    url(r'^SHARING: 6 DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU/$', views.maranakurujoinssf6, name='maranakurujoinssf6'),
+
+    url(r'^7 DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU/$', views.maranakurussf7, name='maranakurussf7'),
+    url(r'^SHARING: 7 DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU/$', views.maranakurujoinssf7, name='maranakurujoinssf7'),
+
+    url(r'^10 DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU/SAMBURU/AMBOSELI/$', views.maranakurussf10, name='maranakurussf10'),
+    url(r'^SHARING: 10 DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU/SAMBURU/AMBOSELI/$', views.maranakurujoinssf10, name='maranakurujoinssf10'),
+
+    url(r'^13 DAYS AMBOSELI/TSAVO EAST/NAIVASHA/NAKURU/MASAI MARA BUDGET SAFARI/$', views.amboselinakurussf13, name='amboselinakurussf13'),
+    url(r'^SHARING: 13 DAYS AMBOSELI/TSAVO EAST/NAIVASHA/NAKURU/MASAI MARA BUDGET SAFARI/$', views.amboselinakurujoinssf13, name='amboselinakurujoinssf13'),
+
+
+    url(r'^bookingtravelerinfo/$', views.bookings, name='bookings'), 
+
+    # url(r'^confirmation/$', views.confirming, name='confirming'),
+    # url(r'^payment/$', views.payment, name='payment'),
 ] 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT) 
-# 
-#   # url(r'^booking/$', views.booking, name='booking'),
-    # url(r'^confirmation/$', views.confirming, name='confirming'),
-    # url(r'^payment/$', views.payment, name='payment'),
