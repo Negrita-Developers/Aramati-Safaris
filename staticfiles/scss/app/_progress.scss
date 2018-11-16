@@ -1,0 +1,43 @@
+.progress {
+  position: relative;
+  @include rem(height, 20px);
+  margin-right: 1rem;
+  flex-grow: 1;
+  background-color: $white;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    border: 1px solid $hr-border-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &--sm {
+    @include rem(height, 7px);
+    @include rem(border-radius, 4px);
+
+    &:after {
+      @include rem(border-radius, 4px);
+    }
+  }
+
+  &--lg {
+    @include rem(height, 20px);
+    @include rem(border-radius, 10px);
+
+    &:after {
+      @include rem(border-radius, 10px);
+    }
+  }
+}
+
+.progress-bar {
+  text-align: center;
+  transition: width 1s ease;
+}
+

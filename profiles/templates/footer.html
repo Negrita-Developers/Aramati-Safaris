@@ -1,0 +1,135 @@
+{% load bootstrap4 %}
+{% load static %}
+{{ block.super}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Looking for something amazing?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+
+    {% if title %}
+    <title>Aramati Safaris - {{title}}</title>
+    {% else %}
+    <title> Aramati Safaris</title>
+    {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <!-- Edge and IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Add to homescreen for Chrome on Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Looking for something amazing?">
+    <link rel="icon" sizes="162x162" href="{% static 'img/touch/chrome-touch-icon-162x162.png' %}">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Aramati Safaris">
+
+    <link rel="apple-touch-icon" href="{% static 'img/touch/apple-touch-icon.png' %}">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,500,600,700%7CPoppins:400,500,600,700 " rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link id="cssRtl" rel="stylesheet" href="#">
+    <link rel="stylesheet" href="{% static 'css/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-stars-o.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blueimp-gallery.min.css' %}">
+    <!-- build:css style.min.css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- endbuild-->
+    <link id="cssTheme" rel="stylesheet" href="{% static 'skins/style-default.css' %}">
+    {% endblock %}
+
+</head>
+
+<body class="load">
+    <footer class="page-footer">
+        <div class="page-footer__cover jarallax" data-speed="0.5"><img class="jarallax-img" src="https://s-media-cache-ak0.pinimg.com/originals/35/76/a5/3576a51097ee19c85932943e6f73ea2f.jpg"
+                alt="#"></div>
+        <div class="container mb-5 mb-lg-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 mt-5">
+                    <h3 class="h3 text-uppercase">Aramati safaris</h3>
+                    <ul class="page-footer__address">
+                        <li class="mb-2"><i class="fas fa-building" style="margin-right:12px;"></i>
+                            Rehema Place, Suite B14, Ngong Road/Ring Road,
+                            Adjacent Eastlands Hotel & Opposite Nakumatt Ngong Road (Prestige Plaza)
+                        </li>
+                        <li class="mb-2"><i class="fas fa-headset" style="margin-right:12px;"></i>
+                            24/7 customer support:
+                            <a href="tel:#">+254 722 44 32 74, +254 734 44 32 74</a>
+                        </li>
+                        <li class="mb-2"><i class="fas fa-at" style="margin-right:12px;"></i>
+                            <a href="mailto:#">info@aramatisafaris.co.ke</a>
+                        </li>
+                    </ul>
+                    <h4 class="h4 mb-2">Follow us:</h4>
+                    <ul class="footer-social d-flex flex-wrap">
+                        <li class="mr-4"><a class="social-link" href="https://www.facebook.com/pages/Aramati-Safaris/137041733019958"
+                                target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="mr-4"><a class="social-link" href="https://twitter.com/Aramatisafaris" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-12 col-sm-6 col-lg-4 mt-5">
+                            <h3 class="h3 text-uppercase">customer support</h3>
+                            <ul class="page-footer__support list-styled">
+                                <li class="mb-2"><a href="#" target="_blank">Faq</a></li>
+                                <li class="mb-2"><a href="#" target="_blank">How do I make a reservation?</a></li>
+                                <li class="mb-2"><a href="#" target="_blank">Payment options</a></li>
+                                <li class="mb-2"><a href="#" target="_blank">Booking tips</a></li>
+                            </ul>
+                        </div> -->
+                        
+                <div class="col-12 col-sm-12 col-lg-4 mt-5" style="margin-left:340px;">
+                    <h3 class="h3 text-uppercase">get our best offers</h3>
+                    <form class="subscribe-form" action="#" method="POST">
+                        <div class="input-group input-group--lg flex-nowrap mb-4">
+                            <input class="form-control form-control-lg" type="email" placeholder="Enter Your email"
+                                required>
+                            <div class="input-group-append">
+                                <button class="btn btn-btn btn-light btn--round" type="submit"><i class="fa fa-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p>We guarantee your confidentiality, and we also undertake not to transfer your email address
+                            to third parties.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer__copyright text-center">
+            <div class="container">
+                <div class="hr"></div>Copyright © 2014 Aramati Safaris. All rights reserved.<br /><a class="text-light text-uppercase"
+                    href="https://themeforest.net/user/netgon">This was created by Negrita Developers.
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script></a>
+            </div>
+        </div>
+    </footer>
+    <style>
+        p {
+            color: black;
+            font-size: 15px;
+        }
+    </style>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

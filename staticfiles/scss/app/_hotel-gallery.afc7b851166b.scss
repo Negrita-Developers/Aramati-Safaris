@@ -1,0 +1,230 @@
+/**
+ * Hotel Gallery
+ */
+.hotel-gallery {
+  &__carousel {
+    min-height: 38vh;
+    height: 500/1200*100vw;
+    max-height: 500px;
+    margin-bottom: 5px;
+  }
+
+  &__thumbs {
+    .swiper-slide {
+      width: 80px;
+      height: 60px;
+      border: 2px solid #fff;
+    }
+  }
+
+  &__thumb {
+    height: 100%;
+    display: block;
+    background-size: cover;
+  }
+
+  &__arrow {
+    display: block;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    width: 1em;
+    height: 1em;
+    font-size: 32px;
+    line-height: 1;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0.50;
+    border-radius: 50%;
+
+    &:first-of-type {
+      left: 0.5rem;
+    }
+    &:last-of-type {
+      right: 0.5rem;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .icon {
+      color: #fff;
+    }
+  }
+}
+
+
+/**
+ * Lightbox for Gallery
+ */
+.blueimp-gallery {
+  .close {
+    display: flex;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    opacity: 1;
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.gallery-modal {
+  font-size: 14px;
+
+  a[data-toggle=collapse] {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  > .slides {
+    position: absolute;
+  }
+
+  &.blueimp-gallery-controls {
+    .prev,
+    .next {
+      width: 40px;
+      height: 40px;
+      margin-top: calc(-20px - 13px);
+      transform: rotate(45deg);
+      transition: all .4s;
+      border-width: 1px;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .prev {
+      left: 1.5rem;
+      border-color: transparent transparent #fff #fff;
+    }
+
+    .next {
+      right: 1.5rem;
+      border-color: #fff #fff transparent transparent;
+    }
+
+    html.rtl & {
+      .prev {
+        left: auto;
+        right: 40px;
+      }
+
+      .next {
+        right: auto;
+        left: 40px;
+      }
+
+      .prev,
+      .next {
+        transform: scaleX(-1) rotate(45deg);
+      }
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    .container {
+      padding-top: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    html.rtl & {
+      direction: rtl;
+    }
+  }
+
+  &__info {
+    margin: 0 -1rem;
+
+    .description {
+      padding: 0 1rem 0.5rem;
+    }
+
+    .toggle-thumbs {
+      padding: 0 1rem 0.5rem;
+      text-transform: inherit;
+
+      &:before {
+        display: inline-block;
+        content: 'Show list'
+      }
+
+      &[aria-expanded=true] {
+        &:before {
+          content: 'Hide list'
+        }
+        i:before {
+          display: block;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__thumbs {
+    padding-bottom: 0.5rem;
+
+    .swiper-slide {
+      width: 100px;
+      height: 70px;
+      opacity: 1;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background-size: cover;
+      background-position: center;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+        @include shadow-8dp();
+      }
+    }
+  }
+
+  @include media('<lg') {
+    > .slides {
+      > .slide {
+        > .slide-content {
+          @include object-fit;
+        }
+      }
+    }
+
+    &__bottom {
+      .container {
+        max-width: none;
+        width: auto;
+        margin: 1rem;
+      }
+    }
+  }
+
+  @include media('<lg', 'landscape') {
+    &__bottom {
+      .container {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$fzb: 16;
+$font-primary: 'Open Sans', sans-serif;
+$font-second: 'Poppins', sans-serif;
+
+$gray-dark-color: (
+  #555555, // 1
+  #666666, // 2
+  #777777, // 3
+  #888888, // 4
+  #999999  // 5
+);
+
+$gray-light-color: (
+  #fafafa, // 1
+  #f5f5f5, // 2
+  #eeeeee, // 3
+  #e0e0e0, // 4
+  #e8e5df, // 5
+  #dedede, // 6
+  #cecece, // 7
+  #cccccc, // 8
+  #d1d1d1, // 9
+  #d1f1fc  // 10
+);
+
+$body-bg:                   nth($gray-light-color, 5);
+$body-color:                $gray-900;
+
+$header-top-sm-height: 50px;
+$menu-mobile-width: 240px;
+$btn-toggle-menu-width: 20px;

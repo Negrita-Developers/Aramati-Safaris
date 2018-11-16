@@ -1,0 +1,682 @@
+$reverse: false !default;
+
+a {
+  color: $link-color;
+
+  @include hover {
+    color: $link-hover-color;
+  }
+}
+
+ul {
+  &.list-bullets {
+    li {
+      &:before {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.rating {
+  color: $secondary;
+}
+
+// Style colors ...
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+
+// Alerts
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color), theme-color-level($color, $alert-color-level));
+  }
+}
+
+
+// Tooltips
+
+.bs-tooltip-top {
+  .arrow {
+    &::before {
+      border-top-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-right {
+  .arrow {
+    &::before {
+      border-right-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-bottom {
+  .arrow {
+    &::before {
+      border-bottom-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-left {
+  .arrow {
+    &::before {
+      border-left-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.bs-tooltip-auto {
+  &[x-placement^="top"] {
+    @extend .bs-tooltip-top;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-tooltip-right;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-tooltip-bottom;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-tooltip-left;
+  }
+}
+
+.tooltip-inner {
+  background-color: $tooltip-bg;
+}
+
+
+// Buttons Themes
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+.btn-light,
+.btn-outline-light {
+  color: $secondary;
+}
+
+.btn-nav {
+  &:hover,
+  &:focus {
+    background-color: #fff!important;
+    color: $secondary!important;
+  }
+}
+
+
+// UI Spinner
+
+.qty {
+  .ui-spinner-input {
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  .ui-spinner-button {
+    &:hover,
+    &:focus {
+      &::after {
+        border-color: $secondary transparent;
+      }
+    }
+  }
+}
+
+
+// Scrollbar
+
+.mCSB_scrollTools {
+  .mCSB_buttonDown,
+  .mCSB_buttonUp {
+    color: #fff;
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+
+// Forms, form controls
+
+.form-control,
+.select2-container .select2-selection--single {
+  border-color: $input-border-color;
+
+  @include form-control-focus();
+}
+
+.form-control {
+  @include box-shadow($input-box-shadow);
+
+  &:focus ~ .input-group-append .btn {
+    border-color: $input-focus-border-color;
+  }
+
+  &:focus ~ .form-control.date {
+    color: $secondary;
+  }
+
+  &::placeholder {
+    opacity: 1;
+    color: $input-placeholder-color;
+  }
+
+  &.flatpickr-input[readonly] {
+    background-color: #fff;
+  }
+}
+
+.custom-checkbox {
+  .custom-control-label {
+    &::after {
+      background-image: linear-gradient(
+        to bottom, $secondary 100%, transparent 100%
+      ), linear-gradient(
+        to right, $secondary 100%, transparent 100%
+      )!important;
+    }
+  }
+}
+
+.custom-radio {
+  .custom-control-label {
+    &:before {
+      background-color: $secondary;
+    }
+  }
+
+  .custom-control-input:checked~.custom-control-label {
+    &::before {
+      background-color: $secondary;
+    }
+  }
+}
+
+.select2-dropdown {
+  .select2-search {
+    border-bottom-color: $secondary;
+  }
+
+  .select2-results {
+    &__option {
+      &--highlighted[aria-selected] {
+        .select2-container & {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+
+// UI Sliders
+
+.noUi-horizontal.noUi-ltr {
+  .noUi-connect {
+    background-color: $secondary;
+  }
+
+  .noUi-handle {
+    background-color: $secondary;
+  }
+}
+
+
+// Progress Bars
+
+.progress-bar {
+  color: $progress-bar-color;
+  background-color: $progress-bar-bg;
+}
+
+
+// Modal Account
+
+.modal-account {
+  &__tabs {
+    .nav-link {
+      background-color: rgba($primary, 0.20);
+
+      &:hover {
+        background-color: rgba($primary, 0.30%);
+      }
+
+      &.active {
+        background-color: #ffffff;
+        border-color: #ffffff;
+      }
+    }
+  }
+
+  @include media('>md') {
+    &__list {
+      .nav-link {
+        &:hover {
+          background-color: rgba($primary, 0.20);
+          border-color: rgba($primary, 0.20);
+        }
+      }
+    }
+  }
+}
+
+
+// Breadcrumbs
+
+.breadcrumb-item {
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+
+// Pagination
+
+.page-link {
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border: $pagination-border-width solid $pagination-border-color;
+
+  &:hover {
+    color: $pagination-hover-color;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+}
+
+.page-item {
+  &.active .page-link {
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border-color;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+}
+
+.page-content {
+  border-bottom-color: $secondary;
+}
+
+
+// Navigation menu
+
+.main-nav {
+  background-color: $primary;
+
+  &__list {
+    .nav-link {
+      color: $white;
+      background-color: $primary;
+
+      &:hover {
+        background-color: lighten($primary, 7%);
+
+        span {
+          border-bottom-color: currentColor;
+        }
+      }
+
+      &:active:focus {
+        background-color: darken($primary, 2%);
+      }
+    }
+
+    .dropdown-menu {
+      .nav-link {
+        &:focus,
+        &:hover,
+        &:active:focus {
+          background-color: lighten($primary, 55%);
+        }
+      }
+    }
+  }
+
+  &__search {
+    .form-control {
+      box-shadow: inset 0 0 0 1px transparent;
+
+      &:focus {
+        box-shadow: inset 0 0 0 1px $secondary;
+      }
+    }
+  }
+
+  @include media('<lg') {
+    background-color: $gray-100;
+
+    &__list {
+      .nav-item {
+        &.show {
+          > .nav-link {
+            color: $primary;
+          }
+        }
+      }
+
+      .nav-link {
+        background-color: $gray-100;
+        color: $gray-900;
+
+        &:hover,
+        &:active:focus {
+          background-color: $gray-200;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+
+// Intro home
+
+.card-intro {
+  &__footer {
+    background-color: rgba($primary, 0.9);
+  }
+
+  &__rating {
+    .br-widget {
+      a {
+        color: inherit;
+
+        &::after {
+          color: inherit!important;
+        }
+      }
+    }
+  }
+}
+
+
+// Intro searchbar
+
+.search-hotels__tabs {
+  .nav-link {
+    border-color: lighten($primary, 46%);
+    background-color: lighten($primary, 46%);
+
+    &:hover {
+      background-color: lighten($primary, 48%);
+    }
+
+    &.active {
+      background-color: $white;
+      border-color: $secondary;
+      border-bottom-color: $gray-500;
+    }
+  }
+}
+
+.search-hotels__form {
+  .select-local {
+    background-color: $primary-light;
+
+    .select2-selection--single {
+      background-color: transparent;
+
+      &:focus {
+        .select2-selection__rendered {
+          border-color: $secondary!important;
+        }
+      }
+    }
+  }
+
+  .form-control {
+    &.date {
+      &:focus ~ .date {
+        border-bottom-color: $secondary;
+      }
+    }
+  }
+}
+
+
+// Cards
+
+.card-hover {
+  background-color: rgba($primary, 0.94);
+  box-shadow: 0px 0px 0px 1px rgba($primary, 0.94);
+}
+
+.card-service {
+  .card-header {
+    color: $primary;
+  }
+}
+
+
+// Category Sortbar
+
+.sortbar {
+  .nav-link {
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+
+// Hotel, navigation, cards, guest rooms
+
+.hotel-nav {
+  &__menu {
+    .nav-link {
+      color: $gray-600;
+      background-color: $primary-light;
+
+      &.active {
+        color: #fff;
+        background-color: rgba($primary, 0.80);
+      }
+    }
+  }
+}
+
+.hotel-service {
+  &__list {
+    .available {
+      background-color: $primary-light;
+    }
+  }
+}
+
+.hotel-status {
+  background-color: rgba($primary, 0.5);
+}
+
+
+// Hotel check items
+
+.hotel-package {
+  &__title {
+    &:before {
+      border-left-color: $secondary;
+    }
+  }
+
+  &__props {
+    .form-select {
+      .select2-container {
+        .select2-selection--single {
+          background-color: rgba($primary, .20);
+        }
+      }
+    }
+  }
+}
+
+
+// Hotel Gallery
+
+.hotel-gallery {
+  &__thumbs {
+    .swiper-slide {
+      &.swiper-slide-active {
+        border-color: $secondary;
+      }
+    }
+  }
+}
+
+
+// Blog list, blog posts
+
+.blog-post {
+  &__meta-tags {
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+
+// Sidebar
+
+.sidebar {
+  &__list {
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__contacts {
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+
+// Sitebar guests
+
+.guests-room {
+  &__desc {
+    background-color: $primary-light;
+
+    &:after {
+      border-color: rgba($primary, 0.20) transparent transparent;
+    }
+  }
+
+  &__avatar {
+    &:hover {
+      border-color: $secondary;
+      box-shadow: 0 0 0 2px $secondary;
+    }
+  }
+}
+
+
+// Site footer
+
+.page-footer {
+  color: $white;
+  background-color: rgba($primary, .9);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  &__cover {
+    &:before {
+      background-color: rgba($primary, .9);
+    }
+  }
+
+  &__copyright {
+    color: rgba($white, 0.70);
+
+    .hr {
+      border-top-color: rgba($white, .50);
+    }
+  }
+}
+
+.footer-social {
+  color: #fff;
+}
+
+.subscribe-form {
+  .form-control {
+    border-color: $white !important;
+    color: $white;
+    background-color: transparent;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    border-color: $white !important;
+    color: $gray-600;
+  }
+}
+
+
+// Datetimepicker
+
+@import 'flatpickr-theme';
+
+
+@if $reverse {
+  .comment {
+    &__level {
+      .badge {
+        color: #fff;
+      }
+    }
+  }
+}

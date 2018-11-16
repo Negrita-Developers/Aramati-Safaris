@@ -1,0 +1,32 @@
+/**
+ * Pagination
+ */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .page-item {
+    @include rem(margin, 0 4px);
+
+    html.rtl & {
+      .fa {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include rem(width, 36px);
+  @include rem(height, 36px);
+  border-radius: 50%!important;
+  padding: 4px;
+  margin: 0;
+  line-height: 1;
+  transition: 200ms ease;
+}

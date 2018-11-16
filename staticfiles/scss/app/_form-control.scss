@@ -1,0 +1,129 @@
+.form-control,
+.select2-container .select2-selection--single {
+  height: 35px;
+  padding: 7px 16px;
+  border-radius: 1.25rem;
+  font-weight: 600;
+  font-size: 13px;
+  color: $gray-700;
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus();
+
+  .has-error & {
+    color: inherit;
+    border-color: currentColor;
+  }
+}
+
+.form-control {
+  @include box-shadow($input-box-shadow);
+
+  &.hidden {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    padding: 0;
+    margin: auto;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &.date {
+    display: inline;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  &:focus ~ .form-control.date {
+    border-bottom: 1px dotted;
+  }
+
+  // sizing modifiers
+
+  &-sm {
+    @include rem(height, 40px);
+    @include rem(padding, 10px 1rem);
+    border-radius: 1.50rem;
+  }
+
+  &-lg {
+    @include rem(height, 50px);
+    @include rem(padding, 12px 20px);
+    font-size: 1rem;
+    line-height: (24/16);
+  }
+}
+
+textarea.form-control {
+  height: auto;
+  border-radius: 6px;
+  resize: none;
+}
+
+.input-group-prepend,
+.input-group-append {
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    transform: translateY(-50%);
+    @include rem(font-size, 15px);
+    line-height: 1;
+  }
+
+  .btn,
+  .input-group-text {
+    margin: 0 -1px;
+    border-radius: 1.25rem;
+    border-color: $input-border-color;
+    padding: 0.25rem 1rem;
+  }
+}
+
+.input-group-prepend {
+  .form-control {
+    @include rem(padding-left, 40px);
+  }
+
+  .icon {
+    left: 0;
+    margin-left: 1rem;
+  }
+
+  .btn,
+  .input-group-text {
+    border-radius: 1.25rem;
+  }
+}
+
+.input-group-append {
+  .form-control {
+    @include rem(padding-right, 40px);
+  }
+  .icon {
+    right: 0;
+    margin-right: 1rem;
+  }
+}
+
+.input-group--lg {
+  .form-control,
+  .btn {
+    border-radius: 1.75rem;
+  }
+}
+
+.has-error {
+  color: $danger;
+}
+
+.has-success {
+  color: $success;
+}
