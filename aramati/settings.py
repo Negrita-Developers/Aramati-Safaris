@@ -25,7 +25,7 @@ SECRET_KEY = '!1!$k97byy7#&1_c241@+jlsf0&(enwalc*d9)95ki8%v=yp+s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = '.localhost', '.herokuapp.com', '.127.0.0.1', '.cpanel.com', 'http://www.aramatisharingsafaris.co.ke'
+ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '.127.0.0.1', '.cpanel.com', 'http://www.aramatisharingsafaris.co.ke', 'https://www.aramatisharingsafaris.co.ke']
 
 
 # Application definition
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'aramati.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

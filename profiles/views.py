@@ -1,17 +1,33 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Packages , LowSeason, JoinedSafaris , HighSeason, PeakSeason, ExcursionPrices
 from datetime import date
+from django.http import HttpResponse
 # Create your views here.
 
 # General view pages
 def home(request):
-   return render(request, 'home.html') 
+   guaras = JoinedSafaris.objects.all()
+   return render(request, 'home.html', {"guaras": guaras}) 
 
 def aboutus(request):
    return render(request, 'about.html') 
 
 def contact(request):
    return render(request, 'contacts.html') 
+
+def search_results(request):
+
+    if 'package' in request.GET and request.GET["package"]:
+        search_term = request.GET.get("package")
+        searched_packages = Package.search_by_name(search_term)
+        message = f("{search_term}")
+
+        return render(request, 'search.html',{"message":message,"packages": searched_packages})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html',{"message":message})
+
 
 #excursions
 def excursions (request):
@@ -157,7 +173,7 @@ def amboselissf6(request):
 def amboselijoinssf6(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'longsafaris/6days/amboselinakuru.html', {"guaras": guaras}, {"single":  single}) 
+    return render (request, 'joingroup/6days/amboselinakuru.html', {"guaras": guaras}, {"single":  single}) 
 
 def maranakurussf6(request):
     return render (request, 'longsafaris/6days/maranakurunaivasha.html') 
@@ -165,7 +181,7 @@ def maranakurussf6(request):
 def maranakurujoinssf6(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'longsafaris/6days/maranakurunaivasha.html', {"guaras": guaras}, {"single":  single}) 
+    return render (request, 'joingroup/6days/maranakurunaivasha.html', {"guaras": guaras}, {"single":  single}) 
 
 def maranakurussf7(request):
     return render (request, 'longsafaris/7days/maranakuru.html') 
@@ -173,7 +189,7 @@ def maranakurussf7(request):
 def maranakurujoinssf7(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'longsafaris/7days/maranakuru.html', {"guaras": guaras}, {"single":  single})
+    return render (request, 'joingroup/7days/maranakuru.html', {"guaras": guaras}, {"single":  single})
 
 def maranakurussf10(request):
     return render (request, 'longsafaris/10days/maranakuru.html') 
@@ -181,7 +197,7 @@ def maranakurussf10(request):
 def maranakurujoinssf10(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'longsafaris/10days/maranakuru.html', {"guaras": guaras}, {"single":  single})
+    return render (request, 'joingroup/10days/maranakuru.html', {"guaras": guaras}, {"single":  single})
 
 def amboselinakurussf13(request):
     return render (request, 'longsafaris/13days/amboselinakuru.html') 
@@ -189,7 +205,7 @@ def amboselinakurussf13(request):
 def amboselinakurujoinssf13(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'longsafaris/13days/amboselinakuru.html', {"guaras": guaras}, {"single":  single})
+    return render (request, 'joingroup/13days/amboselinakuru.html', {"guaras": guaras}, {"single":  single})
 
 #booking and checkout
 def bookings(request):

@@ -35,50 +35,178 @@
                                         <ul class="sidebar-filter__list">
                                             <li class="sidebar-filter__item">
                                                 <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                                                        href="#price" data-toggle="collapse" role="button"><span>Price
-                                                            (per night)</span><i class="fa fa-angle-down"></i></a></h5>
-                                                <div class="collapse show" id="price">
-                                                    <div class="sidebar-filter__content">
-                                                        <label class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" /><span
-                                                                class="custom-control-label pointer">50 - 99 €</span>
-                                                        </label>
-                                                        <label class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" /><span
-                                                                class="custom-control-label pointer">100 - 149 €</span>
-                                                        </label>
-                                                        <label class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" /><span
-                                                                class="custom-control-label pointer">150 - 199 €</span>
-                                                        </label>
-                                                        <label class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" /><span
-                                                                class="custom-control-label pointer">200 € +</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="sidebar-filter__item">
-                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                                                        href="#accommodation" data-toggle="collapse" role="button"><span>Safaris:</span><i
-                                                            class="fa fa-angle-down"></i></a></h5>
-                                                <div class="collapse show" id="accommodation">
+                                                        href="#2days" data-toggle="collapse" role="button"><span>2
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="2days">
                                                     <div class="sidebar-filter__content">
                                                         <ul>
                                                             <li>
-                                                                <a href="">Short Safaris(2-5 days)</a>
+                                                                <a href="{% url 'profiles:ssfnakuru' %}" style="margin-bottom:19px;">2
+                                                                    DAYS LAKE NAKURU </a>
                                                             </li>
                                                             <li>
-                                                                <a href="">Long Safaris(6-13 days)</a>
+                                                                <a href="{% url 'profiles:aberdaressf' %}" style="margin-top:69px;">2
+                                                                    DAYS ABERDARE NATIONAL PARK</a>
                                                             </li>
                                                             <li>
-                                                                <a href="">Request customized Safari.</a>
+                                                                <a href="{% url 'profiles:amboselissf' %}">2 DAYS
+                                                                    AMBOSELI SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:naivashassf' %}">2 DAYS LAKE
+                                                                    NAIVASHA</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maasaimarassf' %}">2 DAYS
+                                                                    MAASAI MARA SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:pajetassf' %}">2 DAYS
+                                                                    SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
                                                             </li>
                                                         </ul>
 
                                                     </div>
                                                 </div>
                                             </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#3days" data-toggle="collapse" role="button"><span>3
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="3days">
+                                                    <div class="sidebar-filters__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselissf3' %}" style="margin-bottom:19px;">3
+                                                                    DAYS AMBOSELI SAFARI </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:sweetwaterssf3' %}" style="margin-top:69px;">3
+                                                                    DAYS SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maasaimarassf3' %}">3 DAYS
+                                                                    MAASAI MARA SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:nakurussf3' %}">3 DAYS NAKURU
+                                                                    - NAIVASHA</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:samburussf3' %}">3 DAYS
+                                                                    SAMBURU SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#4days" data-toggle="collapse" role="button"><span>4
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="4days">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maranakurussf4' %}" style="margin-bottom:19px;">4
+                                                                    DAYS MAASAI MARA/NAKURU SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#5days" data-toggle="collapse" role="button"><span>5
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="5days">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselissf5' %}" style="margin-bottom:19px;">5
+                                                                    DAYS AMBOSELI - NAKURU - MARA SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#accommodation" data-toggle="collapse" role="button"><span>6
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="accommodation">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselissf6' %}" style="margin-bottom:19px;">6
+                                                                    DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maranakurussf6' %}" style="margin-bottom:19px;">6
+                                                                    DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#accommodation" data-toggle="collapse" role="button"><span>7
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="accommodation">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maranakurussf7' %}" style="margin-bottom:19px;">7
+                                                                    DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#accommodation" data-toggle="collapse" role="button"><span>10
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="accommodation">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maranakurussf10' %}" style="margin-bottom:19px;">10
+                                                                    DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                                                    NAKURU-SAMBURU-AMBOSELI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#accommodation" data-toggle="collapse" role="button"><span>13
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="accommodation">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselinakurussf13' %}"
+                                                                    style="margin-bottom:19px;">13
+                                                                    DAYS AMBOSELI-TSAVO
+                                                                    EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
 
                                         </ul>
                                     </div>
@@ -105,17 +233,126 @@
                     <div class="category-content__items pad-lg-20">
                         <div class="col-3 col-sm-12 ">
                             <div class="product bg-white js-grid-item product--list">
-                                    {% if "Excursions-lakenaivasha" in guara.package.name %}
-                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="http://stewasafariskenya.co.ke/wp-content/uploads/2018/07/LAKE-NAIVASHA.jpg"
+                                {% if "Excursions-lakenaivasha" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenaivasha/hells-gate.jpg' %}"
                                         alt="#" /></a>
-                                        {% elif "Excursions-lakenakuru" in guara.package.name %}
-                                        <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenakuru/Lake-In-Flamingo-Bird-Picture_SmhzbZp.jpg' %} "
-                                            alt="#" /></a>
-                                            {% endif %}
+                                {% elif "Excursions-lakenakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenakuru/image2a.jpg' %}  "
+                                        alt="#" /></a>
+
+                                {% elif "2days-aberdare" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/aberdarepark/31-the-ark-kenya.jpg' %} "
+                                        alt="#" /></a>
+                                {% elif "2days-amboseli" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "2days-maasaimara" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/maasaimara/Masai-Mara-Wild-Eye-Trip-Report_036-1.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "2days-lakenaivasha" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenaivasha/hells-gate.jpg' %}  "
+                                        alt="#" /></a>
+                                {% elif "2days-lakenakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenakuru/Lake-In-Flamingo-Bird-Picture_SmhzbZp.jpg'%}"
+                                        alt="#" /></a>
+                                {% elif "2days-sweetwaters" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="https://i0.wp.com/eastafricanretreats.com/wp-content/uploads/2016/01/Ol-Pejeta-Chimpanzees-2.jpg?fit=750%2C500 "
+                                        alt="#" /></a>
+
+
+                                {% elif "3days-amboseli" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/amboseli/Amboseli_National_Park_024.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "3days-maasaimara" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/maasaimara/mm-800x530.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "3days-nakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenakuru/kenya--amboseli,-lake-naivasha,-masai-mara.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "3days-samburu" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/samburu/samburu-safari.jpg' %} "
+                                        alt="#" /></a>
+                                {% elif "3days-sweetwaters" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/sweetwater/30498376600_102703aec5_k.jpg' %}"
+                                        alt="#" /></a>
+
+                                {% elif "4days-MaraNakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/maasaimara/a86fab233b324c079958c3a47b1bf4ce.jpeg' %}"
+                                        alt="#" /></a>
+                                {% elif "5days-amboseli" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/amboseli/ElephantSibs_EN-US13884552392_1920x1080.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "6days-amboseli" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "6days-MaraNakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/lakenaivasha/4-day-masai-mara-and-lake-nakuru-private-safari-from-nairobi-in-nairobi-467519.jpg'%}"
+                                        alt="#" /></a>
+                                {% elif "7days-MaraNakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/maasaimara/a86fab233b324c079958c3a47b1bf4ce.jpeg' %}"
+                                        alt="#" /></a>
+                                {% elif "10days-MaraNakuru" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/samburu/gazelle_gerenuk.jpg' %}"
+                                        alt="#" /></a>
+                                {% elif "13days-Amboseli" in guara.package.name %}
+                                <a class="product__img-top d-block" href=" "><img class="img-fluid" src="{% static 'img/maasaimara/conservancyimg3.jpg' %}"
+                                        alt="#" /></a>
+
+                                {% endif %}
                                 <div class="product__body">
 
 
-                                    <h4 class="product__title"><a href=" ">{{guara.package}}</a></h4>
+
+                                    {% if "Excursions-lakenaivasha" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>Lake Naivasha Day Trip</h4>
+                                    {% elif "Excursions-lakenakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>Lake Nakuru Day Trip</h4>
+                                    {% elif "2days-aberdare" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS ABERDARE NATIONAL PARK</h4>
+                                    {% elif "2days-amboseli" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS AMBOSELI SAFARI</h4>
+                                    {% elif "2days-maasaimara" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS MAASAI MARA SAFARI</h4>
+                                    {% elif "2days-lakenaivasha" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAIVASHA</h4>
+                                    {% elif "2days-lakenakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAKURU NATIONAL PARK</h4>
+                                    {% elif "2days-sweetwaters" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>2 DAYS SWEETWATERS/ OL PEJETA
+                                        CONSERVANCY SAFARI</h4>
+
+                                    {% elif "3days-amboseli" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>3 DAYS AMBOSELI SAFARI</h4>
+                                    {% elif "3days-maasaimara" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>3 DAYS MAASAI MARA SAFARI</h4>
+                                    {% elif "3days-nakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>3 DAYS NAKURU - NAIVASHA</h4>
+                                    {% elif "3days-samburu" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>3 DAYS SAMBURU SAFARI</h4>
+                                    {% elif "3days-sweetwaters" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>3 DAYS SWEETWATERS/ OL PEJETA
+                                        CONSERVANCY SAFARI</h4>
+
+                                    {% elif "4days-MaraNakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>4 DAYS MAASAI MARA/NAKURU SAFARI</h4>
+                                    {% elif "5days-amboseli" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>5 DAYS AMBOSELI - NAKURU - MARA SAFARI</h4>
+                                    {% elif "6days-amboseli" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>6 DAYS AMBOSELI- ABERDARE-NAKURU-MASAI
+                                        MARA SAFARI</h4>
+                                    {% elif "6days-MaraNakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>6 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                        NAKURU</h4>
+                                    {% elif "7days-MaraNakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>7 DAYS MARA-LAKE NAIVASHA-LAKE
+                                        BOGORIA-LAKE NAKURU</h4>
+                                    {% elif "10days-MaraNakuru" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>10 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                        NAKURU-SAMBURU-AMBOSELI</h4>
+                                    {% elif "13days-Amboseli" in guara.package.name %}
+                                    <h4 class="product__title"><a href=" "> </a>13 DAYS AMBOSELI/TSAVO
+                                        EAST/NAIVASHA/NAKURU/MASAI MARA BUDGET SAFARI</h4>
+                                    {% endif %}
                                     <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
                                             <select class="js-rating-stat" data-current-rating="5">
@@ -131,25 +368,83 @@
                                         <li class="mr-3"><i class="fas fa-map-marked-alt" style="font-size:16px; margin-right: 12px; "></i><span>{{guara.Location}}</span></li>
                                         <li> </li>
                                     </ul>
-                                   <p style="font-size:16px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}} Days
-                                                Remaining</p>
+                                    <p style="font-size:16px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
+                                        Days
+                                        Remaining</p>
                                     <hr>
 
                                     <div class="product__desc">
                                         <div class="row">
                                             <div class="d-inline-flex flex-wrap">
-                                                <div class="avatar" style=" height:39px; width:39px;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;;"></div>
-                                                <div class="avatar" style="margin-left:12px; height:39px; width:39px;"></div>
+                                                {% if guara.people_booked == 1 %}
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 2 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 3 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 4 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 5 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 6 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <div class="avatar_black" style="margin-left:10px; height:39px; width:39px;"></div>
+                                                {% endif %}
+                                                {% if guara.people_booked == 7 %}
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar_black-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px; " src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar_black-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                <img style="margin-left:10px; height:39px; width:39px;" src="{% static 'img/52067c0624385d729ef33136a0a8a13f-black-boy-cartoon-avatar-head-by-vexels.png' %}">
+                                                {% endif %}
                                             </div>
                                         </div>
 
                                     </div>
-                                    <p style="color:black; margin-left:110px;">{{guara.seatsremaining}} Seat(s) Remaining</p>
+                                    <p style="color:black; margin-left:110px;">{{guara.seatsremaining}} Seat(s)
+                                        Remaining</p>
 
                                 </div>
                                 <hr class="d-none d-sm-block" />
@@ -158,12 +453,72 @@
                                         <li class="mr-2"><span>Book now and pay:</span></li>
                                         <li><span class="cost">{{guara.price}}</span>
                                         </li>
+
                                         {% if "Excursions-lakenaivasha" in guara.package.name %}
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:joinlakenaivasha' %}">book
-                                        now</a>
+                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:joinlakenaivasha' %}">See
+                                        Trip</a>
                                     {% elif "Excursions-lakenakuru" in guara.package.name %}
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:joinlakenakuru' %}">book
-                                        now</a>
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:joinlakenaivasha' %}">See
+                                        Trip</a>
+
+
+                                    {% elif "2days-aberdare" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:aberdarejoinssf' %}">See
+                                        Trip</a>
+                                    {% elif "2days-amboseli" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselijoinssf' %}">See
+                                        Trip</a>
+                                    {% elif "2days-maasaimara" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maasaimarajoinssf' %}">See
+                                        Trip</a>
+                                    {% elif "2days-lakenaivasha" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:naivashajoinssf' %}">See
+                                        Trip</a>
+                                    {% elif "2days-lakenakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:joinssfnakuru' %}">See
+                                        Trip</a>
+                                    {% elif "2days-sweetwaters" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:pajetajoinssf' %}">See
+                                        Trip</a>
+
+
+                                    {% elif "3days-amboseli" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselijoinssf3' %}">See
+                                        Trip</a>
+                                    {% elif "3days-maasaimara" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maasaimarajoinssf3' %}">See
+                                        Trip</a>
+                                    {% elif "3days-nakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:nakurujoinssf3' %}">See
+                                        Trip</a>
+                                    {% elif "3days-samburu" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:samburujoinssf3' %}">See
+                                        Trip</a>
+                                    {% elif "3days-sweetwaters" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:sweetwaterjoinssf3' %}">See
+                                        Trip</a>
+
+                                    {% elif "4days-MaraNakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maranakurujoinssf4' %}">See
+                                        Trip</a>
+                                    {% elif "5days-amboseli" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselijoinssf5' %}">See
+                                        Trip</a>
+                                    {% elif "6days-amboseli" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselijoinssf6' %}">See
+                                        Trip</a>
+                                    {% elif "6days-MaraNakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maranakurujoinssf6' %}">See
+                                        Trip</a>
+                                    {% elif "7days-MaraNakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maranakurujoinssf7' %}">See
+                                        Trip</a>
+                                    {% elif "10days-MaraNakuru" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maranakurujoinssf10' %}">See
+                                        Trip</a>
+                                    {% elif "13days-Amboseli" in guara.package.name %}
+                                    <a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselinakurujoinssf13' %}">See
+                                        Trip</a>
                                     {% endif %}
 
                                 </div>
@@ -185,4 +540,95 @@
 </main>
 {% include "footer.html" %}
 <script src="{% static 'js/script.js' %}"></script>
+<style>
+    .avatar_black {
+        position: relative;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background: #ddd;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+    .avatar_black {
+        position: relative;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background: #ddd;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+
+    .avatar_black:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 70%;
+        height: 44%;
+        margin: 0 0 0 -35%;
+        background: #989898;
+        -webkit-border-radius: 100% 100% 0 0;
+        border-radius: 100% 100% 0 0
+    }
+
+    .avatar_black:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 19%;
+        width: 40%;
+        height: 40%;
+        margin: 0 0 0 -20%;
+        background: #989898;
+        -webkit-box-shadow: 0 0 0 4px #DCDCDC;
+        box-shadow: 0 0 0 4px #DCDCDC;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+    .avatar_black:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 70%;
+        height: 44%;
+        margin: 0 0 0 -35%;
+        background: #000000;
+        -webkit-border-radius: 100% 100% 0 0;
+        border-radius: 100% 100% 0 0
+    }
+
+    .avatar_black:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 19%;
+        width: 40%;
+        height: 40%;
+        margin: 0 0 0 -20%;
+        background: #000000;
+        -webkit-box-shadow: 0 0 0 4px #DCDCDC;
+        box-shadow: 0 0 0 4px #DCDCDC;
+        -webkit-border-radius: 50%;
+        border-radius: 50%
+    }
+
+    .avatar_black img {
+        position: relative;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        z-index: 10
+    }
+
+    p {
+        color: #000000;
+    }
+</style>
 {% endblock %}

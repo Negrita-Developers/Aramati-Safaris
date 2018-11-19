@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from . import views
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -9,6 +10,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.aboutus, name='aboutus'),
     url(r'^contactus/$', views.contact, name='contact'),
+    url(r'^search/', views.search_results, name='search_results'),
     url(r'^guaranteedsafaris/$', views.guaranteedsafaris, name='guaranteedsafaris'),
     url(r'^excursions/$', views.excursions, name='excursions'),
     url(r'^longsafaris/$', views.longsafaris, name='longsafaris'),

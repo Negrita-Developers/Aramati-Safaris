@@ -34,25 +34,169 @@
                                         <ul class="sidebar-filter__list">
                                             <li class="sidebar-filter__item">
                                                 <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                                                        href="#accommodation" data-toggle="collapse" role="button"><span>Safaris:</span><i
-                                                            class="fa fa-angle-down"></i></a></h5>
-                                                <div class="collapse show" id="accommodation">
+                                                        href="#2days" data-toggle="collapse" role="button"><span>2
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="2days">
                                                     <div class="sidebar-filter__content">
                                                         <ul>
                                                             <li>
-                                                                <a href="">Short Safaris(2-5 days)</a>
+                                                                <a href="{% url 'profiles:ssfnakuru' %}" style="margin-bottom:19px;">2
+                                                                    DAYS LAKE NAKURU </a>
                                                             </li>
                                                             <li>
-                                                                <a href="">Long Safaris(6-13 days)</a>
+                                                                <a href="{% url 'profiles:aberdaressf' %}" style="margin-top:69px;">2
+                                                                    DAYS ABERDARE NATIONAL PARK</a>
                                                             </li>
                                                             <li>
-                                                                <a href="">Request customized Safari.</a>
+                                                                <a href="{% url 'profiles:amboselissf' %}">2 DAYS
+                                                                    AMBOSELI SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:naivashassf' %}">2 DAYS LAKE
+                                                                    NAIVASHA</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maasaimarassf' %}">2 DAYS
+                                                                    MAASAI MARA SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:pajetassf' %}">2 DAYS
+                                                                    SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
                                                             </li>
                                                         </ul>
 
                                                     </div>
                                                 </div>
                                             </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                    href="#3days" data-toggle="collapse" role="button"><span>3
+                                                        days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="3days">
+                                                    <div class="sidebar-filters__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselissf3' %}" style="margin-bottom:19px;">3
+                                                                    DAYS AMBOSELI SAFARI </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:sweetwaterssf3' %}" style="margin-top:69px;">3
+                                                                    DAYS SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maasaimarassf3' %}">3 DAYS
+                                                                    MAASAI MARA SAFARI</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:nakurussf3' %}">3 DAYS NAKURU
+                                                                    - NAIVASHA</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="{% url 'profiles:samburussf3' %}">3 DAYS
+                                                                    SAMBURU SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#4days" data-toggle="collapse" role="button"><span>4
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="4days">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:maranakurussf4' %}" style="margin-bottom:19px;">4
+                                                                    DAYS MAASAI MARA/NAKURU SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item">
+                                                <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                        href="#5days" data-toggle="collapse" role="button"><span>5
+                                                            days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                                <div class="collapse hide" id="5days">
+                                                    <div class="sidebar-filter__content">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="{% url 'profiles:amboselissf5' %}" style="margin-bottom:19px;">5
+                                                                    DAYS AMBOSELI - NAKURU - MARA SAFARI</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                    href="#accommodation" data-toggle="collapse" role="button"><span>6
+                                                        days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                            <div class="collapse hide" id="accommodation">
+                                                <div class="sidebar-filter__content">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'profiles:amboselissf6' %}" style="margin-bottom:19px;">6
+                                                                DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{% url 'profiles:maranakurussf6' %}" style="margin-bottom:19px;">6
+                                                                DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div></li>
+                                            <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                    href="#accommodation" data-toggle="collapse" role="button"><span>7
+                                                        days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                            <div class="collapse hide" id="accommodation">
+                                                <div class="sidebar-filter__content">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'profiles:maranakurussf7' %}" style="margin-bottom:19px;">7
+                                                                DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div></li>
+                                            <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                    href="#accommodation" data-toggle="collapse" role="button"><span>10
+                                                        days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                            <div class="collapse hide" id="accommodation">
+                                                <div class="sidebar-filter__content">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'profiles:maranakurussf10' %}" style="margin-bottom:19px;">10
+                                                                DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                                                NAKURU-SAMBURU-AMBOSELI</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div></li>
+                                            <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                                    href="#accommodation" data-toggle="collapse" role="button"><span>13
+                                                        days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                            <div class="collapse hide" id="accommodation">
+                                                <div class="sidebar-filter__content">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'profiles:amboselinakurussf13' %}" style="margin-bottom:19px;">13
+                                                                DAYS AMBOSELI-TSAVO
+                                                                EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div></li>
+                                            
+
 
                                         </ul>
                                     </div>
@@ -94,8 +238,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 728-306 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 306-728</span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:ssfnakuru'%}">book
                                         now</a>
@@ -149,8 +293,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 645-205 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 205-645 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:aberdaressf'%}">book
                                         now</a>
@@ -203,8 +347,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 318-694 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselissf'%}">book
                                         now</a>
@@ -261,8 +405,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 270-700 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:naivashassf'%}">book
                                         now</a>
@@ -319,8 +463,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 225-630 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maasaimarassf'%}">book
                                         now</a>
@@ -378,8 +522,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 589-1215 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:pajetassf'%}">book
                                         now</a>
@@ -432,8 +576,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 444-1029 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselissf3'%}">book
                                         now</a>
@@ -494,8 +638,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 395-1040 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maasaimarassf3'%}">book
                                         now</a>
@@ -550,8 +694,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 440-1185 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:nakurussf3'%}">book
                                         now</a>
@@ -604,8 +748,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 430-1070 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:samburussf3'%}">book
                                         now</a>
@@ -660,8 +804,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 585-1215 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:sweetwaterssf3'%}">book
                                         now</a>
@@ -715,8 +859,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 540-1480 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:maranakurussf4'%}">book
                                         now</a>
@@ -771,8 +915,8 @@
                                 <hr class="d-none d-sm-block" />
                                 <div class="product__footer">
                                     <ul class="product__price d-flex justify-content-between align-items-center">
-                                        <li class="mr-2"><span>Price per day from</span></li>
-                                        <li><span class="cost">USD 677-318 </span>
+                                        <li class="mr-2"><span>Price per person from</span></li>
+                                        <li><span class="cost">USD 740-1905 </span>
                                         </li>
                                     </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:amboselissf5'%}">book
                                         now</a>

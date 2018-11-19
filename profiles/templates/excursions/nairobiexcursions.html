@@ -22,84 +22,197 @@
   <div class="page-content">
     <div class="container">
       <div class="row">
-        <aside class="sidebar col-lg-3">
+        <aside class="sidebar col-lg-3 order-1 order-lg-0">
           <div class="sidebar__content js-sticky-top">
-            <div class="sidebar__finder card bg-primary text-white">
-              <h4 class="m-0 mb-lg-4">Create a safari group.</h4>
-              <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://www.enformed.io/arn8nc8f"
-                method="POST" data-toggle="validator">
-                <div class="row">
-                  <div class="col-12 form-group">
-                    <label>Name:</label>
-                    <input name="Name:" class="form-control">
-                  </div>
-                  <div class="col-12 form-group">
-                    <label>Email:</label>
-                    <input name="Email:" class="form-control">
-                  </div>
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-12 col-sm-6 col-lg-12 form-group">
-                        <label class="label-text" for="hotelInDate">Depature Date:</label>
-                        <div class="input-group-append">
-                          <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
-                            required="required" />
+            <div class="sidebar-filter modal card fade" id="sidebarFilter" tabindex="-1" role="dialog">
+              <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
+              <div class="modal-header bg-white">
+                <h4 class="modal-title">See more packages:</h4>
+
+              </div>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <ul class="sidebar-filter__list">
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#2days" data-toggle="collapse" role="button"><span>2
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="2days">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:ssfnakuru' %}" style="margin-bottom:19px;">2
+                                  DAYS LAKE NAKURU </a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:aberdaressf' %}" style="margin-top:69px;">2
+                                  DAYS ABERDARE NATIONAL PARK</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:amboselissf' %}">2 DAYS
+                                  AMBOSELI SAFARI</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:naivashassf' %}">2 DAYS LAKE
+                                  NAIVASHA</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:maasaimarassf' %}">2 DAYS
+                                  MAASAI MARA SAFARI</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:pajetassf' %}">2 DAYS
+                                  SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                              </li>
+                            </ul>
+
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-lg-12 form-group">
-                    <span class="form-select">
-                      <label>Excursion:</label>
-                      <select class="form-control select2 js-form-select" id="hotelDeparture" name="Type of excursion:">
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#3days" data-toggle="collapse" role="button"><span>3
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="3days">
+                          <div class="sidebar-filters__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:amboselissf3' %}" style="margin-bottom:19px;">3
+                                  DAYS AMBOSELI SAFARI </a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:sweetwaterssf3' %}" style="margin-top:69px;">3
+                                  DAYS SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:maasaimarassf3' %}">3 DAYS
+                                  MAASAI MARA SAFARI</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:nakurussf3' %}">3 DAYS NAKURU
+                                  - NAIVASHA</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:samburussf3' %}">3 DAYS
+                                  SAMBURU SAFARI</a>
+                              </li>
+                            </ul>
 
-                        <option value="DAVID SHELDRICK WILDLIFE TRUST">DAVID SHELDRICK WILDLIFE TRUST</option>
-                        <option value="NAIROBI CITY TOUR">NAIROBI CITY TOUR</option>
-                        <option value="NAIROBI NATIONAL PARK">NAIROBI NATIONAL PARK</option>
-                        <option value="BOMAS OF KENYA">BOMAS OF KENYA</option>
-                        <option value="THE CARNIVORE EXPERIENCE">THE CARNIVORE EXPERIENCE</option>
-                        <option value="KAREN BLIXEN MUSEUM &amp; GIRAFFE CENTRE">KAREN BLIXEN MUSEUM &amp; GIRAFFE
-                          CENTRE</option>
-                        <option value="FULL DAY">FULL DAY</option>
-                      </select>
-                    </span>
-                  </div>
-                  <div class="col-12">
-                    <label class="label">Travel Info:</label>
-                    <div class="row">
-                      <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
-                          <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
-                            <option value="1 Adult">1 Adult</option>
-                            <option value="2 Adults">2 Adults</option>
-                            <option value="3 Adults">3 Adults</option>
-                            <option value="4 Adults">4 Adults</option>
-                            <option value="5 Adults">5 Adults</option>
-                            <option value="5 Adults">6 Adults</option>
-                            <option value="5 Adults">7 Adults</option>
-                          </select></span>
-                      </div>
+                          </div>
+                        </div>
+                      </li>
 
-                      <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
-                          <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
-                            <label>Open or Closed Group</label>
-                            <option value="Open">Open</option>
-                            <option value="Closed">Closed</option>
-                          </select></span>
-                      </div>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#4days" data-toggle="collapse" role="button"><span>4
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="4days">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:maranakurussf4' %}" style="margin-bottom:19px;">4
+                                  DAYS MAASAI MARA/NAKURU SAFARI</a>
+                              </li>
+                            </ul>
 
-                    </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#5days" data-toggle="collapse" role="button"><span>5
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="5days">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:amboselissf5' %}" style="margin-bottom:19px;">5
+                                  DAYS AMBOSELI - NAKURU - MARA SAFARI</a>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#accommodation" data-toggle="collapse" role="button"><span>6
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="accommodation">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:amboselissf6' %}" style="margin-bottom:19px;">6
+                                  DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI</a>
+                              </li>
+                              <li>
+                                <a href="{% url 'profiles:maranakurussf6' %}" style="margin-bottom:19px;">6
+                                  DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU</a>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#accommodation" data-toggle="collapse" role="button"><span>7
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="accommodation">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:maranakurussf7' %}" style="margin-bottom:19px;">7
+                                  DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU</a>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#accommodation" data-toggle="collapse" role="button"><span>10
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="accommodation">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:maranakurussf10' %}" style="margin-bottom:19px;">10
+                                  DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                  NAKURU-SAMBURU-AMBOSELI</a>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </li>
+                      <li class="sidebar-filter__item">
+                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                            href="#accommodation" data-toggle="collapse" role="button"><span>13
+                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                        <div class="collapse hide" id="accommodation">
+                          <div class="sidebar-filter__content">
+                            <ul>
+                              <li>
+                                <a href="{% url 'profiles:amboselinakurussf13' %}" style="margin-bottom:19px;">13
+                                  DAYS AMBOSELI-TSAVO
+                                  EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</a>
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </li>
+
+
+
+                    </ul>
                   </div>
                 </div>
-                <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
-                </button>
-              </form>
-              <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-                data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              </div>
             </div>
-
-            <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-              data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
-
           </div>
         </aside>
         <div class="col-lg-9 category-content">
@@ -135,85 +248,11 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 295-150 </span>
+                    <li><span class="cost">USD 150-295 </span>
                     </li>
                   </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
-                    data-target="#Sheldrick">book
-                    now</button>
-                  <!-- Modal -->
-                  <div class="modal fade" id="Sheldrick" tabindex="-1" aria-labelledby="exampleModalLongTitle"
-                    aria-hidden="true" style="margin-top: 50px; overflow: auto; ">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle"><strong>David Sheldrick Wildlife Trust</strong> </h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <h5>Itinerary</h5>
-                          <p>Only 25 minutes away from the city centre is The David Sheldrick Wildlife Trust. It is one
-                            the most successful orphan-elephant rescue and rehabilitation programs in the world.
-                            The Trust was founded in 1977 in memory of David Sheldrick, a founding Warden of Tsavo
-                            East National Park.
-                            Among other roles, it rescues orphaned and wounded baby elephants and rehabilitates
-                            them before reintroducing them to their natural habitat.
-                            The elephants in their care are fed each day at 11am. The feeding is done in the public
-                            during which a warden will narrate the story of each calf. This is an unparalleled
-                            experience as you get up close and candid with the world&#39;s biggest land mammals. It is
-                            further an opportunity for you to learn how man’s activities affect nature and how you can
-                            make a difference.</p>
-                          <hr>
-                          <h5>Rates</h5>
-                          <h4 class="mb-4"><strong> Rates:</strong></h4>
+                    data-target="#DAVID SHELDRICK WILDLIFE TRUST">See Trip</button>
 
-                          <table class="table-fill">
-                            <thead>
-                              <tr>
-                                <th class="text-left">No. of Passenger (s)</th>
-                                <th class="text-left">Price per person</th>
-                              </tr>
-                            </thead>
-                            <tbody class="table-hover">
-                              <tr>
-                                <td class="text-left">1 PAX</td>
-                                <td class="text-left">$ 295</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">2 PAX</td>
-                                <td class="text-left">$ 215</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">3 PAX</td>
-                                <td class="text-left">$ 185</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">4 PAX</td>
-                                <td class="text-left">$ 165</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">5 PAX</td>
-                                <td class="text-left">$ 160</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">6 PAX</td>
-                                <td class="text-left">$ 155</td>
-                              </tr>
-                              <tr>
-                                <td class="text-left">7 PAX</td>
-                                <td class="text-left">$ 150</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
               </div>
@@ -241,7 +280,8 @@
                                         </div>
                                     </div> -->
                   <ul class="product__stat d-flex flex-wrap justify-content-between align-items-center">
-                    <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Nairobi City.</span></li>
+                    <li class="mr-3"><i class="fas fa-map-marked-alt" style="margin-right: 12px;"></i><span>Nairobi
+                        City.</span></li>
                   </ul>
                   <hr>
                   <ul class="product__price d-flex justify-content-between align-items-center">
@@ -257,7 +297,8 @@
                       building in the region), the parliament buildings (which are adjacent to the late Jomo
                       Kenyatta&#39;s mausoleum), the railways museum, and the Nairobi University. For coffee
                       lovers, feel free to ask your guide to show you to one of the many coffee lounges for a cup of
-                      pure Kenyan coffee. The tour ends with a visit to the Snake Park and national museum. </p><a class="product__link-more" href="{% url 'profiles:lakenakuru'%}">Read
+                      pure Kenyan coffee. The tour ends with a visit to the Snake Park and national museum. </p><a
+                      class="product__link-more" href="{% url 'profiles:lakenakuru'%}">Read
                       more</a>
                   </div>
                 </div>
@@ -265,10 +306,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 175-55 </span>
+                    <li><span class="cost">USD 55-175 </span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="{% url 'profiles:lakenakuru'%}">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#NAIROBI CITY TOUR – 3 HOURS">See Trip</button>
                 </div>
 
               </div>
@@ -317,10 +358,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 220-100</span>
+                    <li><span class="cost">USD 100-220</span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#NAIROBI NATIONAL PARK - 4 HRS">See Trip</button>
                 </div>
 
               </div>
@@ -368,10 +409,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 175-55 </span>
+                    <li><span class="cost">USD 55-175 </span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#BOMAS OF KENYA - 3 HRS">See Trip</button>
                 </div>
 
               </div>
@@ -420,10 +461,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 185-85 </span>
+                    <li><span class="cost">USD 85-185 </span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#THE CARNIVORE EXPERIENCE - 2 HRS">See Trip</button>
                 </div>
 
               </div>
@@ -463,7 +504,8 @@
                   <div class="product__desc">
                     <p>Karen Blixen&#39;s home lies at the foot of Ngong hills, and is now preserved as a museum. A
                       visit here will expose you to the furniture, artifacts and photographs from her days as a
-                      pioneer coffee farmer. Soon after, we drive you to the giraffe center,</p><a class="product__link-more" href="">Read
+                      pioneer coffee farmer. Soon after, we drive you to the giraffe center,</p><a class="product__link-more"
+                      href="">Read
                       more</a>
                   </div>
                 </div>
@@ -471,10 +513,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 195-55 </span>
+                    <li><span class="cost">USD 55-195 </span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#KAREN BLIXEN MUSEUM & GIRAFFE CENTRE - 4 HRS">See Trip</button>
                 </div>
 
               </div>
@@ -489,8 +531,9 @@
                 <div class="product__body">
 
 
-                  <h4 class="product__title"><a href=" ">FULL DAY DAPHNE SHELDRICK&#39;S ELEPHANT ORPHANAGE/ GIRAFFE CENTER/KAREN
-                    BLIXEN MUSEUM/ KAZURI BEADS</a></h4>
+                  <h4 class="product__title"><a href=" ">FULL DAY DAPHNE SHELDRICK&#39;S ELEPHANT ORPHANAGE/ GIRAFFE
+                      CENTER/KAREN
+                      BLIXEN MUSEUM/ KAZURI BEADS</a></h4>
                   <!-- <div class="product__rating mb-2"> 
                                         <div class="rating">
                                             <select class="js-rating-stat" data-current-rating="5">
@@ -523,10 +566,10 @@
                 <div class="product__footer">
                   <ul class="product__price d-flex justify-content-between align-items-center">
                     <li class="mr-2"><span>Price per day from</span></li>
-                    <li><span class="cost">USD 245-95 </span>
+                    <li><span class="cost">USD 95-245 </span>
                     </li>
-                  </ul><a class="product__btn-book btn btn-secondary btn--round" href="">book
-                    now</a>
+                  </ul><button type="button" class="product__btn-book btn btn-secondary btn--round" data-toggle="modal"
+                  data-target="#FULL DAY DAPHNE SHELDRICK'S ELEPHANT ORPHANAGE/ GIRAFFE CENTER/KAREN BLIXEN MUSEUM/ KAZURI BEADS">See Trip</button>
                 </div>
 
               </div>
@@ -544,86 +587,1005 @@
 
   </div>
 </main>
-<footer class="page-footer">
-  <div class="page-footer__cover jarallax" data-speed="0.5"><img class="jarallax-img" src="https://s-media-cache-ak0.pinimg.com/originals/35/76/a5/3576a51097ee19c85932943e6f73ea2f.jpg"
-      alt="#"></div>
-  <div class="container mb-5 mb-lg-4">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">Aramati safaris</h3>
-        <ul class="page-footer__address">
-          <li class="mb-2"><strong class="float-left mr-1">A:</strong>
-            Rehema Place, Suite B14, Ngong Road/Ring Road,
-            Adjacent Eastlands Hotel & Opposite Nakumatt Ngong Road (Prestige Plaza)
-          </li>
-          <li class="mb-2"><strong class="float-left mr-1">P:</strong>
-            24/7 customer support:
-            <a href="tel:#">+254 722 44 32 74, +254 734 44 32 74</a>
-          </li>
-          <li class="mb-2"><strong class="float-left mr-1">E:</strong>
-            <a href="mailto:#">info@aramatisafaris.co.ke</a>
-          </li>
-        </ul>
-        <h4 class="h4 mb-2">Follow us:</h4>
-        <ul class="footer-social d-flex flex-wrap">
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-          <li class="mr-4"><a class="social-link" href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-        </ul>
+{% include "footer.html" %}
+<!-- Modal -->
+<div class="modal fade" id="DAVID SHELDRICK WILDLIFE TRUST" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="col-12 col-sm-6 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">customer support</h3>
-        <ul class="page-footer__support list-styled">
-          <li class="mb-2"><a href="#" target="_blank">Faq</a></li>
-          <li class="mb-2"><a href="#" target="_blank">How do I make a reservation?</a></li>
-          <li class="mb-2"><a href="#" target="_blank">Payment options</a></li>
-          <li class="mb-2"><a href="#" target="_blank">Booking tips</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-sm-12 col-lg-4 mt-5">
-        <h3 class="h3 text-uppercase">get our best offers</h3>
-        <form class="subscribe-form" action="#" method="POST">
-          <div class="input-group input-group--lg flex-nowrap mb-4">
-            <input class="form-control form-control-lg" type="email" placeholder="Enter Your email" required>
-            <div class="input-group-append">
-              <button class="btn btn-btn btn-light btn--round" type="submit"><i class="fa fa-send"></i>
-              </button>
-            </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+            <p>Only 25 minutes away from the city centre is The David Sheldrick Wildlife Trust. It is one
+                the most successful orphan-elephant rescue and rehabilitation programs in the world.
+                The Trust was founded in 1977 in memory of David Sheldrick, a founding Warden of Tsavo
+                East National Park.
+                Among other roles, it rescues orphaned and wounded baby elephants and rehabilitates
+                them before reintroducing them to their natural habitat.
+                The elephants in their care are fed each day at 11am. The feeding is done in the public
+                during which a warden will narrate the story of each calf. This is an unparalleled
+                experience as you get up close and candid with the world&#39;s biggest land mammals. It is
+                further an opportunity for you to learn how man’s activities affect nature and how you can
+                make a difference.</p>
           </div>
-          <p>We guarantee your confidentiality, and we also undertake not to transfer your email address
-            to third parties.</p>
-        </form>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 140 </div>
+                                  <div class="table-data">$ 85</div>
+                                  <div class="table-data">$ 65</div>
+                                  <div class="table-data">$ 55</div>
+                                  <div class="table-data">$ 50</div>
+                                  <div class="table-data">$ 45</div>
+                                  <div class="table-data">$ 40</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="DAVID SHELDRICK WILDLIFE TRUST - 3HRS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="DAVID SHELDRICK WILDLIFE TRUST - 3HRS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-  <div class="page-footer__copyright text-center">
-    <div class="container">
-      <div class="hr"></div>Copyright © 2014 Aramati Safaris. All rights reserved.<br /><a class="text-light text-uppercase"
-        href="https://themeforest.net/user/netgon">This was created by Negrita Developers.
-        <script>
-          document.write(new Date().getFullYear());
-        </script></a>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="NAIROBI CITY TOUR – 3 HOURS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary2" role="tab" aria-controls="Itinerary" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="Rates2" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="CreateGroup2" aria-selected="true"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary2" role="tabpanel">
+            <p>A guided tour of the city of Nairobi (better known as the city in the sun) will generally
+                include the city market (which houses several curio shops), its surrounding bazaars, a drive
+                past Kenyatta International Conference Center (which was until recently the highest
+                building in the region), the parliament buildings (which are adjacent to the late Jomo
+                Kenyatta&#39;s mausoleum), the railways museum, and the Nairobi University. For coffee
+                lovers, feel free to ask your guide to show you to one of the many coffee lounges for a cup of
+                pure Kenyan coffee. The tour ends with a visit to the Snake Park and national museum.</p>
+          </div>
+          <div class="tab-pane " id="Rates2" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 175 </div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 85</div>
+                                  <div class="table-data">$ 70</div>
+                                  <div class="table-data">$ 65</div>
+                                  <div class="table-data">$ 60</div>
+                                  <div class="table-data">$ 55</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup2" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="NAIROBI CITY TOUR – 3 HOURS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="NAIROBI CITY TOUR – 3 HOURS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-</footer>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="NAIROBI NATIONAL PARK - 4 HRS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+            <p>There was a time not so long ago, when lions freely roamed the streets of Nairobi. Today
+                they can be seen only 14 kilometres from the city center in the Nairobi National Park. The
+                Nairobi National Park boasts of being the only Park in the world with such close proximity
+                to a major city. For short term visitors, this park contains most of the animals to be seen on
+                more extended safari such as the rhino, buffalo, cheetah, zebra, giraffe, plenty of antelopes
+                and gazelles. The park is best visited early in the morning and the game drive takes 3 to 4
+                hours. There after you can opt to enjoy breakfast at the famous Rangers restaurant which is
+                been built overlooking a waterhole that periodically attracts game, treating you to an
+                authentic bush experience.</p>
+          </div>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 220 </div>
+                                  <div class="table-data">$ 150</div>
+                                  <div class="table-data">$ 130</div>
+                                  <div class="table-data">$ 120</div>
+                                  <div class="table-data">$ 110</div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 100</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="NAIROBI NATIONAL PARK - 4 HRS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="NAIROBI NATIONAL PARK - 4 HRS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="BOMAS OF KENYA - 3 HRS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+            <p>Kenya is the indeed the land of contrast and diversity. It boasts of 42 tribes. There is not a
+                better place that captures a bird&#39;s eye view of the 42 tribes&#39; cultures like the Bomas of
+                Kenya does. Here you get to see the recreated Kenyan villages with their traditional huts
+                and depicting in great details their original lifestyles. But even better you get to enjoy
+                colorful stage performances by dancers from different tribes and even sample some
+                traditional dishes. The dances begin in the afternoons.</p>
+          </div>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 175 </div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 85</div>
+                                  <div class="table-data">$ 70</div>
+                                  <div class="table-data">$ 65</div>
+                                  <div class="table-data">$ 60</div>
+                                  <div class="table-data">$ 55</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="BOMAS OF KENYA - 3 HRS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="BOMAS OF KENYA - 3 HRS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="THE CARNIVORE EXPERIENCE - 2 HRS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+            <p>The Carnivore Restaurant is famous world over. For many Kenyan visitors you have not
+                been to Kenya if you have not been at the Carnivore. It is rated amongst the 50 beast
+                restaurants in the world, and a meal here is considered &quot;Africa&#39;s greatest Eating
+                Experience&quot;. While here make sure you get a taste of the succulent mouthwatering
+                
+                crocodile meat. On a hot sunny afternoon nothing quenches your thirst like their special
+                cocktail juice.</p>
+          </div>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 185</div>
+                                  <div class="table-data">$ 125</div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 100</div>
+                                  <div class="table-data">$ 95</div>
+                                  <div class="table-data">$ 90</div>
+                                  <div class="table-data">$ 85</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="THE CARNIVORE EXPERIENCE - 2 HRS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="THE CARNIVORE EXPERIENCE - 2 HRS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="KAREN BLIXEN MUSEUM & GIRAFFE CENTRE - 4 HRS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+            <p>Karen Blixen&#39;s home lies at the foot of Ngong hills, and is now preserved as a museum. A
+                visit here will expose you to the furniture, artifacts and photographs from her days as a
+                pioneer coffee farmer. Soon after, we drive you to the giraffe center, where families of the
+                rare Rothschild giraffe can be hand fed and photographed from a platform at giraffe&#39;s eye
+                level. There is a restaurant within the center where you can sit for a cup of afternoon tea
+                before returning to the comfort of your hotel room.</p>
+          </div>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 195 </div>
+                                  <div class="table-data">$ 130</div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 100</div>
+                                  <div class="table-data">$ 95</div>
+                                  <div class="table-data">$ 90</div>
+                                  <div class="table-data">$ 85</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="KAREN BLIXEN MUSEUM & GIRAFFE CENTRE - 4 HRS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="KAREN BLIXEN MUSEUM & GIRAFFE CENTRE - 4 HRS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="FULL DAY DAPHNE SHELDRICK'S ELEPHANT ORPHANAGE/ GIRAFFE CENTER/KAREN BLIXEN MUSEUM/ KAZURI BEADS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="hotel-nav">
+          <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+            <li class="nav-item d-flex col-12 col-lg p-0" style="width:350px;"><a class="nav-link active" data-toggle="tab"
+                href="#Itinerary" role="tab" aria-controls="hotel" aria-selected="false"><span>Itinerary</span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#Rates" role="tab"
+                aria-controls="hotelServices" aria-selected="true"><span>Rates </span></a>
+            </li>
+            <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab" href="#CreateGroup"
+                role="tab" aria-controls="hotels" aria-selected="false"><span> Create Group</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="Itinerary" role="tabpanel">
+           <ul>
+             <li ><span style="font-weight:900;">1100hrs-1200hrs:</span><p>Visit the David Sheldrick Elephant orphanage where you enjoy a close
+                encounter with elephant calves! The Trust is part of the David Sheldrick’s Conservation
+                Foundation that rehabilitates baby elephants and other wildlife. Most of the animals at the
+                shelter have either lost their mothers to poaching, natural death, injuries, or were found
+                lost in the wild due to various tragedies. Daphne and her dedicated staff raise them and
+                later release them back into the wild when they are ready.</p></li>
+             <li><span style="font-weight:900;">1200 -1300hrs:</span><p>Visit the Giraffe Centre where you feed the friendly Rothschild’s Giraffe.
+                They often accept a kiss from you and will pick their food from your palms! The Giraffe
+                Center was founded when, Jock and Betty Leslie-Melville(founders), rescued a baby giraffe
+                named Daisy from a heavily-poached area of western Kenya in 1974, their home has
+                become a household name among wildlife lovers world-wide - and Daisy a star in her own
+                right.</p></li>
+             <li><span style="font-weight:900;">1300-1500hrs:</span><p>Visit the Karen Blixen museum, a Short tour to the home of the pioneer
+                coffee farmer, Karen Blixen - of &quot;Out of Africa&quot; fame, is now preserved as a museum. A visit
+                to this museum provides an opportunity to step back in time and gain an insight into this
+                remarkable woman&#39;s life. Views of the Ngong Hills
+                can be admired from the beautifully landscaped gardens of the museum.
+                The Karen Blixen museum is one of a number of very interesting regional museums and
+                archeological and prehistoric sites of the National museums of Kenya, and it continues to
+                be an immensely popular tourist attraction with the same words &#39; I dreamt of Africa&#39;</p></li>
+             <li><span style="font-weight:900;">1500-1600hrs:</span><p>Visit the Kazuri Beads center where we can view the women artisans at
+                work and maybe buy ourselves local gifts in support of the self help local women’s project.
+                Kazuri, which means “small and beautiful” in Swahili, began in 1975 as a tiny workshop
+                experimenting in hand crafted ceramic beads.
+                Its founder started with two single motherhood women and soon discovered that there
+                were many others in the villages around Nairobi, most of who were disadvantaged and
+                were in great need of regular employment.</p></li>
+
+           </ul> 
+          </div>
+          <div class="tab-pane " id="Rates" role="tabpanel">
+              <div class="hotel-card" id="rates">
+                  <h5 class="d-flex align-items-center text-primary mb-3" style="font-size:16px;"><i class="fas fa-info-circle"
+                      style="margin-right: 12px;"></i>Rates: (USING A SAFARI VAN,
+                          COST PER PERSON SHARING)</h5>
+                  <div class="table-title"> 
+                  </div>
+                  <div class="container">
+                      <div class="table">
+                          <div class="table-header">
+                              <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                      href="#">1 PAX</a></div>
+                              <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                      href="#">2 PAX</a></div>
+                              <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                      href="#">3 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">4 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">5 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">6 PAX</a></div>
+                              <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                      href="#">7 PAX</a></div>
+                              
+                          </div>
+                          <div class="table-content">
+                              <div class="table-row">
+                                  <div class="table-data">$ 245 </div>
+                                  <div class="table-data">$ 160</div>
+                                  <div class="table-data">$ 130</div>
+                                  <div class="table-data">$ 115</div>
+                                  <div class="table-data">$ 105</div>
+                                  <div class="table-data">$ 100</div>
+                                  <div class="table-data">$ 95</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="CreateGroup" role="tabpanel">
+                <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke" method="POST" data-toggle="validator">
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <label>Name:</label>
+                      <input name="FULL DAY DAPHNE SHELDRICK'S ELEPHANT ORPHANAGE/ GIRAFFE CENTER/KAREN BLIXEN MUSEUM/ KAZURI BEADS Name:" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label>Email:</label>
+                      <input  name="FULL DAY DAPHNE SHELDRICK'S ELEPHANT ORPHANAGE/ GIRAFFE CENTER/KAREN BLIXEN MUSEUM/ KAZURI BEADS Email:" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-12 form-group">
+                          <label class="label-text" for="hotelInDate">Depature Date:</label>
+                          <div class="input-group-append">
+                            <input class="form-control js-input-date " id="hotelInDate" type="text" name="Depature date:"
+                              required="required" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="label">Travel Info:</label>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelAdults" name="Adults:">
+                              <option value="1 Adult">1 Adult</option>
+                              <option value="2 Adults">2 Adults</option>
+                              <option value="3 Adults">3 Adults</option>
+                              <option value="4 Adults">4 Adults</option>
+                              <option value="5 Adults">5 Adults</option>
+                              <option value="5 Adults">6 Adults</option>
+                              <option value="5 Adults">7 Adults</option>
+                            </select></span>
+                        </div>
+                        <label>Open or Closed Group</label>
+                        <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
+                            <select class="form-control select2 js-form-select" id="hotelDeparture" name="Open or Closed:">
+                              
+                              <option value="Open">Open</option>
+                              <option value="Closed">Closed</option>
+                            </select></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
+                  </button>
+                </form>
+                <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
+                  data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+              
+              </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <style>
   p {
     color: black;
   }
-
-  .modal-backdrop.fade {
-    opacity: 0
-  }
-
-  .modal-backdrop.show {
-    opacity: 0;
-  }
 </style>
 <script src="{% static 'js/script.js' %}">
-</script>
-<script>
-  $('#myModal').modal(options)
 </script>
 {% endblock %}

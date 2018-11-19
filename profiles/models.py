@@ -12,6 +12,11 @@ class Packages(models.Model):
     def __str__(self):
         return self.name 
 
+    @classmethod
+    def search_by_name(cls,search_term):
+        search = cls.objects.filter(name__icontains=search_term)
+        return search
+
 class JoinedSafaris(models.Model):
    
     package=models.ForeignKey(Packages)
@@ -53,6 +58,12 @@ class JoinedSafaris(models.Model):
         seatsrem = 7 - booked
         return seatsrem
 
+    @classmethod
+    def search_by_depature_date(cls,search_term):
+        package = cls.objects.filter(depature_date_icontains=search_term)
+        return package
+    
+    
 
 class LowSeason(models.Model):
     package=models.ForeignKey(Packages)
