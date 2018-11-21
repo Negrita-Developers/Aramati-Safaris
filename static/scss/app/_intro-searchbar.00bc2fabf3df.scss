@@ -1,0 +1,191 @@
+/**
+ * Intro Searchbar Tabs
+ */
+.search-hotels__tabs {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+
+  .nav-item {
+    flex-grow: 1;
+    display: flex;
+    margin-bottom: 0;
+    width: 33%;
+  }
+
+  .nav-link {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.50rem;
+    font-weight: normal;
+    border-radius: 0;
+    border-bottom-width: 0;
+    color: inherit;
+    transition: 120ms linear;
+
+    &.active {
+      cursor: default;
+    }
+  }
+
+  @include media('>md') {
+    width: auto;
+
+    .nav-item {
+      width: auto;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+      padding: 0.50rem 1.50rem;
+    }
+  }
+}
+
+/**
+ * Intro Searchbar Form
+ */
+.search-hotels__form {
+  position: relative;
+  @include rem(padding, 1.25rem 15px 0.50rem);
+  font-size: 14px;
+  color: $gray-900;
+  background-color: $white;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid $white;
+  }
+
+  .row {
+    > *:not(.border-0) {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 0;
+        @include rem(height, 50px);
+        border-right: 1px solid $hr-border-color;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    > * {
+      margin-bottom: 0.50rem;
+    }
+  }
+
+  .form-group-date {
+    width: 100%;
+    max-width: 340px;
+
+    > .d-inline-block {
+      width: calc((50% - 2px) - 1.5rem);
+    }
+  }
+
+  .input-date-custom {
+    min-width: 105px;
+  }
+
+  .label-text {
+    display: block;
+    font-size: 15px;
+  }
+
+  .select-local {
+    flex-grow: 1;
+    border-radius: 4px;
+
+    .icon-label {
+      padding: 0.15em 0.25em;
+      font-size: 20px;
+    }
+
+    .select2-selection--single {
+      height: 28px;
+      padding: 2px 0.25rem;
+      border: none;
+      font-style: italic;
+      font-size: inherit;
+      font-weight: 600;
+      color: inherit;
+      line-height: 22px;
+      overflow: hidden;
+
+      .select2-selection__rendered {
+        display: inline;
+        padding: 0;
+        line-height: inherit;
+        white-space: normal;
+        background-color: transparent;
+        border-bottom: 1px dotted transparent;
+      }
+
+      .select2-selection__clear {
+        padding-left: 0.5rem;
+        opacity: 0;
+      }
+
+      .select2-selection__arrow {
+        display: none;
+      }
+    }
+
+    .select2-dropdown {
+      min-width: 220px;
+    }
+
+    .select2-search {
+      padding: 0.25em;
+    }
+  }
+
+  .form-control {
+    &.date {
+      padding: 0;
+      margin: 0;
+      font-weight: 600;
+      font-size: inherit;
+      border: none;
+      border-bottom: 1px solid transparent;
+      border-radius: 0;
+      background-color: transparent;
+      color: inherit;
+
+      &:focus ~ .date {
+        border-bottom: 1px dotted $secondary;
+      }
+    }
+  }
+
+  .icon-label {
+    padding: 2px 0 0 2px;
+    @include rem(font-size, 20px);
+  }
+
+  .icon-calendar {
+    @include rem(font-size, 20px);
+  }
+
+  [type=submit] {
+    width: 170px;
+    margin: auto;
+  }
+
+  @include media('>sm') {
+    .form-group {
+      margin-bottom: 0.50rem;
+    }
+  }
+}

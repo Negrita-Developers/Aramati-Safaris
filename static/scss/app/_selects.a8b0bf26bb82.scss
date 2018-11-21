@@ -1,0 +1,107 @@
+.form-control + .select2-container.select2-container--default .select2-selection--single {
+  @include rem(padding-right, 20px);
+}
+
+.form-select {
+  .select2-selection--single {
+    position: relative;
+    overflow: hidden;
+
+    .select2-selection__rendered {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+    }
+
+    .select2-selection__arrow {
+      width: 20/13 + em;
+      height: auto;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      top: 0;
+      bottom: 0;
+      margin: -1px;
+      margin-left: auto;
+      background-color: #fff;
+
+      &:after {
+        content: "\f107";
+        font: normal normal normal 16px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      b {
+        display: none;
+      }
+    }
+
+    .select-dropdown & {
+      display: inline-flex;
+    }
+  }
+
+  .select2-container--open .select2-selection--single {
+    .select2-selection__arrow {
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  border: none;
+  border-radius: 0;
+  @include shadow-8dp;
+
+  .select2-search {
+    position: absolute;
+    width: 100%;
+    padding: 0.5em 0;
+    transform: translateY(-100%);
+    background-color: #ffffff;
+    border-bottom: 1px solid $secondary;
+
+    .select2-search__field {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .select2-results {
+    &__option {
+      padding-left: 15px;
+      transition: 200ms;
+      font-size: inherit;
+      line-height: inherit;
+
+      &[aria-selected=true] {
+        background-color: #fff;
+      }
+
+      &--highlighted[aria-selected] {
+        .select2-container & {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &--above {
+    margin-top:0;
+    border-bottom-width: 0;
+
+    .select2-search {
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      transform: translateY(100%);
+    }
+  }
+
+  &--below {
+    border-top-width: 0;
+  }
+}

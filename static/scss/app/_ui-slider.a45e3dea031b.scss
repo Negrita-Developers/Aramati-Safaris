@@ -1,0 +1,27 @@
+.noUi-horizontal.noUi-ltr {
+  height: 6px;
+  border: 1px solid $hr-border-color;
+  border-radius: 3px;
+  min-width: 100px;
+
+  .noUi-connect {
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .noUi-handle {
+    top: -8px!important;
+    right: -8px!important;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    @include shadow-4dp;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}

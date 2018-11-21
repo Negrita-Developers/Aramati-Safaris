@@ -1,0 +1,119 @@
+@mixin input-group-radius($border-radius) {
+  .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .input-group-append:last-child > .input-group-text:not(:last-child),
+  .input-group-append:not(:last-child) > .btn,
+  .input-group-append:not(:last-child) > .input-group-text,
+  .input-group-prepend > .btn,
+  .input-group-prepend > .input-group-text {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .input-group-append > .btn,
+  .input-group-append > .input-group-text,
+  .input-group-prepend:first-child > .btn:not(:first-child),
+  .input-group-prepend:first-child > .input-group-text:not(:first-child),
+  .input-group-prepend:not(:first-child) > .btn,
+  .input-group-prepend:not(:first-child) > .input-group-text {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .custom-select:not(:first-child),
+  .form-control:not(:first-child) {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .custom-select:not(:last-child),
+  .form-control:not(:last-child) {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+}
+
+
+html.rtl {
+  .float-left {
+    float: right!important;
+  }
+
+  .float-right {
+    float: left!important;
+  }
+
+  .input-group {
+    @include input-group-radius(1.25rem)
+  }
+
+  .input-group--lg {
+    @include input-group-radius(1.75rem);
+  }
+
+  .input-group-prepend {
+    .form-control {
+      padding-left: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .icon {
+      left: auto;
+      right: 0;
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .input-group-append {
+    .form-control {
+      padding-right: 1rem;
+      padding-left: 2.5rem;
+    }
+
+    .icon {
+      right: auto;
+      left: 0;
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .form-select .select2-selection--single .select2-selection__arrow {
+    right: auto;
+    left: 0;
+    justify-content: flex-end;
+  }
+
+  .mCSB_scrollTools {
+    left: 0;
+    right: auto;
+  }
+
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .mCS-dir-rtl>.mCSB_inside>.mCSB_container {
+    margin-left: 0;
+  }
+
+  .progress {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  .bootstrap-datetimepicker-widget {
+    .fa-chevron-left,
+    .fa-chevron-right {
+      transform: scaleX(-1);
+    }
+  }
+
+  @include media('>sm') {
+    .text-sm-left {
+      text-align: right!important;
+    }
+  }
+}
+
+.no-rtl {
+  direction: ltr;
+  text-align: left;
+}

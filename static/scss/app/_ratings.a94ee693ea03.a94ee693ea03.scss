@@ -1,0 +1,34 @@
+.br-widget {
+  display: flex;
+
+  > * {
+    margin-right: 0.25rem;
+
+    html.rtl & {
+      margin-right: 0;
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.rating {
+  line-height: 1;
+
+  &--lg {
+    @include rem(font-size, 18px);
+  }
+
+  .br-widget {
+    height: auto;
+    display: flex;
+
+    a {
+      font-size: inherit;
+      color: currentColor;
+
+      &:after {
+        color: currentColor!important;
+      }
+    }
+  }
+}

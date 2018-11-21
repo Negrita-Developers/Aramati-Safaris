@@ -77,14 +77,23 @@ WSGI_APPLICATION = 'aramati.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'aramati',
+#         'USER': 'claudia',
+#     'PASSWORD':'claudia04',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aramati',
-        'USER': 'claudia',
-    'PASSWORD':'claudia04',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
 
 
 # Password validation
@@ -123,15 +132,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # collect  all my static files and place them here
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "my_static_files"),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # find my static files here
+
+######
+# STATIC_URL = '/static/'
+
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "my_static_files"),
+#     #os.path.join(BASE_DIR, "static_in_env"),
+#     #'/var/www/static/',
+# )
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
+
+######
 
 
-
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/' # collect  all my media files and place them here
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

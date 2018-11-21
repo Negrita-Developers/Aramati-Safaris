@@ -1,0 +1,184 @@
+/**
+ * Hotel check items
+ */
+.hotel-package {
+  &:last-child {
+    margin-bottom: 0!important;
+
+    > hr.hr-bottom {
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+    @include rem(padding-left, 12px);
+    margin: 12px 0 6px;
+    @include rem(font-size, 18px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include rem(top, 6px);
+      left: 0;
+      border-style: solid;
+      @include rem(border-width, 4.5px 0 4.5px 8px);
+      color: transparent;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    height: 190px;
+    z-index: 1;
+
+    img {
+      @extend %object-fit;
+      transition: 0.25s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__props {
+    font-size: 13px;
+
+    > * {
+      &.disabled {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+        }
+
+        > *:not([data-toggle='popover']) {
+          opacity: 0.50;
+        }
+
+        [data-toggle=popover] {
+          position: relative;
+          z-index: 1;
+        }
+
+        &.rooms {
+          .title {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .rooms {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-select {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.25rem;
+
+      .select2-container {
+        display: inline-block;
+        @include rem(min-width, 60px);
+
+        .select2-selection--single {
+          height: auto;
+          padding: 3px 14px 3px 4px;
+          border: none;
+          border-radius: 15px;
+          font-size: inherit;
+          text-align: center;
+
+          html.rtl & {
+            padding-right: 4px;
+            padding-left: 14px;
+          }
+
+          .select2-selection__arrow {
+            background-color: transparent
+          }
+        }
+      }
+    }
+
+    .price {
+      line-height: 1.2;
+      > * {
+        vertical-align: baseline;
+      }
+    }
+
+    .sale {
+      position: relative;
+      padding-right: 6px;
+      margin-right: 10px;
+      color: $gray-600;
+      border-bottom: 1px dotted;
+      text-decoration: line-through;
+      white-space: nowrap;
+
+      i.hint {
+        position: absolute;
+        top: 0;
+        right: -8px;
+        margin-top: -8px;
+      }
+    }
+
+    .cost {
+      @include rem(font-size, 15px);
+      white-space: nowrap;
+    }
+
+    .icon-user {
+      @include rem(font-size, 14px);
+    }
+  }
+
+  &__menu {
+    i {
+      @include rem(font-size, 20px);
+    }
+  }
+
+  &__more {
+    @include rem(padding-bottom, 18px);
+  }
+
+  @include media('<xs') {
+    &__row {
+      text-align: center;
+
+      > * {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__props {
+      .rooms {
+        justify-content: center;
+      }
+    }
+  }
+
+
+  html.rtl & {
+    &__row {
+      > *:first-child {
+        padding-right: 1rem!important;
+      }
+    }
+  }
+}

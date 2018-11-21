@@ -1,0 +1,159 @@
+.modal-account {
+  opacity: 0;
+  z-index: $zindex-modal + 10;
+
+  &.show {
+    opacity: 1;
+    transition: opacity 120ms ease-in;
+  }
+
+  .modal-header {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    transition: background-color 120ms, opacity 120ms;
+
+    html.rtl & {
+      right: auto;
+      left: 0;
+      margin: 0;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    margin: -1px -1px 0;
+
+    .nav-link {
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0!important;
+      border: 1px solid $gray-300;
+      color: $gray-700;
+      transition: 120ms linear;
+
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .modal-footer {
+    padding: 1rem 0;
+  }
+
+  &__form {
+    opacity: 0;
+
+    .form-group {
+      transition: 0s 0.3s;
+    }
+
+    .tab-pane.show & {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out 150ms;
+
+      .form-group {
+        margin-bottom: 1.25rem;
+        transition: margin-bottom 0.3s ease-in-out;
+      }
+    }
+
+    .help-block {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  @include media('<md') {
+    display: block!important;
+    opacity: 1;
+    transition: transform 300ms linear;
+    transform: translateX(-100%);
+
+    html.rtl & {
+      transform: translateX(100%);
+    }
+
+    &.show {
+      transform: translateX(0)!important;
+      transition: transform 300ms linear;
+    }
+
+    .modal-dialog {
+      margin: 0;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    .modal-content {
+      min-height: 100%;
+    }
+  }
+}
+
+.social-sign {
+  &__list {
+    margin: 0 -10px;
+
+    > * {
+      display: flex;
+      padding: 0 10px;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: inherit;
+      transition: background-color 120ms ease;
+    }
+
+    .nav-icon {
+      max-width: 2.50rem;
+      line-height: 1;
+    }
+  }
+
+  @include media('>md') {
+    &__list {
+      .nav-icon {
+        max-width: 3.25rem;
+      }
+
+      .nav-link {
+        @include rem(min-height, 70px);
+        padding: 0.25rem 1.25rem;
+        border: 1px solid $gray-400;
+        border-radius: 34px;
+      }
+    }
+  }
+}

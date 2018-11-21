@@ -1,0 +1,231 @@
+/**
+* Navigation menu
+*/
+.main-nav {
+  position: relative;
+  z-index: 3;
+
+  &.show  {
+    z-index: 1041;
+  }
+
+  .container {
+    max-width: map-get($container-max-widths, xl);
+  }
+
+  &__list {
+    .nav-link {
+      padding: 0.50rem;
+      font-size: 13px;
+      transition: background-color 300ms;
+
+      span {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    .dropdown {
+      > .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .dropdown-menu {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+
+      .nav-item {
+        border-bottom: 1px solid $hr-border-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .nav-link {
+        color: inherit;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__search {
+    padding: .5rem 0 .5rem .5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .navbar-search {
+      width: 100%;
+
+      .form-control {
+        padding: 0.50rem;
+        margin: 0 1px;
+
+        html.rtl & {
+          margin: 0 1px;
+        }
+      }
+
+      .form-control, .btn {
+        border: none;
+        border-radius: 0;
+      }
+
+      .btn {
+        padding: 0;
+        width: 34px;
+      }
+
+      .input-group-append {
+        order: -1;
+      }
+    }
+  }
+
+  @include media('>lg') {
+    padding: 0;
+
+    &__list {
+      margin-top: 0;
+
+      > .dropdown {
+        > .dropdown-menu {
+          transform: translateX(10px);
+        }
+
+        &:hover {
+          > .dropdown-menu {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      .dropdown {
+        &:hover {
+          > .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transition: 300ms ease, visibility 0s 0s;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        min-width: 180px;
+        display: block!important;
+        height: auto!important;
+        visibility: hidden;
+        opacity: 0;
+        @include shadow-6dp();
+        transition: 300ms ease-in, visibility 0s 300ms;
+
+        > .dropdown:hover {
+          > .dropdown-menu {
+            transform: translateY(0);
+          }
+        }
+
+        .dropdown-menu {
+          top: 0;
+          right: auto;
+          left: 100%;
+          transform: translateY(10px);
+
+          html.rtl & {
+            left: -100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include media('<lg') {
+    display: block!important;
+    position: fixed;
+    left: $btn-toggle-menu-width;
+    left: 0;
+    width: 100%;
+    max-width: $menu-mobile-width;
+    height: calc(100% - #{$header-top-sm-height})!important;
+    z-index: 1050;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: translateX(-100%);
+
+    html.rtl & {
+      left: auto;
+      right: $btn-toggle-menu-width;
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    body.menu-open & {
+      transform: translateX(-$btn-toggle-menu-width);
+      transform: translateX(0);
+
+      html.rtl & {
+        transform: translateX($btn-toggle-menu-width);
+        transform: translateX(0);
+      }
+    }
+
+    &__container {
+      min-height: 100%;
+
+      > .container {
+        padding: 0;
+      }
+    }
+
+    &__list {
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid $gray-300;
+      }
+
+      .dropdown-menu {
+        position: relative;
+        top: auto;
+        left: auto!important;
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+.btn-toggle-nav {
+  position: fixed;
+  left: -$btn-toggle-menu-width;
+  padding-left: $btn-toggle-menu-width;
+  z-index: $zindex-modal - 9;
+  height: 100%;
+  width: $btn-toggle-menu-width + $btn-toggle-menu-width;
+  padding-bottom: $header-top-sm-height;
+  transform: translateX(0px);
+
+  .icon-bar {
+    transform: rotate(-90deg);
+  }
+
+  html.rtl & {
+    left: auto;
+    right: -$btn-toggle-menu-width;
+    padding-left: 0;
+    padding-right: $btn-toggle-menu-width;
+  }
+
+  .menu-open & {
+    transform: translateX($menu-mobile-width);
+
+    html.rtl & {
+      transform: translateX(-$menu-mobile-width);
+    }
+  }
+}

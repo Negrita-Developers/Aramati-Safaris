@@ -1,0 +1,25 @@
+.modal-map {
+  padding-right: 0!important;
+  opacity: 0;
+  transition: opacity 300ms;
+
+  &.show {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    height: 100vh;
+    border: none;
+    @include shadow-12dp();
+  }
+
+  .map-contain {
+    flex-grow: 1;
+  }
+}

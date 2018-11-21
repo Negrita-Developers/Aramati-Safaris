@@ -1,0 +1,203 @@
+.btn {
+  font-weight: 400;
+  padding: 0.75rem 2.25rem;
+  font-size: 13px;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--round {
+    @include rem(border-radius, 30px);
+  }
+
+  .hotel-card & {
+    max-width: 220px;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin: 0 auto;
+  }
+}
+
+.icon-caret {
+  font-size: 1rem;
+}
+
+.btn-load {
+  position: relative;
+  width: 155px;
+  height: 40px;
+  padding: 0;
+  transition: all 0.2s ease-out;
+
+  .fa-check {
+    font-size: 20px;
+  }
+
+  &.loading {
+    position: relative;
+    padding: 0;
+    width: 40px;
+  }
+
+  &.complete {
+    .fa-check {
+      transform: scale(0);
+      animation: check 0.2s ease-in-out 0.1s forwards;
+    }
+  }
+
+  .spinner {
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    height: 34px;
+    border-top: 4px solid currentColor;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 100%;
+    animation: spin 0.6s ease-out infinite;
+  }
+
+  @keyframes spin {
+    100% {transform: rotate(360deg)}
+  }
+  @keyframes check {
+    0% {transform: scale(0)}
+    100% {transform: scale(1)}
+  }
+}
+
+.btn-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 24px;
+  transition: 120ms;
+  z-index: 1;
+
+  &--up {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    @include shadow-4dp();
+
+    html.rtl & {
+      right: auto;
+      left: 1rem;
+    }
+
+    i {
+      transform: rotate(-180deg);
+      transition: transform 120ms linear;
+    }
+
+    &.bottom {
+      position: absolute;
+
+      i {
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+.btn-toggle {
+  direction: ltr;
+  display: flex;
+  padding: 0;
+  width: auto;
+  justify-content: center;
+  border-radius: 0;
+
+  .icon-bar {
+    height: 26px;
+    display: flex;
+    align-items: center;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 2px;
+      margin-top: 0.7rem;
+      background-color: $gray-700;
+      transition: 200ms ease;
+    }
+
+    &:before {
+      margin-right: -3px;
+      transform-origin: 100% 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &[aria-expanded=true] {
+    .icon-bar {
+      &:before,
+      &:after {
+        margin-top: -0.4rem;
+      }
+
+      &:before {
+        margin-right: 0;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.btn-switch {
+  direction: ltr;
+  position: relative;
+  width: 44px;
+  z-index: 0;
+  cursor: pointer;
+
+  .bar {
+    border-radius: 8px;
+    height: 16px;
+    left: 3px;
+    opacity: 0.4;
+    position: absolute;
+    top: 2px;
+    width: 38px;
+    z-index: 0;
+    transition: all 300ms linear, background-color linear 80ms;
+  }
+
+  .toggle {
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+    height: 20px;
+    position: relative;
+    transition: transform linear 80ms, background-color linear 80ms;
+    width: 20px;
+    z-index: 1;
+  }
+
+  &.is-active {
+    .bar {
+      opacity: 1;
+    }
+    .toggle {
+      transform: translate3d(24px, 0, 0);
+    }
+  }
+}

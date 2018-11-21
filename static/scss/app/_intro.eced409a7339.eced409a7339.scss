@@ -1,0 +1,289 @@
+/**
+ * Intro home
+ */
+
+.intro {
+  body.load & {
+    min-height: calc(100vh);
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+
+    &.sticky {
+      position: fixed;
+    }
+
+    .over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.30);
+      z-index: 3;
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      transition: opacity 1s linear 1s;
+
+      body.load & {
+        opacity: 0;
+      }
+    }
+
+    .swiper-container {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      .img-cover {
+        height: calc(100% + 100px);
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-active {
+        .img-cover {
+          animation: coverTop 32s linear;
+        }
+      }
+    }
+
+    @keyframes coverTop {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100px);
+      }
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15vh 0;
+    font-size: 1.25rem;
+    color: #fff;
+    font-family: $font-second;
+    opacity: 1;
+    transition: opacity 1s ease 1s;
+
+    body.load & {
+      opacity: 0;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      z-index: 100;
+
+      > .row {
+        flex-grow: 1;
+      }
+    }
+
+    .swiper-slide {
+      opacity: 0!important;
+
+      &.swiper-slide-active {
+        opacity: 1!important;
+      }
+    }
+  }
+
+  &__caption {
+    font-weight: normal;
+    font-size: inherit;
+  }
+
+  &__title {
+    font-size: 90px;
+    line-height: 1.05;
+  }
+
+  &__content {
+    width: 100%;
+    padding-top: 2.50rem;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 1s ease 1s;
+
+    body.load & {
+      opacity: 0;
+    }
+  }
+
+  &__search {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+
+  &__hotels {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  &__hotels-controls {
+    > * {
+      top: 0;
+      position: absolute;
+
+      &:first-child {
+        left: 1rem;
+      }
+
+      &:last-child {
+        right: 1rem;
+      }
+    }
+  }
+
+  &__btn-scroll {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    color: #fff;
+    transition: opacity .3s;
+    z-index: 2;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+      animation: btnScrollAnim 1.50s infinite;
+    }
+
+    @keyframes btnScrollAnim {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+    }
+  }
+
+  @include media('<xl') {
+    &__desc {
+      position: relative;
+    }
+
+    &__content {
+      min-height: auto!important;
+    }
+
+    &__title {
+      font-size: 90/1200*100vw;
+    }
+
+    &__btn-scroll {
+      display: block;
+    }
+  }
+
+  @include media('<sm') {
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
+
+.card-intro {
+  position: relative;
+  min-height: 250px;
+  padding-top: 69.4%;
+  font-size: 14px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+
+  .card-price {
+    right: 0;
+  }
+
+  &__footer {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+
+    .h4 {
+      font-weight: inherit;
+      margin-bottom: 0;
+      height: 1.25rem;
+      font-size: 1.125rem;
+      color: inherit;
+      overflow: hidden;
+    }
+  }
+
+  &__local {
+    margin-bottom: 8px;
+
+    .link {
+      color: inherit;
+    }
+  }
+
+  &__rating {
+    .br-widget {
+      height: auto;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/**
+ * Intro pages
+ */
+.intro-page {
+  position: relative;
+  height: 45vh;
+  z-index: 1;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
