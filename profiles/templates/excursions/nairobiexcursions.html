@@ -24,197 +24,189 @@
       <div class="row">
         <aside class="sidebar col-lg-3 order-1 order-lg-0">
           <div class="sidebar__content js-sticky-top">
-            <div class="sidebar-filter modal card fade" id="sidebarFilter" tabindex="-1" role="dialog">
-              <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
-              <div class="modal-header bg-white">
-                <h4 class="modal-title">See more packages:</h4>
+              <div class="sidebar-filter modal card fade" id="sidebarFilter" tabindex="-1" role="dialog">
+                  <button class="btn-toggle btn btn-light" type="button" data-dismiss="modal"><span class="icon-bar"></span></button>
+                  <div class="modal-header bg-white">
+                      <h4 class="modal-title">See more packages:</h4>
 
-              </div>
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <ul class="sidebar-filter__list">
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#2days" data-toggle="collapse" role="button"><span>2
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="2days">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:ssfnakuru' %}" style="margin-bottom:19px;">2
-                                  DAYS LAKE NAKURU </a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:aberdaressf' %}" style="margin-top:69px;">2
-                                  DAYS ABERDARE NATIONAL PARK</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:amboselissf' %}">2 DAYS
-                                  AMBOSELI SAFARI</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:naivashassf' %}">2 DAYS LAKE
-                                  NAIVASHA</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:maasaimarassf' %}">2 DAYS
-                                  MAASAI MARA SAFARI</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:pajetassf' %}">2 DAYS
-                                  SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#3days" data-toggle="collapse" role="button"><span>3
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="3days">
-                          <div class="sidebar-filters__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:amboselissf3' %}" style="margin-bottom:19px;">3
-                                  DAYS AMBOSELI SAFARI </a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:sweetwaterssf3' %}" style="margin-top:69px;">3
-                                  DAYS SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:maasaimarassf3' %}">3 DAYS
-                                  MAASAI MARA SAFARI</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:nakurussf3' %}">3 DAYS NAKURU
-                                  - NAIVASHA</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:samburussf3' %}">3 DAYS
-                                  SAMBURU SAFARI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#4days" data-toggle="collapse" role="button"><span>4
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="4days">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:maranakurussf4' %}" style="margin-bottom:19px;">4
-                                  DAYS MAASAI MARA/NAKURU SAFARI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#5days" data-toggle="collapse" role="button"><span>5
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="5days">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:amboselissf5' %}" style="margin-bottom:19px;">5
-                                  DAYS AMBOSELI - NAKURU - MARA SAFARI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#accommodation" data-toggle="collapse" role="button"><span>6
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="accommodation">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:amboselissf6' %}" style="margin-bottom:19px;">6
-                                  DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI</a>
-                              </li>
-                              <li>
-                                <a href="{% url 'profiles:maranakurussf6' %}" style="margin-bottom:19px;">6
-                                  DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#accommodation" data-toggle="collapse" role="button"><span>7
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="accommodation">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:maranakurussf7' %}" style="margin-bottom:19px;">7
-                                  DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#accommodation" data-toggle="collapse" role="button"><span>10
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="accommodation">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:maranakurussf10' %}" style="margin-bottom:19px;">10
-                                  DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
-                                  NAKURU-SAMBURU-AMBOSELI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-                      <li class="sidebar-filter__item">
-                        <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
-                            href="#accommodation" data-toggle="collapse" role="button"><span>13
-                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
-                        <div class="collapse hide" id="accommodation">
-                          <div class="sidebar-filter__content">
-                            <ul>
-                              <li>
-                                <a href="{% url 'profiles:amboselinakurussf13' %}" style="margin-bottom:19px;">13
-                                  DAYS AMBOSELI-TSAVO
-                                  EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</a>
-                              </li>
-                            </ul>
-
-                          </div>
-                        </div>
-                      </li>
-
-
-
-                    </ul>
                   </div>
-                </div>
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-body">
+                              <ul class="sidebar-filter__list">
+                                  <li class="sidebar-filter__item">
+                                      <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                              href="#2days" data-toggle="collapse" role="button"><span>2
+                                                  days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                      <div class="collapse hide" id="2days">
+                                          <div class="sidebar-filter__content">
+                                              <ul>
+                                                  <li>
+                                                      <a href="{% url 'profiles:ssfnakuru' %}" style="margin-bottom:19px;">2
+                                                          DAYS LAKE NAKURU </a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:aberdaressf' %}" style="margin-top:69px;">2
+                                                          DAYS ABERDARE NATIONAL PARK</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:amboselissf' %}">2 DAYS
+                                                          AMBOSELI SAFARI</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:naivashassf' %}">2 DAYS LAKE
+                                                          NAIVASHA</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:maasaimarassf' %}">2 DAYS
+                                                          MAASAI MARA SAFARI</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:pajetassf' %}">2 DAYS
+                                                          SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                                                  </li>
+                                              </ul>
+
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class="sidebar-filter__item">
+                                      <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                          href="#3days" data-toggle="collapse" role="button"><span>3
+                                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                      <div class="collapse hide" id="3days">
+                                          <div class="sidebar-filters__content">
+                                              <ul>
+                                                  <li>
+                                                      <a href="{% url 'profiles:amboselissf3' %}" style="margin-bottom:19px;">3
+                                                          DAYS AMBOSELI SAFARI </a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:sweetwaterssf3' %}" style="margin-top:69px;">3
+                                                          DAYS SWEETWATERS/ OL PEJETA CONSERVANCY SAFARI</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:maasaimarassf3' %}">3 DAYS
+                                                          MAASAI MARA SAFARI</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:nakurussf3' %}">3 DAYS NAKURU
+                                                          - NAIVASHA</a>
+                                                  </li>
+                                                  <li>
+                                                      <a href="{% url 'profiles:samburussf3' %}">3 DAYS
+                                                          SAMBURU SAFARI</a>
+                                                  </li>
+                                              </ul>
+
+                                          </div>
+                                      </div>
+                                  </li>
+
+                                  <li class="sidebar-filter__item">
+                                      <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                              href="#4days" data-toggle="collapse" role="button"><span>4
+                                                  days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                      <div class="collapse hide" id="4days">
+                                          <div class="sidebar-filter__content">
+                                              <ul>
+                                                  <li>
+                                                      <a href="{% url 'profiles:maranakurussf4' %}" style="margin-bottom:19px;">4
+                                                          DAYS MAASAI MARA/NAKURU SAFARI</a>
+                                                  </li>
+                                              </ul>
+
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class="sidebar-filter__item">
+                                      <h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                              href="#5days" data-toggle="collapse" role="button"><span>5
+                                                  days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                      <div class="collapse hide" id="5days">
+                                          <div class="sidebar-filter__content">
+                                              <ul>
+                                                  <li>
+                                                      <a href="{% url 'profiles:amboselissf5' %}" style="margin-bottom:19px;">5
+                                                          DAYS AMBOSELI - NAKURU - MARA SAFARI</a>
+                                                  </li>
+                                              </ul>
+
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                          href="#6days" data-toggle="collapse" role="button"><span>6
+                                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                  <div class="collapse hide" id="6days">
+                                      <div class="sidebar-filter__content">
+                                          <ul>
+                                              <li>
+                                                  <a href="{% url 'profiles:amboselissf6' %}" style="margin-bottom:19px;">6
+                                                      DAYS AMBOSELI, ABERDARE, NAKURU, MASAI MARA SAFARI</a>
+                                              </li>
+                                              <li>
+                                                  <a href="{% url 'profiles:maranakurussf6' %}" style="margin-bottom:19px;">6
+                                                      DAYS/MASAI MARA/LAKE NAIVASHA/LAKE NAKURU</a>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                  </div></li>
+                                  <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                          href="#7days" data-toggle="collapse" role="button"><span>7
+                                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                  <div class="collapse hide" id="7days">
+                                      <div class="sidebar-filter__content">
+                                          <ul>
+                                              <li>
+                                                  <a href="{% url 'profiles:maranakurussf7' %}" style="margin-bottom:19px;">7
+                                                      DAYS MARA-LAKE NAIVASHA-LAKE BOGORIA-LAKE NAKURU</a>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                  </div></li>
+                                  <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                          href="#10days" data-toggle="collapse" role="button"><span>10
+                                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                  <div class="collapse hide" id="10days">
+                                      <div class="sidebar-filter__content">
+                                          <ul>
+                                              <li>
+                                                  <a href="{% url 'profiles:maranakurussf10' %}" style="margin-bottom:19px;">10
+                                                      DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                                      NAKURU-SAMBURU-AMBOSELI</a>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                  </div></li>
+                                  <li class="sidebar-filter__item"><h5 class="sidebar-filter__title"><a class="sidebar-filter__toggle d-flex justify-content-between align-items-center"
+                                          href="#13days" data-toggle="collapse" role="button"><span>13
+                                              days safari:</span><i class="fa fa-angle-down"></i></a></h5>
+                                  <div class="collapse hide" id="13days">
+                                      <div class="sidebar-filter__content">
+                                          <ul>
+                                              <li>
+                                                  <a href="{% url 'profiles:amboselinakurussf13' %}" style="margin-bottom:19px;">13
+                                                      DAYS AMBOSELI-TSAVO
+                                                      EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</a>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                  </div></li>
+                                  
+
+
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </aside>
+      </aside>
         <div class="col-lg-9 category-content">
 
           <div class="category-content__items pad-lg-20">
