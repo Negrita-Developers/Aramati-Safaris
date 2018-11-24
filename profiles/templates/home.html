@@ -3,27 +3,24 @@
 {% load static %}
 
 {% block content %}
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 <main class="page-main">
-    <section class="intro d-flex flex-column load" style="height:460px;">
+    <section class="intro d-flex flex-column load">
         <div class="intro__bg js-intro-bg">
             <div class="over"></div>
             <div class="swiper-container js-intro-slider-bg">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="img-cover" src="http://wallpapers-and-backgrounds.net/wp-content/uploads/2016/05/cheetah-full-hd-background_1.jpg"
+                    <div class="swiper-slide"><img class="img-cover" src="{% static 'img/cheetah-wallpaper-hd-45.jpg' %}"
                             alt="#"></div>
-                    <div class="swiper-slide"><img class="img-cover" src="http://www.bingwallpaperhd.com/wp-content/uploads/2018/06/ReticulatedGiraffe.jpg"
+                    <div class="swiper-slide"><img class="img-cover" src="{% static 'img/Reticulaed Giraffe.jpg' %}"
                             alt="#"></div>
-                    <div class="swiper-slide"><img class="img-cover" src="https://www.naturalworldsafaris.com/~/media/images/destinations/kenya/kenya-wildlife-lion-pride-with-cubs-richard-denyer.jpg"
+                    <div class="swiper-slide"><img class="img-cover" src="{% static 'img/kenya-wildlife-lion-pride-with-cubs-richard-denyer.jpg' %}"
                             alt="#"></div>
-
-
-
                 </div>
             </div>
         </div>
@@ -32,6 +29,7 @@
 
             <div class="modal-container" style="width:300px; height:100px;">
                 <input id="modal-toggle" type="checkbox">
+
                 <label class="modal-btn" style="width: 290px; margin-left: -250px;
                 margin-top: 420px; background-color: black; opacity: 1;"
                     for="modal-toggle"><i class="fas fa-plus-square" style="margin-right:12px;"></i><a href=" "
@@ -141,55 +139,55 @@
 
                         <div class="card-hotel__bottom">
                             {% if "Excursions-lakenaivasha" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>Lake Naivasha Day Trip</h4>
-                                    {% elif "Excursions-lakenakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>Lake Nakuru Day Trip</h4>
-                                    {% elif "2days-aberdare" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS ABERDARE NATIONAL PARK</h4>
-                                    {% elif "2days-amboseli" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS AMBOSELI SAFARI</h4>
-                                    {% elif "2days-maasaimara" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS MAASAI MARA SAFARI</h4>
-                                    {% elif "2days-lakenaivasha" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAIVASHA</h4>
-                                    {% elif "2days-lakenakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAKURU NATIONAL PARK</h4>
-                                    {% elif "2days-sweetwaters" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>2 DAYS SWEETWATERS- OL PEJETA
-                                        CONSERVANCY SAFARI</h4>
+                            <h4 class="product__title"><a href=" "> </a>Lake Naivasha Day Trip</h4>
+                            {% elif "Excursions-lakenakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>Lake Nakuru Day Trip</h4>
+                            {% elif "2days-aberdare" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS ABERDARE NATIONAL PARK</h4>
+                            {% elif "2days-amboseli" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS AMBOSELI SAFARI</h4>
+                            {% elif "2days-maasaimara" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS MAASAI MARA SAFARI</h4>
+                            {% elif "2days-lakenaivasha" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAIVASHA</h4>
+                            {% elif "2days-lakenakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS LAKE NAKURU NATIONAL PARK</h4>
+                            {% elif "2days-sweetwaters" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>2 DAYS SWEETWATERS- OL PEJETA
+                                CONSERVANCY SAFARI</h4>
 
-                                    {% elif "3days-amboseli" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>3 DAYS AMBOSELI SAFARI</h4>
-                                    {% elif "3days-maasaimara" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>3 DAYS MAASAI MARA SAFARI</h4>
-                                    {% elif "3days-nakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>3 DAYS NAKURU - NAIVASHA</h4>
-                                    {% elif "3days-samburu" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>3 DAYS SAMBURU SAFARI</h4>
-                                    {% elif "3days-sweetwaters" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>3 DAYS SWEETWATERS-OL PEJETA
-                                        CONSERVANCY SAFARI</h4>
+                            {% elif "3days-amboseli" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>3 DAYS AMBOSELI SAFARI</h4>
+                            {% elif "3days-maasaimara" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>3 DAYS MAASAI MARA SAFARI</h4>
+                            {% elif "3days-nakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>3 DAYS NAKURU - NAIVASHA</h4>
+                            {% elif "3days-samburu" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>3 DAYS SAMBURU SAFARI</h4>
+                            {% elif "3days-sweetwaters" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>3 DAYS SWEETWATERS-OL PEJETA
+                                CONSERVANCY SAFARI</h4>
 
-                                    {% elif "4days-MaraNakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>4 DAYS MAASAI MARA-NAKURU SAFARI</h4>
-                                    {% elif "5days-amboseli" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>5 DAYS AMBOSELI - NAKURU - MARA SAFARI</h4>
-                                    {% elif "6days-amboseli" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>6 DAYS AMBOSELI- ABERDARE-NAKURU-MASAI
-                                        MARA SAFARI</h4>
-                                    {% elif "6days-MaraNakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>6 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
-                                        NAKURU</h4>
-                                    {% elif "7days-MaraNakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>7 DAYS MARA-LAKE NAIVASHA-LAKE
-                                        BOGORIA-LAKE NAKURU</h4>
-                                    {% elif "10days-MaraNakuru" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>10 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
-                                        NAKURU-SAMBURU-AMBOSELI</h4>
-                                    {% elif "13days-Amboseli" in guara.package.name %}
-                                    <h4 class="product__title"><a href=" "> </a>13 DAYS AMBOSELI-TSAVO
-                                        EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</h4>
-                                    {% endif %}
+                            {% elif "4days-MaraNakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>4 DAYS MAASAI MARA-NAKURU SAFARI</h4>
+                            {% elif "5days-amboseli" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>5 DAYS AMBOSELI - NAKURU - MARA SAFARI</h4>
+                            {% elif "6days-amboseli" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>6 DAYS AMBOSELI- ABERDARE-NAKURU-MASAI
+                                MARA SAFARI</h4>
+                            {% elif "6days-MaraNakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>6 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                NAKURU</h4>
+                            {% elif "7days-MaraNakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>7 DAYS MARA-LAKE NAIVASHA-LAKE
+                                BOGORIA-LAKE NAKURU</h4>
+                            {% elif "10days-MaraNakuru" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>10 DAYS-MASAI MARA-LAKE NAIVASHA-LAKE
+                                NAKURU-SAMBURU-AMBOSELI</h4>
+                            {% elif "13days-Amboseli" in guara.package.name %}
+                            <h4 class="product__title"><a href=" "> </a>13 DAYS AMBOSELI-TSAVO
+                                EAST-NAIVASHA-NAKURU-MASAI MARA BUDGET SAFARI</h4>
+                            {% endif %}
                             <p class="flashit" style="color:red; font-size:19px; font-weight: bolder;">{{guara.datediff}}
                                 Days
                                 Remaining</p>
@@ -272,73 +270,74 @@
                             </div>
 
                             <p style="margin-left:160px; margin-top: 20px;">{{guara.seatsremaining}} Seat(s) Remaining</p>
-                            
+
                             {% if "Excursions-lakenaivasha" in guara.package.name %}
-                                    </ul><a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:joinlakenaivasha' %}">See
-                                        Trip</a>
-                                    {% elif "Excursions-lakenakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:joinlakenaivasha' %}">See
-                                        Trip</a>
+                            </ul><a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;"
+                                href="{% url 'profiles:joinlakenaivasha' %}">See
+                                Trip</a>
+                            {% elif "Excursions-lakenakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:joinlakenaivasha' %}">See
+                                Trip</a>
 
 
-                                    {% elif "2days-aberdare" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:aberdarejoinssf' %}">See
-                                        Trip</a>
-                                    {% elif "2days-amboseli" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf' %}">See
-                                        Trip</a>
-                                    {% elif "2days-maasaimara" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maasaimarajoinssf' %}">See
-                                        Trip</a>
-                                    {% elif "2days-lakenaivasha" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:naivashajoinssf' %}">See
-                                        Trip</a>
-                                    {% elif "2days-lakenakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:joinssfnakuru' %}">See
-                                        Trip</a>
-                                    {% elif "2days-sweetwaters" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:pajetajoinssf' %}">See
-                                        Trip</a>
+                            {% elif "2days-aberdare" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:aberdarejoinssf' %}">See
+                                Trip</a>
+                            {% elif "2days-amboseli" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf' %}">See
+                                Trip</a>
+                            {% elif "2days-maasaimara" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maasaimarajoinssf' %}">See
+                                Trip</a>
+                            {% elif "2days-lakenaivasha" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:naivashajoinssf' %}">See
+                                Trip</a>
+                            {% elif "2days-lakenakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:joinssfnakuru' %}">See
+                                Trip</a>
+                            {% elif "2days-sweetwaters" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:pajetajoinssf' %}">See
+                                Trip</a>
 
 
-                                    {% elif "3days-amboseli" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf3' %}">See
-                                        Trip</a>
-                                    {% elif "3days-maasaimara" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maasaimarajoinssf3' %}">See
-                                        Trip</a>
-                                    {% elif "3days-nakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:nakurujoinssf3' %}">See
-                                        Trip</a>
-                                    {% elif "3days-samburu" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:samburujoinssf3' %}">See
-                                        Trip</a>
-                                    {% elif "3days-sweetwaters" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:sweetwaterjoinssf3' %}">See
-                                        Trip</a>
+                            {% elif "3days-amboseli" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf3' %}">See
+                                Trip</a>
+                            {% elif "3days-maasaimara" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maasaimarajoinssf3' %}">See
+                                Trip</a>
+                            {% elif "3days-nakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:nakurujoinssf3' %}">See
+                                Trip</a>
+                            {% elif "3days-samburu" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:samburujoinssf3' %}">See
+                                Trip</a>
+                            {% elif "3days-sweetwaters" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:sweetwaterjoinssf3' %}">See
+                                Trip</a>
 
-                                    {% elif "4days-MaraNakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf4' %}">See
-                                        Trip</a>
-                                    {% elif "5days-amboseli" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf5' %}">See
-                                        Trip</a>
-                                    {% elif "6days-amboseli" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf6' %}">See
-                                        Trip</a>
-                                    {% elif "6days-MaraNakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf6' %}">See
-                                        Trip</a>
-                                    {% elif "7days-MaraNakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf7' %}">See
-                                        Trip</a>
-                                    {% elif "10days-MaraNakuru" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf10' %}">See
-                                        Trip</a>
-                                    {% elif "13days-Amboseli" in guara.package.name %}
-                                    <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselinakurujoinssf13' %}">See
-                                        Trip</a>
-                                    {% endif %}
+                            {% elif "4days-MaraNakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf4' %}">See
+                                Trip</a>
+                            {% elif "5days-amboseli" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf5' %}">See
+                                Trip</a>
+                            {% elif "6days-amboseli" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselijoinssf6' %}">See
+                                Trip</a>
+                            {% elif "6days-MaraNakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf6' %}">See
+                                Trip</a>
+                            {% elif "7days-MaraNakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf7' %}">See
+                                Trip</a>
+                            {% elif "10days-MaraNakuru" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:maranakurujoinssf10' %}">See
+                                Trip</a>
+                            {% elif "13days-Amboseli" in guara.package.name %}
+                            <a class="product__btn-book btn btn-secondary btn--round" style="margin-left:32%;" href="{% url 'profiles:amboselinakurujoinssf13' %}">See
+                                Trip</a>
+                            {% endif %}
 
                         </div>
 
@@ -530,6 +529,32 @@
     });
 </script>
 <style>
+    @media(min-width: 1340px) {
+        .intro {
+            height: 600px;
+
+        }
+
+        .intro__content {
+            margin-top: -90px;
+        }
+    }
+
+    .intro {
+        height: 456px;
+    }
+
+    .intro__content {
+        margin-top: -90px;
+    }
+
+    @media(max-width: 1024px) {
+        .intro__bg {
+            max-height: 40%;
+        }
+
+    }
+
     .avatar {
         position: relative;
         overflow: hidden;

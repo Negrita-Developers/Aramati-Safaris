@@ -23,31 +23,165 @@
     <div class="page-content">
         <div class="container">
             <div class="row">
-                    <aside class="sidebar col-lg-3">
-                            <div class="sidebar__content js-sticky-top">
-                    
-                                    <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                            $ 300 <sub>p.p</sub></button>
-                                    <!-- <hr> -->
-                                    <br>
-                                    <div class="sidebar__finder card bg-primary text-white">
-                                            <h4>Time to Book:</h4>
-                                            <p style="font-size:22px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
-                                                    Days
-                                                    Remaining</p>
-                                            <h4>Depature Date:</h4>
-                                            <p style="font: size 20px;">{{guara.depature_date}}</p>
-                                            <h4>Booked Seats:</h4>
-                                            <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
-                                            <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
+                <aside class="sidebar col-lg-3">
+                    <div class="sidebar__content js-sticky-top">
+                        {% if "Low Season" in guara.Season %}
+                        {% if "Ark Aberdare" in guara.Hotel_Star%}
+                        {% if  guara.people_booked == 1%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book Now and Pay
+                            $ 425 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 360 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 330 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 310 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 295 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 7%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 285 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "Treetops Aberdare" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 345 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 280 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 245 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 225 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 210 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 205 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+
+
+                        {% if "High Season" in guara.Season %}
+                        {% if "Ark Aberdare" in guara.Hotel_Star%}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 440 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 375 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 3040 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 320 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 305 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 300 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "Treetops Aberdare" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 300 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 245 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 215 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 200 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 190 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 180 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+
+
+                        {% if "Peak Season" in guara.Season %}
+                        {% if "Ark Aberdare" in guara.Hotel_Star%}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 450 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 385 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 350 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 330 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 320 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 310 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "Treetops Aberdare" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 380 <sub>p.p</sub></button>
+                        {% elif  guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 315 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 285 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 265 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 250 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book & Pay
+                            $ 240 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+                        <!-- <hr> -->
+                        <br>
+                        <div class="sidebar__finder card bg-primary text-white">
+                            <h4>Time to Book:</h4>
+                            <p style="font-size:22px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
+                                Days
+                                Remaining</p>
+                            <h4>Depature Date:</h4>
+                            <p style="font: size 20px;">{{guara.depature_date}}</p>
+                            <h4>Booked Seats:</h4>
+                            <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
+                            <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
                                         <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
-                                        <a href="{% url 'profiles:bookings' %}"><button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Join This Trip
-                                            </button></a> 
-                                    </div>
-                                    <hr>
-                            </div>
-                    </aside>
-                    
+                            <a href="{% url 'profiles:bookings' %}"><button class="btn btn-dark btn--round mx-auto mt-2 w-100"
+                                    type="submit">Join This Trip
+                                </button></a>
+                        </div>
+                        <hr>
+                    </div>
+                </aside>
+
 
                 <div class="col-lg-9" id="barba-wrapper">
                     <div class="barba-container">
@@ -167,8 +301,12 @@
                                                 <section class="pb-4">
                                                     <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                             style="margin-right: 12px;"></i>Details:</h5>
-                                                    <p>The park provides a habitat for elephants, black rhinos, leopards, spotted hyenas, olive baboons, black and white colobus monkeys, buffalos, warthogs and bushbucks among others. Rare sightings include those of the Giant Forest hog,
-                                                         bongo, golden cat, serval cat, African wild cat, African civet cat and the blue duiker. </p>
+                                                    <p>The park provides a habitat for elephants, black rhinos,
+                                                        leopards, spotted hyenas, olive baboons, black and white
+                                                        colobus monkeys, buffalos, warthogs and bushbucks among others.
+                                                        Rare sightings include those of the Giant Forest hog,
+                                                        bongo, golden cat, serval cat, African wild cat, African civet
+                                                        cat and the blue duiker. </p>
 
                                                 </section>
 
@@ -186,10 +324,11 @@
                                         <h4>General Informantion</h4>
                                         <ul>
 
-                                                <li><span style="font-weight:900;">Available: </span> All year round</li>
-                                                <li><span style="font-weight:900;">Tour Duration: </span> 0700hrs – 1800hrs</li>
-                                                <li><span style="font-weight:900;">Pick up/drop off location: </span> Aramati Safari Offices – Ngong Road</li>
-                                                <li> <span style="font-weight:900;">Departure Time: </span> 0700hrs</li>
+                                            <li><span style="font-weight:900;">Available: </span> All year round</li>
+                                            <li><span style="font-weight:900;">Tour Duration: </span> 0700hrs – 1800hrs</li>
+                                            <li><span style="font-weight:900;">Pick up/drop off location: </span>
+                                                Aramati Safari Offices – Ngong Road</li>
+                                            <li> <span style="font-weight:900;">Departure Time: </span> 0700hrs</li>
                                         </ul>
                                         <br>
                                         <div class="row">
@@ -197,14 +336,21 @@
                                                 <div class="hotel__intro hotel-card w-100">
                                                     <section class="pb-4">
                                                         <h2 class="d-flex align-items-center text-primary mb-3"><i
-                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 1: NAIROBI-ABERDARE</h2>
-                                                        <p>Arrive JKIA, you will be met by our representative where you shall be briefed on the safari.
-                                                                Depart Nairobi for a journey across the Kenyan Highlands, through pineapple and coffee
-                                                                plantations. Arrive in time for lunch at the base hotel. Afternoon drive through the park
-                                                                watching wildlife along the way to the lodge. Afternoon game viewing from the balconies of
-                                                                the tree hotel. The Aberdare national park is home to elephants, black rhinos, leopards,
-                                                                spotted hyenas, olive baboons, black and white colobus monkeys, buffalos, warthogs and
-                                                                bushbucks among others. Dinner and overnight at the lodge.</p>
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY
+                                                            1: NAIROBI-ABERDARE</h2>
+                                                        <p>Arrive JKIA, you will be met by our representative where you
+                                                            shall be briefed on the safari.
+                                                            Depart Nairobi for a journey across the Kenyan Highlands,
+                                                            through pineapple and coffee
+                                                            plantations. Arrive in time for lunch at the base hotel.
+                                                            Afternoon drive through the park
+                                                            watching wildlife along the way to the lodge. Afternoon
+                                                            game viewing from the balconies of
+                                                            the tree hotel. The Aberdare national park is home to
+                                                            elephants, black rhinos, leopards,
+                                                            spotted hyenas, olive baboons, black and white colobus
+                                                            monkeys, buffalos, warthogs and
+                                                            bushbucks among others. Dinner and overnight at the lodge.</p>
 
                                                         <p>Suggested accommodation or similar standard:</p>
                                                         <ul>
@@ -226,9 +372,11 @@
                                                 <div class="hotel__intro hotel-card w-100">
                                                     <section class="pb-4">
                                                         <h2 class="d-flex align-items-center text-primary mb-3"><i
-                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 2: ABERDARE-NAIROBI</h2>
-                                                        <p>Breakfast at the lodge. Depart for Nairobi. On arrival drop off at the airport for final
-                                                                departure.</p>
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY
+                                                            2: ABERDARE-NAIROBI</h2>
+                                                        <p>Breakfast at the lodge. Depart for Nairobi. On arrival drop
+                                                            off at the airport for final
+                                                            departure.</p>
 
                                                     </section>
 
@@ -248,65 +396,70 @@
                                     <hr class="mb-4">
 
                                     <div class="hotel-card" id="rates">
-                                        <h4 class="mb-4"><strong> Rates: (USING A SAFARI VAN,
-                                                COST PER PERSON SHARING)</strong></h4>
+                                        <h4 class="mb-4" style="font-weight:900;"> Rates: (USING A SAFARI VAN,
+                                            COST PER PERSON SHARING)</h4>
                                         <div class="table-title">
                                         </div>
                                         <div class="container">
-                                                <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
-                                                        style="margin-right: 12px;"></i>LOW SEASON 16 TH MARCH-30 TH JUNE (EXCLUDING EASTER), 1 ST NOV-15 TH DEC</h5>
-    
-                                                <div class="table">
-                                                    <div class="table-header">
-                                                        <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
-                                                        <div class="header__item"><a id="wins" class="filter__link filter__link--number"
-                                                                href="#">1 PAX</a></div>
-                                                        <div class="header__item"><a id="draws" class="filter__link filter__link--number"
-                                                                href="#">2 PAX</a></div>
-                                                        <div class="header__item"><a id="losses" class="filter__link filter__link--number"
-                                                                href="#">3 PAX</a></div>
-                                                        <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">4 PAX</a></div>
-                                                        <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">5 PAX</a></div>
-                                                        <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">6 PAX</a></div>
-                                                        <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">7 PAX</a></div>
-                                                                <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                    href="#">SRS</a></div>
-                                                    </div>
-                                                    <div class="table-content">
-                                                        <div class="table-row">
-                                                            <div class="table-data">THE ARK</div> 
-                                                            <div class="table-data">625 </div>
-                                                            <div class="table-data">425</div>
-                                                            <div class="table-data">360</div>
-                                                            <div class="table-data">330</div>
-                                                            <div class="table-data">310</div>
-                                                            <div class="table-data">295</div>
-                                                            <div class="table-data">285</div>
-                                                            <div class="table-data">65</div>
+                                            {% if "Low Season" in guara.Season %}
+                                            <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
+                                                    style="margin-right: 12px;"></i>LOW SEASON 16 TH MARCH-30 TH JUNE
+                                                (EXCLUDING EASTER), 1 ST NOV-15 TH DEC</h5>
 
-    
-    
-                                                        </div>
-                                                        <div class="table-row">
-                                                            <div class="table-data">TREETOPS</div>    
-                                                            <div class="table-data">540</div>
-                                                            <div class="table-data">345</div>
-                                                            <div class="table-data">280</div>
-                                                            <div class="table-data">245</div>
-                                                            <div class="table-data"> 225</div>
-                                                            <div class="table-data"> 210</div>
-                                                            <div class="table-data">205</div>
-                                                            <div class="table-data">65</div>
-
-                                                        </div>
+                                            <div class="table">
+                                                <div class="table-header">
+                                                    <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
+                                                    <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                                            href="#">1 PAX</a></div>
+                                                    <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                                            href="#">2 PAX</a></div>
+                                                    <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                                            href="#">3 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">4 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">5 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">6 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">7 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
+                                                </div>
+                                                <div class="table-content">
+                                                    {% if "Ark Aberdare" in guara.Hotel_Star%}
+                                                    <div class="table-row">
+                                                        <div class="table-data">THE ARK</div>
+                                                        <div class="table-data">625 </div>
+                                                        <div class="table-data">425</div>
+                                                        <div class="table-data">360</div>
+                                                        <div class="table-data">330</div>
+                                                        <div class="table-data">310</div>
+                                                        <div class="table-data">295</div>
+                                                        <div class="table-data">285</div>
+                                                        <div class="table-data">65</div>
                                                     </div>
+                                                    {% endif %}
+                                                    {% if "Treetops Aberdare" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">TREETOPS</div>
+                                                        <div class="table-data">540</div>
+                                                        <div class="table-data">345</div>
+                                                        <div class="table-data">280</div>
+                                                        <div class="table-data">245</div>
+                                                        <div class="table-data"> 225</div>
+                                                        <div class="table-data"> 210</div>
+                                                        <div class="table-data">205</div>
+                                                        <div class="table-data">65</div>
+
+                                                    </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
+                                            {% endif %}
+                                        </div>
                                         <div class="container">
+                                            {% if "High Season" in guara.Season %}
                                             <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                     style="margin-right: 12px;"></i>HIGH SEASON 3 RD JAN-15 TH MARCH</h5>
 
@@ -327,12 +480,13 @@
                                                             href="#">6 PAX</a></div>
                                                     <div class="header__item"><a id="total" class="filter__link filter__link--number"
                                                             href="#">7 PAX</a></div>
-                                                            <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">SRS</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
                                                 </div>
                                                 <div class="table-content">
                                                     <div class="table-row">
-                                                        <div class="table-data">THE ARK</div> 
+                                                        {% if "Ark Aberdare" in guara.Hotel_Star%}
+                                                        <div class="table-data">THE ARK</div>
                                                         <div class="table-data">635 </div>
                                                         <div class="table-data">440</div>
                                                         <div class="table-data">375</div>
@@ -343,9 +497,10 @@
                                                         <div class="table-data">70</div>
 
 
-
+                                                        {% endif %}
                                                     </div>
                                                     <div class="table-row">
+                                                        {% if "Treetops Aberdare" in guara.Hotel_Star %}
                                                         <div class="table-data">TREETOPS</div>
                                                         <div class="table-data">470 </div>
                                                         <div class="table-data">300</div>
@@ -355,11 +510,14 @@
                                                         <div class="table-data"> 190</div>
                                                         <div class="table-data">180</div>
                                                         <div class="table-data">80</div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>
+                                            {% endif %}
                                         </div>
                                         <div class="container">
+                                            {% if "Peak Season" in guara.Season %}
                                             <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                     style="margin-right: 12px;"></i>PEAK SEASON 1 ST JULY-31 ST OCTOBER</h5>
                                             <div class="table">
@@ -379,12 +537,14 @@
                                                             href="#">6 PAX</a></div>
                                                     <div class="header__item"><a id="total" class="filter__link filter__link--number"
                                                             href="#">7 PAX</a></div>
-                                                            <div class="header__item"><a id="total" class="filter__link filter__link--number"
-                                                                href="#">SRS</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
                                                 </div>
-                                                <div class="table-content">
+                                                <div class="table-content">{% if "Ark Aberdare" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">THE ARK</div> 
+
+                                                        <div class="table-data">THE ARK</div>
+
                                                         <div class="table-data">645 </div>
                                                         <div class="table-data">450</div>
                                                         <div class="table-data">385</div>
@@ -395,9 +555,11 @@
                                                         <div class="table-data">75</div>
 
 
-                                                    </div>
+                                                    </div>{% endif %}
+                                                    {% if "Treetops Aberdare" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">TREETOPS</div>  
+
+                                                        <div class="table-data">TREETOPS</div>
                                                         <div class="table-data">580</div>
                                                         <div class="table-data">380</div>
                                                         <div class="table-data">315</div>
@@ -406,9 +568,11 @@
                                                         <div class="table-data"> 250</div>
                                                         <div class="table-data">240</div>
                                                         <div class="table-data">140</div>
-                                                    </div>
+
+                                                    </div> {% endif %}
                                                 </div>
                                             </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <div class="hotel-card">
@@ -506,7 +670,7 @@
                                         further questions, please don&#39;t hesitate to contact us, will be our
                                         pleasure to help
                                         you. For private/customized tours please contact us direct. Our email remains
-                                        <a href="info@aramatisafaris.co.ke">info@aramatisafaris.co.ke</a></li>
+                                        <a href="sharing@aramatisafaris.co.ke">sharing@aramatisafaris.co.ke</a></li>
                                 </ul>
                             </div>
 

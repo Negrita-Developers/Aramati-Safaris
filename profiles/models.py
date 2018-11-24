@@ -34,8 +34,8 @@ class JoinedSafaris(models.Model):
         ('2 star', '2 star'),
         ('3 star','3 star'),
         ('4 star','4 star'),
-        ('Treetops ','Treetops Aberdare'),
-        ('Ark ','Ark Aberdare')
+        ('Treetops Aberdare','Treetops Aberdare'),
+        ('Ark Aberdare','Ark Aberdare')
     )
     Hotel_Star=models.CharField(choices=Hotel_Star, max_length=20, default="hotelstar")
     Accomodation=(
