@@ -24,47 +24,28 @@
         <div class="container">
             <div class="row">
                     <aside class="sidebar col-lg-3">
-                            <div class="sidebar__content js-sticky-top"> {% if guara.people_booked == 1%}
+                            <div class="sidebar__content js-sticky-top">
+                                    {% if "Low Season" in guara.Season %}
+                                     {% if guara.people_booked == 1%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 315 <sub>p.p</sub></button>
+                                    Now and Pay $ 687 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 2%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 255 <sub>p.p</sub></button>
+                                    Now and Pay $ 610 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 3%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 230 <sub>p.p</sub></button>
+                                    Now and Pay $ 600 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 4%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 210 <sub>p.p</sub></button>
+                                    Now and Pay $ 534 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 6%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 200 <sub>p.p</sub></button>
+                                    Now and Pay $ 520 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 7%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 190 <sub>p.p</sub></button>
+                                    Now and Pay $ 504 <sub>p.p</sub></button>
                                 {% endif %}
         
-                                {% elif "3 star" in guara.Hotel_Star %}
-                                {% if guara.people_booked == 1 %}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 340<sub>p.p</sub></button>
-                                {% elif guara.people_booked == 2%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 280 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 3%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 255 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 4%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 240 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 5%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 225<sub>p.p</sub></button>
-                                {% elif guara.people_booked == 6%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 220 <sub>p.p</sub></button>
-                                {% endif %}
-                                {% endif %}
                                 {% endif %}
         
         
@@ -72,46 +53,25 @@
                                 {% if "2 star" in guara.Hotel_Star%}
                                 {% if guara.people_booked == 1 %}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 315 <sub>p.p</sub></button>
+                                    Now and Pay $ 721 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 2%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 255 <sub>p.p</sub></button>
+                                    Now and Pay $ 636 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 3%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 230 <sub>p.p</sub></button>
+                                    Now and Pay $ 594 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 4%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    Now and Pay $ 210 <sub>p.p</sub></button>
+                                    Now and Pay $ 568 <sub>p.p</sub></button>
         
                                 {% elif guara.people_booked == 5%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 200 <sub>p.p</sub></button>
+                                    $ 551 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 6%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 190 <sub>p.p</sub></button>
+                                    $ 540 <sub>p.p</sub></button>
                                 {% endif %}
         
-                                {% elif "3 star" in guara.Hotel_Star %}
-                                {% if guara.people_booked == 1 %}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 365 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 2%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 305 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 3%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 280 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 4%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 260 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 5%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 250 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 6%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 240 <sub>p.p</sub></button>
-                                {% endif %}
-                                {% endif %}
                                 {% endif %}
         
         
@@ -119,46 +79,24 @@
                                 {% if "2 star" in guara.Hotel_Star%}
                                 {% if guara.people_booked == 1 %}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 315 <sub>p.p</sub></button>
+                                    $ 792 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 2%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 255 <sub>p.p</sub></button>
+                                    $ 707 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 3%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 230 <sub>p.p</sub></button>
+                                    $ 665 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 4%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 210 <sub>p.p</sub></button>
+                                    $ 640 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 5%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 200 <sub>p.p</sub></button>
+                                    $ 622 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 6%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 190 <sub>p.p</sub></button>
+                                    $ 610 <sub>p.p</sub></button>
                                 {% endif %}
         
-                                {% elif "3 star" in guara.Hotel_Star %}
-                                {% if guara.people_booked == 1 %}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 375 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 2%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 320 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 3%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 290 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 4%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 270 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 5 %}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
-                                    $ 260 <sub>p.p</sub></button>
-                                {% elif guara.people_booked == 6%}
-                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
-                                    & Pay
-                                    $ 255 <sub>p.p</sub></button>
-                                {% endif %}
-                                {% endif %}
                                 {% endif %}
                                 <!-- <hr> -->
                                 <br>

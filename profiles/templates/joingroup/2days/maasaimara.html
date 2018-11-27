@@ -24,7 +24,10 @@
         <div class="container">
             <div class="row">
                     <aside class="sidebar col-lg-3">
-                            <div class="sidebar__content js-sticky-top"> {% if guara.people_booked == 1%}
+                            <div class="sidebar__content js-sticky-top">
+                                    {% if "Low Season" in guara.Season %}
+                                    {% if "2 star" in guara.Hotel_Star%}
+                                     {% if guara.people_booked == 1%}
                                 <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
                                     Now and Pay $ 315 <sub>p.p</sub></button>
                                 {% elif guara.people_booked == 2%}
