@@ -1,0 +1,876 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{{ block.super}}
+{% for guara in guaras %}
+{% if "13days-Amboseli" in guara.package.name %}
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+<main class="page-main">
+
+    <nav class="breadcrumb-nav d-flex align-items-center" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:aboutus' %}">About Us</a></li>
+                <li class="breadcrumb-item"><a class="under" href="{% url 'profiles:longsafaris' %}">Long Safaris</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span>13 DAYS AMBOSELI-TSAVO
+                        EAST-NAIVASHA-NAKURU-MASAI MARA
+                        BUDGET SAFARI</span></li>
+
+            </ol>
+        </div>
+    </nav>
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                    <aside class="sidebar col-lg-3">
+                            <div class="sidebar__content js-sticky-top"> {% if guara.people_booked == 1%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 315 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 255 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 230 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 210 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 200 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 7%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 190 <sub>p.p</sub></button>
+                                {% endif %}
+        
+                                {% elif "3 star" in guara.Hotel_Star %}
+                                {% if guara.people_booked == 1 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 340<sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 280 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 255 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 240 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 5%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 225<sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 220 <sub>p.p</sub></button>
+                                {% endif %}
+                                {% endif %}
+                                {% endif %}
+        
+        
+                                {% if "High Season" in guara.Season %}
+                                {% if "2 star" in guara.Hotel_Star%}
+                                {% if guara.people_booked == 1 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 315 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 255 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 230 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    Now and Pay $ 210 <sub>p.p</sub></button>
+        
+                                {% elif guara.people_booked == 5%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 200 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 190 <sub>p.p</sub></button>
+                                {% endif %}
+        
+                                {% elif "3 star" in guara.Hotel_Star %}
+                                {% if guara.people_booked == 1 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 365 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 305 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 280 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 260 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 5%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 250 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 240 <sub>p.p</sub></button>
+                                {% endif %}
+                                {% endif %}
+                                {% endif %}
+        
+        
+                                {% if "Peak Season" in guara.Season %}
+                                {% if "2 star" in guara.Hotel_Star%}
+                                {% if guara.people_booked == 1 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 315 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 255 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 230 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 210 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 5%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 200 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 190 <sub>p.p</sub></button>
+                                {% endif %}
+        
+                                {% elif "3 star" in guara.Hotel_Star %}
+                                {% if guara.people_booked == 1 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 375 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 2%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 320 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 3%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 290 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 4%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 270 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 5 %}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                                    $ 260 <sub>p.p</sub></button>
+                                {% elif guara.people_booked == 6%}
+                                <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                                    & Pay
+                                    $ 255 <sub>p.p</sub></button>
+                                {% endif %}
+                                {% endif %}
+                                {% endif %}
+                                <!-- <hr> -->
+                                <br>
+                                <div class="sidebar__finder card bg-primary text-white">
+                                    <h4>Time to Book:</h4>
+                                    <p style="font-size:22px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
+                                        Days
+                                        Remaining</p>
+                                    <h4>Depature Date:</h4>
+                                    <p style="font: size 20px;">{{guara.depature_date}}</p>
+                                    <h4>Booked Seats:</h4>
+                                    <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
+                                    <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
+                                                                        <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
+                                    <a href="{% url 'profiles:bookings' %}"><button class="btn btn-dark btn--round mx-auto mt-2 w-100"
+                                            type="submit">Join This Trip
+                                        </button></a>
+                                </div>
+                                <hr>
+                            </div>
+                        </aside>
+
+                <div class="col-lg-9" id="barba-wrapper">
+                    <div class="barba-container">
+                        <nav class="hotel-nav">
+                            <ul class="hotel-nav__menu nav nav-tabs" role="tablist">
+                                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link active" data-toggle="tab"
+                                        href="#hotel" role="tab" aria-controls="hotel" aria-selected="false"><span>Package
+                                            information and Details</span></a>
+                                </li>
+                                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab"
+                                        href="#hotelServices" role="tab" aria-controls="hotelServices" aria-selected="true"><span>
+                                            Itinerary</span></a>
+                                </li>
+                                <li class="nav-item d-flex col-12 col-sm p-0"><a class="nav-link" data-toggle="tab"
+                                        href="#hotelServicess" role="tab" aria-controls="hotels" aria-selected="false"><span>
+                                            Rates</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="tab-content">
+
+                            <div class="tab-pane active show" id="hotel" role="tabpanel">
+
+                                <section>
+
+                                    <h3 class="fw-md mb-1">13 DAYS AMBOSELI-TSAVO EAST-NAIVASHA-NAKURU-MASAI MARA
+                                        BUDGET SAFARI</h3>
+                                    <ul class="hotel-title mb-3">
+
+                                        <li class="d-flex">
+                                            <div class="media-object"><i class="fas fa-map-marker-alt" style="margin-right: 12px;"></i></div>
+                                            <div class="local"><span>Kajiado County, Naivasha,Nakuru, Narok County.</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="hotel-gallery">
+                                        <div class="hotel-gallery__carousel swiper-container js-hotel-carousel">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/Kuger.jpg' %} "
+                                                        alt="#" />
+                                                </div>
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/Amboseli_National_Park_024.jpg' %}  "
+                                                        alt="#" />
+                                                </div>
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/ElephantSibs_EN-US13884552392_1920x1080.jpg' %}  "
+                                                        alt="#" />
+                                                </div>
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %}"
+                                                        alt="#" />
+                                                </div>
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/8f4638a2_z.jpg' %} "
+                                                        alt="#" />
+                                                </div>
+                                                <div class="swiper-slide"><img class="img-fluid img-cover" src="{% static 'img/amboseli/20180123112606.jpg' %}  "
+                                                        alt="#" />
+                                                </div>
+
+                                            </div>
+                                            <div class="hotel-gallery__controls"><a class="hotel-gallery__arrow shadow-sm js-prev"
+                                                    role="button"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            viewbox="0 0 44 44">
+                                                            <path d="M22.119 44.237C9.922 44.237 0 34.315 0 22.119S9.922.001 22.119.001s22.119 9.922 22.119 22.118-9.924 22.118-22.119 22.118zm0-42.736C10.75 1.501 1.5 10.75 1.5 22.119c0 11.368 9.25 20.618 20.619 20.618s20.619-9.25 20.619-20.618c0-11.369-9.25-20.618-20.619-20.618z" />
+                                                            <path d="M24.667 29.884a.74.74 0 0 1-.53-.22l-7.328-7.334a.752.752 0 0 1 0-1.061l7.328-7.333a.75.75 0 1 1 1.061 1.061L18.4 21.8l6.798 6.805a.752.752 0 0 1 0 1.061.75.75 0 0 1-.531.218z" /></svg></i></a><a
+                                                    class="hotel-gallery__arrow shadow-sm js-next" role="button"><i
+                                                        class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 44 44">
+                                                            <path d="M22.118 44.236C9.922 44.236 0 34.314 0 22.118S9.922 0 22.118 0s22.118 9.922 22.118 22.118-9.922 22.118-22.118 22.118zm0-42.736C10.75 1.5 1.5 10.749 1.5 22.118c0 11.368 9.25 20.618 20.618 20.618 11.37 0 20.618-9.25 20.618-20.618 0-11.369-9.248-20.618-20.618-20.618z" />
+                                                            <path d="M19.341 29.884a.75.75 0 0 1-.53-1.281l6.796-6.804-6.796-6.803a.75.75 0 1 1 1.061-1.061l7.325 7.333a.75.75 0 0 1 0 1.061l-7.325 7.333a.742.742 0 0 1-.531.222z" /></svg></i></a></div>
+                                        </div>
+                                        <div class="hotel-gallery__thumbs swiper-container js-hotel-carousel-thumbs">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/Kuger.jpg' %} " data-description="Joshua Tree Homesteader Cabin"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/Kuger.jpg' %} "
+                                                            alt="#" /></a></div>
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/Amboseli_National_Park_024.jpg' %} "
+                                                        data-description="A perfect place to snuggle up after a fun day in Asheville!"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/Amboseli_National_Park_024.jpg' %} "
+                                                            alt="#" /></a></div>
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/ElephantSibs_EN-US13884552392_1920x1080.jpg' %} "
+                                                        data-description="A perfect place to snuggle up after a fun day in Asheville!"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/ElephantSibs_EN-US13884552392_1920x1080.jpg' %} "
+                                                            alt="#" /></a></div>
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %} "
+                                                        data-description="Underfloor heating in the bathroom floor to keep your toes warm!"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/Giraffe+in+front+Amboseli+national+park+Kenya.jpg' %} "
+                                                            alt="#" /></a></div>
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/8f4638a2_z.jpg' %}"
+                                                        data-description="Full kitchen with full size refrigerator and dining table"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/8f4638a2_z.jpg' %}"
+                                                            alt="#" /></a></div>
+                                                <div class="swiper-slide"><a class="hotel-gallery__thumb js-gallery-link"
+                                                        href="{% static 'img/amboseli/20180123112606.jpg' %} "
+                                                        data-description="Full kitchen with full size refrigerator and dining table"><img
+                                                            class="img-cover" src="{% static 'img/amboseli/20180123112606.jpg' %} "
+                                                            alt="#" /></a></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12 col-md-12 d-flex">
+                                        <div class="hotel__intro hotel-card w-100">
+                                            <section class="pb-4">
+                                                <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
+                                                        style="margin-right: 12px;"></i>Details:</h5>
+                                                <p>This 6 days safari takes you to some of Kenya’s best Parks which
+                                                    include: Amboseli,
+                                                    Aberdare, Lake Nakuru National Park and the Masai Mara National
+                                                    Reserve. During the
+                                                    safari you will traverse the Great Rift Valley and sisal
+                                                    plantations and experience Kenya like
+                                                    never before. </p>
+
+
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                </section>
+
+                            </div>
+                            <div class="tab-pane" id="hotelServices" role="tabpanel">
+                                <section>
+                                    <hr class="mb-4">
+                                    <div class="hotel-card">
+                                        <h2 class="mb-4">Itinerary</h2>
+                                        <h4>General Informantion</h4>
+                                        <ul>
+                                            <li><span style="font-weight:900;">Available: </span> All year round</li>
+                                            <li><span style="font-weight:900;">Tour Duration: </span> 0700hrs – 1800hrs</li>
+                                            <li><span style="font-weight:900;">Pick up/drop off location: </span>
+                                                Aramati Safari Offices – Ngong Road</li>
+                                            <li> <span style="font-weight:900;">Departure Time: </span> 0700hrs</li>>
+                                        </ul>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY
+                                                            1: NAIROBI-AMBOSELI NATIONAL PARK</h2>
+                                                        <p>Arrive JKIA, you will be met by our representative and briefed on your safari.
+                                                            Depart Nairobi and drive south to Amboseli National Park. Lunch at the camp. Afternoon game
+                                                            viewing with the immense grandeur of Mt Kilimanjaro in the background. Dinner and overnight at
+                                                            camp/lodge.</p>
+
+                                                        <p>Suggested accommodation or similar standard:</p>
+                                                        <ul>
+
+                                                            <li>
+                                                                <p>Kibo Safari Camp 3*<a href="http://www.kibosafaricamp.com">www.kibosafaricamp.com</a></p>
+                                                            </li>
+                                                            <li>
+
+
+                                                                <p>Amboseli Sopa Lodge 4* <a href="http://www.sopalodges.com">http://www.sopalodges.com</a></p>
+                                                            </li>
+                                                        </ul>
+
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 2: AMBOSELI - TSAVO EAST</h2>
+                                                        <p>Early breakfast. Proceed for an extended morning game drive. Arid looking as Amboseli has
+                                                            historically supported both game and the Masai that kept their herds of cattle here. It is thanks to the
+                                                            waters that run off Africa&#39;s greatest mountain that the apparently dry Amboseli, Kenya&#39;s first game
+                                                            sanctuary is able to support its wildlife. Mount Kilimanjaro broods high over Amboseli. The mountain
+                                                            now provides water for the park, wonderful views and, of course, the most glorious background for
+                                                            animal photography. You have an option to visit the Masai Village (extra cost). Lunch at the camp.
+                                                            Depart for Tsavo East to arrive in the evening. Game drive enroute time allowing. Dinner and
+                                                            overnight at camp/lodge.</p>
+
+                                                        <p>Suggested accommodation or similar standard:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p> Sentrim Tsavo Camp 3* <a href=" http://www.sentrim-hotels.com ">
+                                                                    http://www.sentrim-hotels.com </a></p>
+                                                            </li>
+                                                            <li>
+                                                                <p> Voi Wildlife Lodge 4*<a href="  https://www.voiwildlifelodge.com/">
+                                                                    https://www.voiwildlifelodge.com/ </a></p>
+                                                            </li>
+
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 3 &amp; 4: TSAVO EAST</h2>
+                                                        <p>Early breakfast. Depart with picnic lunch for a full day game drive.
+                                                            Tsavo East is Kenya’s largest game sanctuary famed for its huge herds of elephants. It is also home to
+                                                            lion, rhino, giraffe and zebra as well as a variety of other smaller game. Dinner and overnight at
+                                                            camp/ lodge.</p>
+
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 5: TSAVO EAST – NAIVASHA</h2>
+                                                        <p>Early breakfast. Depart for Naivasha via Nairobi. Lunch will be enroute.
+                                                            Arrive in the evening. Dinner and overnight at camp/lodge.</p>
+
+                                                        <p>Suggested accommodation or similar standard:</p>
+                                                        <ul>
+                                                            <li>
+
+
+                                                                <p> Masada Hotel 3* <a href="http://www.superiorhotels.com ">www.superiorhotels.com </a></p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Naivasha Sopa Lodge 4* <a href="http://www.sopalodges.com">www.sopalodges.com</a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>Day 6: NAIVASHA – HELL’S GATE NATIONAL PARK</h2>
+                                                        <p>Breakfast at the Camp. Depart with picnic lunch for Hell’s Gate National Park
+                                                            There are many activities you can do within Hell’s Gate including, walking, cycling, rock climbing, bird
+                                                            watching and trekking through the gorge amongst the geysers – the choice is yours. There is also a hot
+                                                            water swimming pool within the park that acts as a spa.
+                                                            Enjoy a swim in the pool and see how your skin is cleansed.
+                                                            Lake Naivasha lies among extinct volcanoes on the floor of the Great Rift Valley. Later in the afternoon
+                                                            you can opt for a boat ride to view the hippos. This is a beautiful freshwater lake, fringed by thick
+                                                            papyrus is almost 13km&#39;s across, but its waters are shallow with an average depth of five meters. The
+                                                            waters of the lake draw a great range of game to these shores. You can also visit to crescent Island at
+                                                            an extra cost. Dinner and overnight at the camp/lodge.</p>
+                                                        
+                                                        
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 7: NAIVASHA – LAKE NAKURU</h2>
+                                                        <p>Breakfast at the camp. Depart for Lake Nakuru National Park. Picnic lunch in the park. Full day game
+                                                            drive. Lake Nakuru has best been known for its thousands, sometimes millions of flamingos nesting
+                                                            along the shores. Also of interest is an area of 188 km around the lake fenced off as a sanctuary to
+                                                            protect Rothschild giraffes and black rhinos. The park now has more than 25 rhinos, one of the largest
+                                                            concentrations in the country, so the chances of spotting these survivors are good. Dinner and
+                                                            overnight at camp/lodge.</p>
+
+                                                            <p>Suggested accommodation or similar standard:</p>
+                                                            <ul>
+                                                                <li>
+    
+    
+                                                                    <p> Hotel Citymax 3*<a href="http://www.hotelcitymax.co.ke"> www.hotelcitymax.co.ke</a></p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Flamingo Hill Camp 4* <a href="http://www.flamingohillcamp.com">http://www.flamingohillcamp.com</a></p>
+                                                                </li>
+                                                            </ul>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 8:  LAKE NAKURU - MASAI MARA</h2>
+                                                        <p>Early breakfast. Depart for Masai Mara Game Reserve.
+                                                            Arrive in time for lunch. In the afternoon proceed for a game drive in this world famous game reserve.
+                                                            At dusk return to the lodge. Dinner and overnight at the camp.</p>
+
+                                                            <p>Suggested accommodation or similar standard:</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>Explore Nature Mara Lodge 3* <a href="http://www.explorenaturemaralodge.com">http://www.explorenaturemaralodge.com</a></p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Mara River Safari Camp 4*<a href="https://www.mararivercamp.co.ke/">https://www.mararivercamp.co.ke/</a></p>
+                                                                </li>
+                                                            </ul>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 9 - 11: MASAI MARA</h2>
+                                                        <p>Full day game viewing whereby you leave the camp after breakfast with picnic lunch.
+                                                            As well as wildlife, the Masai Mara is also home to many members of the colorful Masai tribe who may
+                                                            be seen around the borders of the park - Morans (warriors) loping across the plains, young boys
+                                                            herding goats, or elders grouped under a tree discussing matters of the day . Dinner and overnight at
+                                                            the camp.</p>
+
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 12: MASAI MARA – NAIROBI</h2>
+                                                        <p>Early breakfast at the camp.  Proceed for a morning game drive. Return to the camp for lunch. Depart
+                                                            for Nairobi. A stop is provided at Narok Town the Masai city where you can buy handicrafts and
+                                                            souvenirs. Arrive Nairobi late evening. Overnight at After40 Hotel booked on bed &amp; breakfast.
+                                                            <a href="http://www.after40hotel.com">www.after40hotel.com</a></p>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 13: DEPARTURE</h2>
+                                                        <p>Breakfast at the hotel (packed breakfast if flight is early). Transfer to the airport for your onward
+                                                            flight.</p>
+                                                    </section>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 style="font-family: Snell Roundhand, cursive; font-weight:900; font-size: 19px; margin-left: 40%;">END
+                                            OF SAFARI</h4>
+                                    </div>
+
+
+                                </section>
+
+                            </div>
+                            <div class="tab-pane" id="hotelServicess" role="tabpanel">
+                                <section>
+                                    <hr class="mb-4">
+
+                                    <div class="hotel-card" id="rates">
+                                        <h4 class="mb-4" style="font-weight:900;"> Rates: (USING A SAFARI VAN,
+                                                COST PER PERSON SHARING)</h4>
+                                        <div class="table-title">
+                                        </div>
+                                        {% if "Low Season" in guara.Season %}
+                                        <div class="container">
+                                            <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
+                                                    style="margin-right: 12px;"></i>LOW SEASON 1 ST APRIL-30 TH JUNE
+                                                (EXCLUDING EASTER), 1 ST NOV-19 TH DEC</h5>
+
+                                            <div class="table">
+                                                <div class="table-header">
+                                                    <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
+                                                    <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                                            href="#">1 PAX</a></div>
+                                                    <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                                            href="#">2 PAX</a></div>
+                                                    <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                                            href="#">3 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">4 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">5 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">6 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">7 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
+                                                </div>
+                                                <div class="table-content">
+                                                        {% if "3 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">3 STAR HOTELS</div> 
+
+                                                        <div class="table-data">3695</div>
+                                                        <div class="table-data">2590</div>
+                                                        <div class="table-data">2225</div>
+                                                        <div class="table-data">2040</div>
+                                                        <div class="table-data">1930</div>
+                                                        <div class="table-data">1855</div>
+                                                        <div class="table-data">1800</div>
+                                                        <div class="table-data">220</div>
+
+
+
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if "4 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">4 STAR HOTELS</div>
+                                                        <div class="table-data">4110</div>
+                                                        <div class="table-data">3005</div>
+                                                        <div class="table-data">2635</div>
+                                                        <div class="table-data">2450</div>
+                                                        <div class="table-data">2340</div>
+                                                        <div class="table-data">2270</div>
+                                                        <div class="table-data">2215</div>
+                                                        <div class="table-data">325</div>
+
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        {% if "High Season" in guara.Season %}
+                                        <div class="container">
+                                            <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
+                                                    style="margin-right: 12px;"></i>HIGH SEASON 5 TH JAN – 31 ST MARCH
+                                                – 1
+                                                ST NOV. – 15 TH DEC</h5>
+
+                                            <div class="table">
+                                                <div class="table-header">
+                                                    <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
+                                                    <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                                            href="#">1 PAX</a></div>
+                                                    <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                                            href="#">2 PAX</a></div>
+                                                    <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                                            href="#">3 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">4 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">5 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">6 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">7 PAX</a></div>
+
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
+                                                </div>
+                                                <div class="table-content">
+                                                        {% if "3 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">3 STAR HOTELS</div> 
+
+                                                        <div class="table-data">3860</div>
+                                                        <div class="table-data">2755</div>
+                                                        <div class="table-data">2385</div>
+                                                        <div class="table-data">2200</div>
+                                                        <div class="table-data">2090</div>
+                                                        <div class="table-data">2015</div>
+                                                        <div class="table-data">1965 </div>
+                                                        <div class="table-data">350</div>
+
+
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if "4 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">4 STAR HOTELS</div> 
+                                                        <div class="table-data">4370</div>
+                                                        <div class="table-data">3270</div>
+                                                        <div class="table-data">2900</div>
+                                                        <div class="table-data">2715</div>
+                                                        <div class="table-data">2605</div>
+                                                        <div class="table-data">2530</div>
+                                                        <div class="table-data">2480</div>
+                                                        <div class="table-data">615</div>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        {% if "Peak Season" in guara.Season %}
+                                        <div class="container">
+                                            <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
+                                                    style="margin-right: 12px;"></i>PEAK SEASON 1 ST JULY – 31 ST
+                                                OCTOBER</h5>
+                                            <div class="table">
+                                                <div class="table-header">
+                                                    <div class="header__item"><a id="name" class="filter__link" href="#">HOTEL</a></div>
+                                                    <div class="header__item"><a id="wins" class="filter__link filter__link--number"
+                                                            href="#">1 PAX</a></div>
+                                                    <div class="header__item"><a id="draws" class="filter__link filter__link--number"
+                                                            href="#">2 PAX</a></div>
+                                                    <div class="header__item"><a id="losses" class="filter__link filter__link--number"
+                                                            href="#">3 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">4 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">5 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">6 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">7 PAX</a></div>
+                                                    <div class="header__item"><a id="total" class="filter__link filter__link--number"
+                                                            href="#">SRS</a></div>
+                                                </div>
+                                                <div class="table-content">
+                                                        {% if "3 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">3 STAR HOTELS</div> 
+
+                                                        <div class="table-data">4040</div>
+                                                        <div class="table-data">2935</div>
+                                                        <div class="table-data">2570</div>
+                                                        <div class="table-data">2385</div>
+                                                        <div class="table-data">2275</div>
+                                                        <div class="table-data">2200</div>
+                                                        <div class="table-data">2145</div>
+                                                        <div class="table-data">360</div>
+
+
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if "4 star" in guara.Hotel_Star %}
+                                                    <div class="table-row">
+                                                        <div class="table-data">4 STAR HOTELS</div>  
+                                                        <div class="table-data">4890</div>
+                                                        <div class="table-data">3785</div>
+                                                        <div class="table-data">3415</div>
+                                                        <div class="table-data">3230</div>
+                                                        <div class="table-data">3120</div>
+                                                        <div class="table-data">3050</div>
+                                                        <div class="table-data">2995</div>
+                                                        <div class="table-data">915</div>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div> {% endif %}
+                                    </div>
+                                    <div class="hotel-card">
+                                        <section>
+                                            <h5>Included:</h5>
+                                            <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Accommodation on fullboard basis at
+                                                        the lodge</span></li>
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Transport in a private safari van
+                                                        with a pop-up roof</span></li>
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Park entry fees</span></li>
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Mineral
+                                                        water</span></li>
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">English
+                                                        speaking driver guide</span></li>
+
+                                                <li class="mr-2"><i class="fas fa-check" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Game drives</span></li>
+
+                                            </ul>
+                                        </section>
+                                    </div>
+                                    <div class="hotel-card">
+                                        <section>
+                                            <h4 class="mb-4">Not Included: </h4>
+                                            <ul class="hotel-facilities d-flex flex-wrap flex-column flex-md-row">
+                                                <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Drinks</span></li>
+                                                <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Tips (tipping guideline US$ 10 pp per
+                                                        day)</span></li>
+                                                <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Extra meals/lunch on the last day</span></li>
+                                                <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Masai Village</span></li>
+                                                <li class="mr-2"><i class="fas fa-times" style="margin-right:12px;"></i><span
+                                                        class="align-middle mr-2">Balloon Safari (USD 450)</span></li>
+
+                                            </ul>
+                                        </section>
+                                    </div>
+
+
+                                </section>
+
+                            </div>
+                            <div class="hotel-card">
+                                <h2>IMPORTANT INFO PLEASE READ CAREFULLY</h2>
+                                <ul style="font-size: 15px; ">
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>The Tours and the
+                                        itineraries CANNOT be changed. As it is a sharing tour, we provide the tours as
+                                        mentioned on our website (unless everyone in the vehicle agrees to a different
+                                        itinerary).</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>We recommend to
+                                        our guests to always be on time and to follow our driver&#39;s suggestions
+                                        regarding
+                                        timing, in this way you&#39;ll have a wonderful tour and we&#39;ll be 100% sure
+                                        that we&#39;ll have no complaints
+                                        or recriminations.</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Once you have
+                                        joined a tour already opened or created a new group, your information (name,
+                                        mobile
+                                        phone, email address) will be given to the other participants joining your
+                                        tour.</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Every time a new
+                                        guest will join or cancel the tour, you will receive a new automatic voucher,
+                                        with
+                                        the guest&#39;s information, number of participants and the new price
+                                        you&#39;ll pay per person.</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Each Safari
+                                        vehicle takes a maximum of 7 passengers</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Payment will be
+                                        made at the day of departure in cash USD, notes from year 2004 onwards</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>At the moment we
+                                        do not accept credit cards for payment, credit card is requested only to
+                                        guarantee
+                                        your services.</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>Cancellation
+                                        policy is 7 days prior the service, after this terms the full amount (based on
+                                        your
+                                        booking) will be charged on your credit card in case of late cancelation or no
+                                        show.</li>
+                                    <br>
+                                    <li><i class="fas fa-caret-right" style="margin-right: 12px;"></i>If you have any
+                                        further questions, please don&#39;t hesitate to contact us, will be our
+                                        pleasure to help
+                                        you. For private/customized tours please contact us direct. Our email remains
+                                        <a href="sharing@aramatisafaris.co.ke">sharing@aramatisafaris.co.ke</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary btn-nav btn-nav--up js-scroll-up" type="button"><i class="fa fa-angle-up"></i></button>
+    </div>
+
+</main>
+{% include "footer.html" %}
+<style>
+    p {
+        color: black;
+        font-size: 15px;
+    }
+</style>
+<script src="{% static 'js/script.js' %}"></script>
+{% endif %}
+{% endfor %}
+{% endblock %}

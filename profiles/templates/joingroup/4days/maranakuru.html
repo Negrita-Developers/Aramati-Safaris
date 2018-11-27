@@ -3,6 +3,8 @@
 
 {% block content %}
 {{ block.super}}
+{% for guara in guaras %}
+{% if "4days-MaraNakuru" in guara.package.name %}
 <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 
 <main class="page-main">
@@ -22,67 +24,160 @@
         <div class="container">
             <div class="row">
                 <aside class="sidebar col-lg-3">
-                    <div class="sidebar__content js-sticky-top">
+                    <div class="sidebar__content js-sticky-top"> {% if guara.people_booked == 1%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 315 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 255 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 230 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 210 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 200 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 7%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 190 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "3 star" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 340<sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 280 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 255 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 240 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 225<sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 220 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+
+
+                        {% if "High Season" in guara.Season %}
+                        {% if "2 star" in guara.Hotel_Star%}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 315 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 255 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 230 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            Now and Pay $ 210 <sub>p.p</sub></button>
+
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 200 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 190 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "3 star" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 365 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 305 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 280 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 260 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 250 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 240 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+
+
+                        {% if "Peak Season" in guara.Season %}
+                        {% if "2 star" in guara.Hotel_Star%}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 315 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 255 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 230 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 210 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 200 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 190 <sub>p.p</sub></button>
+                        {% endif %}
+
+                        {% elif "3 star" in guara.Hotel_Star %}
+                        {% if guara.people_booked == 1 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 375 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 2%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 320 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 3%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 290 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 4%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 270 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 5 %}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">FROM
+                            $ 260 <sub>p.p</sub></button>
+                        {% elif guara.people_booked == 6%}
+                        <button type="button" class="btn peach-gradient" style="border-bottom: 1px solid black; border-top: 1px solid black;  font-weight:900; font-size:20px; margin-bottom: 20px;">Book
+                            & Pay
+                            $ 255 <sub>p.p</sub></button>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+                        <!-- <hr> -->
+                        <br>
                         <div class="sidebar__finder card bg-primary text-white">
-                            <h4 class="m-0 mb-lg-4">Create a safari group.</h4>
-                            <form class="collapse show d-lg-block mt-3" id="hotelFinder" action="https://formspree.io/sharing@aramatisafaris.co.ke"
-                                method="POST" data-toggle="validator">
-                                <div class="row">
-                                    <div class="col-12 form-group">
-                                        <label>Name:</label>
-                                        <input name="Name:" class="form-control">
-                                    </div>
-                                    <div class="col-12 form-group">
-                                        <label>Email:</label>
-                                        <input name="Email:" class="form-control">
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 col-lg-12 form-group">
-                                                <label class="label-text" for="hotelInDate">Depature Date:</label>
-                                                <div class="input-group-append">
-                                                    <input class="form-control js-input-date " id="hotelInDate" type="text"
-                                                        name="Depature date:" required="required" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="label">Travel Info:</label>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 form-group col-lg-12"><span class="form-select">
-                                                    <select class="form-control select2 js-form-select" id="hotelAdults"
-                                                        name="Adults:">
-                                                        <option value="1 Adult">1 Adult</option>
-                                                        <option value="2 Adults">2 Adults</option>
-                                                        <option value="3 Adults">3 Adults</option>
-                                                        <option value="4 Adults">4 Adults</option>
-                                                        <option value="5 Adults">5 Adults</option>
-                                                        <option value="5 Adults">6 Adults</option>
-                                                        <option value="5 Adults">7 Adults</option>
-                                                    </select></span>
-                                            </div>
-                                            <div class="col-12 col-sm-6 col-lg-12 form-group"><span class="form-select">
-                                                    <select class="form-control select2 js-form-select" id="hotelDeparture"
-                                                        name="Open or Closed:">
-                                                        <label>Open or Closed Group</label>
-                                                        <option value="Open">Open</option>
-                                                        <option value="Closed">Closed</option>
-                                                    </select></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-dark btn--round mx-auto mt-2 w-100" type="submit">Request Trip
-                                </button>
-                            </form>
-                            <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-                                data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
+                            <h4>Time to Book:</h4>
+                            <p style="font-size:22px;  color: red; font-weight: 900" class="flashit">{{guara.datediff}}
+                                Days
+                                Remaining</p>
+                            <h4>Depature Date:</h4>
+                            <p style="font: size 20px;">{{guara.depature_date}}</p>
+                            <h4>Booked Seats:</h4>
+                            <p style="font: size 40px;">{{guara.people_booked}}<sub> /7</sub> Seats</p>
+                            <!-- <p style="padding-left:20px; color:white; font-weight:700;font-size: 17px;">Seats booked: 5<sub>/7</sub></p>
+                                                                <p style="padding-left:20px; color:white;font-weight:700;font-size: 17px;">Book Before: {{guara.book_before}}</p> -->
+                            <a href="{% url 'profiles:bookings' %}"><button class="btn btn-dark btn--round mx-auto mt-2 w-100"
+                                    type="submit">Join This Trip
+                                </button></a>
                         </div>
-
-                        <button class="btn-toggle btn btn-primary-light border-0 w-100 py-3 d-lg-none" data-target="#hotelFinder"
-                            data-toggle="collapse" aria-expanded="true" type="button"><span class="icon-bar"></span></button>
-
+                        <hr>
                     </div>
                 </aside>
 
@@ -361,37 +456,41 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                                <div class="col-12 col-md-12 d-flex">
-                                                    <div class="hotel__intro hotel-card w-100">
-                                                        <section class="pb-4">
-                                                            <h2 class="d-flex align-items-center text-primary mb-3"><i
-                                                                    class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY 4: NAKURU - NAIROBI</h2>
-                                                            <p>Early Morning game drive. Breakfast at the lodge. Depart for Nairobi.
-                                                                    A stop is provided at the Great Rift Valley View Point. Arrive in the afternoon and drop off
-                                                                    at the airport for final departure.</p>
-    
-                                                        </section>
-    
-                                                    </div>
+                                            <div class="col-12 col-md-12 d-flex">
+                                                <div class="hotel__intro hotel-card w-100">
+                                                    <section class="pb-4">
+                                                        <h2 class="d-flex align-items-center text-primary mb-3"><i
+                                                                class="fas fa-info-circle" style="margin-right: 12px;"></i>DAY
+                                                            4: NAKURU - NAIROBI</h2>
+                                                        <p>Early Morning game drive. Breakfast at the lodge. Depart for
+                                                            Nairobi.
+                                                            A stop is provided at the Great Rift Valley View Point.
+                                                            Arrive in the afternoon and drop off
+                                                            at the airport for final departure.</p>
+
+                                                    </section>
+
                                                 </div>
                                             </div>
-                                            <h4 style="font-family: Snell Roundhand, cursive; font-weight:900; font-size: 19px; margin-left: 40%;">END
-                                                OF SAFARI</h4>
                                         </div>
-    
-    
-                                    </section>
-    
-                                </div>
-                                <div class="tab-pane" id="hotelServicess" role="tabpanel">
-                                    <section>
-                                        <hr class="mb-4">
-    
-                                        <div class="hotel-card" id="rates">
-                                            <h4 class="mb-4" style="font-weight:900;"> Rates: (USING A SAFARI VAN,
-                                                    COST PER PERSON SHARING)</h4>
+                                        <h4 style="font-family: Snell Roundhand, cursive; font-weight:900; font-size: 19px; margin-left: 40%;">END
+                                            OF SAFARI</h4>
+                                    </div>
+
+
+                                </section>
+
+                            </div>
+                            <div class="tab-pane" id="hotelServicess" role="tabpanel">
+                                <section>
+                                    <hr class="mb-4">
+
+                                    <div class="hotel-card" id="rates">
+                                        <h4 class="mb-4" style="font-weight:900;"> Rates: (USING A SAFARI VAN,
+                                            COST PER PERSON SHARING)</h4>
                                         <div class="table-title">
                                         </div>
+                                        {% if "Low Season" in guara.Season %}
                                         <div class="container">
                                             <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                     style="margin-right: 12px;"></i>LOW SEASON 1 ST APRIL-30 TH JUNE
@@ -418,8 +517,9 @@
                                                             href="#">SRS</a></div>
                                                 </div>
                                                 <div class="table-content">
+                                                        {% if "2 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">2 STAR HOTELS</div> 
+                                                        <div class="table-data">2 STAR HOTELS</div>
 
                                                         <div class="table-data">1040 </div>
                                                         <div class="table-data">700</div>
@@ -433,6 +533,8 @@
 
 
                                                     </div>
+                                                    {% endif %}
+                                                    {% if "3 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
                                                         <div class="table-data">3 STAR HOTELS</div>
                                                         <div class="table-data">1150</div>
@@ -445,9 +547,12 @@
                                                         <div class="table-data">70</div>
 
                                                     </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
+                                        {% endif %}
+                                        {% if "High Season" in guara.Season %}
                                         <div class="container">
                                             <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                     style="margin-right: 12px;"></i>HIGH SEASON 5 TH JAN – 31 ST MARCH
@@ -476,9 +581,10 @@
                                                             href="#">SRS</a></div>
                                                 </div>
                                                 <div class="table-content">
+                                                        {% if "2 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">2 STAR HOTELS</div> 
-                                 
+                                                        <div class="table-data">2 STAR HOTELS</div>
+
                                                         <div class="table-data">1040 </div>
                                                         <div class="table-data">700</div>
                                                         <div class="table-data">590</div>
@@ -490,8 +596,10 @@
 
 
                                                     </div>
+                                                    {% endif %}
+                                                    {% if "3 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">3 STAR HOTELS</div> 
+                                                        <div class="table-data">3 STAR HOTELS</div>
                                                         <div class="table-data">1250</div>
                                                         <div class="table-data">910</div>
                                                         <div class="table-data">800</div>
@@ -501,9 +609,12 @@
                                                         <div class="table-data">670</div>
                                                         <div class="table-data">120</div>
                                                     </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
+                                        {% endif %}
+                                        {% if "Peak Season" in guara.Season %}
                                         <div class="container">
                                             <h5 class="d-flex align-items-center text-primary mb-3"><i class="fas fa-info-circle"
                                                     style="margin-right: 12px;"></i>PEAK SEASON 1 ST JULY – 31 ST
@@ -529,9 +640,10 @@
                                                             href="#">SRS</a></div>
                                                 </div>
                                                 <div class="table-content">
+                                                        {% if "2 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
                                                         <div class="table-data">2 STAR HOTELS</div>
-                                 
+
                                                         <div class="table-data">1040 </div>
                                                         <div class="table-data">700</div>
                                                         <div class="table-data">590</div>
@@ -543,8 +655,10 @@
 
 
                                                     </div>
+                                                    {% endif %}
+                                                    {% if "3 star" in guara.Hotel_Star %}
                                                     <div class="table-row">
-                                                        <div class="table-data">3 STAR HOTELS</div> 
+                                                        <div class="table-data">3 STAR HOTELS</div>
                                                         <div class="table-data">1275</div>
                                                         <div class="table-data">935</div>
                                                         <div class="table-data">820</div>
@@ -554,9 +668,10 @@
                                                         <div class="table-data">690</div>
                                                         <div class="table-data">145</div>
                                                     </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> {% endif %}
                                     </div>
                                     <div class="hotel-card">
                                         <section>
@@ -678,4 +793,6 @@
     }
 </style>
 <script src="{% static 'js/script.js' %}"></script>
+{% endif %}
+{% endfor %}
 {% endblock %}
