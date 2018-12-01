@@ -153,7 +153,7 @@ def maranakurussf4(request):
 def maranakurujoinssf4(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'joingroup/4days/mara-nakuru.html', {"guaras": guaras}, {"single":  single}) 
+    return render (request, 'joingroup/4days/maranakuru.html', {"guaras": guaras}, {"single":  single}) 
 
 def amboselissf5(request):
     return render (request, 'shortsafaris/5days/amboseli.html') 
@@ -181,7 +181,7 @@ def maranakurussf6(request):
 def maranakurujoinssf6(request):
     guaras = JoinedSafaris.objects.all()
     single = Packages.objects.all()
-    return render (request, 'joingroup/6days/maranakurunaivasha.html', {"guaras": guaras}, {"single":  single}) 
+    return render (request, 'joingroup/6days/maranakuru.html', {"guaras": guaras}, {"single":  single}) 
 
 def maranakurussf7(request):
     return render (request, 'longsafaris/7days/maranakuru.html') 
